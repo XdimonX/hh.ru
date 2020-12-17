@@ -28,4 +28,5 @@ func checkErr(err error) {
 func main() {
 	parseCfg()
 	saveCfg()
+	tst()
 }
