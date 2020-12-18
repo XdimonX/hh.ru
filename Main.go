@@ -3,6 +3,7 @@ package main
 import (
 	// "fmt"
 	"os"
+	"sync"
 )
 
 const (
@@ -17,6 +18,7 @@ var (
 	passwordTeleBot     = ""
 	resumeForUpdates    []string
 	timeoutResumeUpdate = 0
+	lock                = &sync.Mutex{}
 )
 
 func checkErr(err error) {
@@ -26,7 +28,11 @@ func checkErr(err error) {
 }
 
 func main() {
+
 	parseCfg()
 	saveCfg()
-	tst()
+	wg := sync.WaitGroup{}
+	wg.Add(1)
+	go startBot()
+	wg.Wait()
 }

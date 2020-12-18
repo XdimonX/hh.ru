@@ -27,8 +27,9 @@ func parseCfg() {
 					resumeForUpdates = append(resumeForUpdates, v)
 				}
 			}
-		} else if param == "timeoutresumeupdate" {
-			timeoutResumeUpdate, err := strconv.Atoi(str[1])
+		} else if param == "timeoutresumeupdates" {
+			var err error
+			timeoutResumeUpdate, err = strconv.Atoi(str[1])
 			checkErr(err)
 			println(timeoutResumeUpdate)
 		}
