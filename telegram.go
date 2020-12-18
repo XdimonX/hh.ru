@@ -13,20 +13,27 @@ const (
 	teleAdminID = 385060683
 )
 
-func startBot() {
-	bot, err := tb.NewBot(tb.Settings{Token: token, Poller: &tb.LongPoller{Timeout: 10 * time.Second}})
-	checkErr(err)
-	teleAdminUser := tb.User{ID: teleAdminID}
-	bot.Handle("/help", func(m *tb.Message) {
-		if m.Sender.ID == teleAdminID {
-			msg := `loginHHru=<Задать логин от сайта hh.ru>
+func helpAndStart(m *tb.Message, bot *tb.Bot) {
+	if m.Sender.ID == teleAdminID {
+		msg := `loginHHru=<Задать логин от сайта hh.ru>
 passwordHHru=<Задать пароль от сайта hh.ru>
 timeoutResumeUpdate=<Установить частоту обновления резюме (в минутах)>
 getResume Получить список резюме
 getLoginHHru Получить логин на hh.ru
 getTimeoutResumeUpdate Получить тайм-аут`
-			bot.Send(m.Sender, msg)
-		}
+		bot.Send(m.Sender, msg)
+	}
+}
+
+func startBot() {
+	bot, err := tb.NewBot(tb.Settings{Token: token, Poller: &tb.LongPoller{Timeout: 10 * time.Second}})
+	checkErr(err)
+	teleAdminUser := tb.User{ID: teleAdminID}
+	bot.Handle("/help", func(m *tb.Message) {
+		helpAndStart(m, bot)
+	})
+	bot.Handle("/start", func(m *tb.Message) {
+		helpAndStart(m, bot)
 	})
 
 	bot.Handle(tb.OnText, func(m *tb.Message) {

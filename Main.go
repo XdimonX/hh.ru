@@ -28,9 +28,7 @@ func checkErr(err error) {
 }
 
 func main() {
-
 	parseCfg()
-	saveCfg()
 	wg := sync.WaitGroup{}
 	wg.Add(1)
 	go startBot()
