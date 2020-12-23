@@ -29,8 +29,9 @@ func checkErr(err error) {
 
 func main() {
 	parseCfg()
+	getResumeList()
 	wg := sync.WaitGroup{}
 	wg.Add(1)
-	go startBot()
-	wg.Wait()
+	// go startBot()
+	// wg.Wait()
 }
