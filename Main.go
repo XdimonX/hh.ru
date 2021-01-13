@@ -30,6 +30,7 @@ func checkErr(err error) {
 func main() {
 	parseCfg()
 	// getResumeList() //tmp
+	runChrome(true) //tmp
 	wg := sync.WaitGroup{}
 	wg.Add(1)
 	// go startBot()
