@@ -29,7 +29,7 @@ func checkErr(err error) {
 
 func main() {
 	parseCfg()
-	getResumeList()
+	// getResumeList() //tmp
 	wg := sync.WaitGroup{}
 	wg.Add(1)
 	// go startBot()
