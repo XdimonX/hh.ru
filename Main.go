@@ -1,7 +1,6 @@
 package main
 
 import (
-	// "fmt"
 	"fmt"
 	"os"
 	"sync"
@@ -34,7 +33,10 @@ func main() {
 	// getResumeList() //tmp
 	ctx, cancel := prepareChrome(true) //tmp
 	// firstRunChrome(ctx, cancel)
-	getResumeList(ctx, cancel)
+	resumeList := getResumeList(ctx, cancel)
+	for _, resu := range resumeList {
+		println(resu)
+	}
 	wg := sync.WaitGroup{}
 	wg.Add(1)
 	// go startBot()

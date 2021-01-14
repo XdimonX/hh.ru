@@ -4,6 +4,7 @@ import (
 	"context"
 	"fmt"
 	"log"
+	"strings"
 	"time"
 
 	"github.com/chromedp/cdproto/cdp"
@@ -57,7 +58,7 @@ func firstRunChrome(ctx context.Context, cancel context.CancelFunc) {
 }
 
 //Получить список резюме
-func getResumeList(ctx context.Context, cancel context.CancelFunc) []string {
+func getResumeList(ctx context.Context, cancel context.CancelFunc) (result []string) {
 	defer cancel()
 	ctx, cancel = context.WithTimeout(ctx, 25*time.Second)
 	defer cancel()
@@ -75,7 +76,8 @@ func getResumeList(ctx context.Context, cancel context.CancelFunc) []string {
 	}
 	err = chromedp.Run(
 		ctx,
-		chromedp.Nodes("div.bloko-gap.bloko-gap_top.bloko-gap_bottom", &children, chromedp.ByQueryAll, chromedp.FromNode(nodes[0])),
+		chromedp.Nodes("div.bloko-gap.bloko-gap_top.bloko-gap_bottom",
+			&children, chromedp.ByQueryAll, chromedp.FromNode(nodes[0])),
 	)
 	if err != nil {
 		fmt.Println(err)
@@ -84,9 +86,12 @@ func getResumeList(ctx context.Context, cancel context.CancelFunc) []string {
 		chromedp.Run(
 			ctx,
 			chromedp.Text("div>h3>a>span", &resume, chromedp.ByQueryAll, chromedp.FromNode(n)),
-			chromedp.Text("div>div.applicant-resumes-status", &status, chromedp.ByQueryAll, chromedp.FromNode(n)),
+			chromedp.Text("div>div.applicant-resumes-status",
+				&status, chromedp.ByQueryAll, chromedp.FromNode(n)),
 		)
-		fmt.Println("")
+		if strings.ToLower(status) != "не видно никому" {
+			result = append(result, resume)
+		}
 	}
-	return nil
+	return
 }
