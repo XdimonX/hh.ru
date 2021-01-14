@@ -3,11 +3,13 @@ package main
 import (
 	"context"
 	"log"
+	"time"
 
+	"github.com/chromedp/cdproto/cdp"
 	"github.com/chromedp/chromedp"
-	// "github.com/chromedp/chromedp/kb"
 )
 
+//Подготовить контекст для запуска браузера
 func prepareChrome(visibleBrowser bool) (context.Context, context.CancelFunc) {
 	var ctx context.Context
 	var cancel context.CancelFunc
@@ -30,12 +32,7 @@ func prepareChrome(visibleBrowser bool) (context.Context, context.CancelFunc) {
 		// defer cancel()
 		_ = ctx
 	}
-	// err := chromedp.Run(ctx, chromedp.Navigate("https://togliatti.hh.ru"),
-	// 	chromedp.Click(`/html/body/div[4]/div[1]/div/div/div[1]/div[1]/a`),
-	// )
-	// if err != nil {
-	// 	log.Fatal(err)
-	// }
+	ctx, cancel = context.WithTimeout(ctx, 1*time.Minute)
 	return ctx, cancel
 }
 
@@ -48,6 +45,15 @@ func firstRunChrome(ctx context.Context, cancel context.CancelFunc) {
 	cancel()
 }
 
-func getResumeList() {
-
+//Получить список резюме
+func getResumeList(ctx context.Context, cancel context.CancelFunc) []string {
+	//*[@id="HH-React-Root"]/div/div/div/div[1]/div[2]
+	var nodes []*cdp.Node
+	chromedp.Run(
+		ctx,
+		chromedp.Navigate("https://togliatti.hh.ru/applicant/resumes?from=header_new"),
+		chromedp.Nodes(`*[@id="HH-React-Root"]/div/div/div/div[1]/div[2]`, &nodes),
+	)
+	cancel()
+	return nil
 }

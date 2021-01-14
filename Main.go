@@ -31,7 +31,8 @@ func main() {
 	parseCfg()
 	// getResumeList() //tmp
 	ctx, cancel := prepareChrome(true) //tmp
-	firstRunChrome(ctx, cancel)
+	// firstRunChrome(ctx, cancel)
+	getResumeList(ctx, cancel)
 	wg := sync.WaitGroup{}
 	wg.Add(1)
 	// go startBot()
