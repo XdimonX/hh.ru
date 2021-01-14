@@ -3,11 +3,13 @@ package main
 import (
 	"context"
 	"fmt"
+	"io/ioutil"
 	"log"
 	"strings"
 	"time"
 
 	"github.com/chromedp/cdproto/cdp"
+	"github.com/chromedp/cdproto/page"
 	"github.com/chromedp/chromedp"
 )
 
@@ -17,11 +19,13 @@ func prepareChrome(visibleBrowser bool) (context.Context, context.CancelFunc) {
 	var cancel context.CancelFunc
 	userDir := `C:\Users\user`
 	if visibleBrowser {
-		opts := append(chromedp.DefaultExecAllocatorOptions[:], chromedp.DisableGPU, chromedp.Flag("headless", false),
+		opts := append(chromedp.DefaultExecAllocatorOptions[:],
+			chromedp.DisableGPU,
+			chromedp.Flag("headless", false),
 			chromedp.Flag("no-first-run", true),
 			// chromedp.Flag("no-sandbox", true),
 			chromedp.Flag("disable-gpu", true),
-			chromedp.Flag("enable-automation", false),
+			chromedp.Flag("enable-automation", true),
 			chromedp.Flag("restore-on-startup", false),
 			chromedp.UserDataDir(userDir),
 		)
@@ -31,17 +35,22 @@ func prepareChrome(visibleBrowser bool) (context.Context, context.CancelFunc) {
 		// defer cancel()
 	} else {
 		opts := append(chromedp.DefaultExecAllocatorOptions[:],
-			chromedp.DisableGPU,
+			// chromedp.DisableGPU,
 			chromedp.Flag("headless", true),
 			chromedp.Flag("no-first-run", true),
-			// chromedp.Flag("no-sandbox", true),
-			chromedp.Flag("disable-gpu", true),
-			chromedp.Flag("enable-automation", false),
-			chromedp.Flag("restore-on-startup", false),
+			chromedp.Flag("no-sandbox", true),
+			// chromedp.Flag("disable-gpu", true),
+			chromedp.Flag("enable-automation", true),
+			chromedp.Flag("restore-on-startup", true),
+			// chromedp.Flag("start-minimized", true),
+			// chromedp.Flag("start-fullscreen", true),
 			chromedp.UserDataDir(userDir),
+			// chromedp.WindowSize(10, 10),
+			chromedp.Flag("minimal", true),
 		)
 		ctx, cancel = chromedp.NewExecAllocator(context.Background(), opts...)
-		ctx, cancel = chromedp.NewContext(context.Background())
+		ctx, cancel = chromedp.NewContext(ctx, chromedp.WithErrorf(log.Printf))
+
 		// defer cancel()
 		_ = ctx
 	}
@@ -57,6 +66,15 @@ func firstRunChrome(ctx context.Context, cancel context.CancelFunc) {
 	cancel()
 }
 
+func screenshotTasks(imageBuf *[]byte) chromedp.Tasks {
+	return chromedp.Tasks{
+		chromedp.ActionFunc(func(ctx context.Context) (err error) {
+			*imageBuf, err = page.CaptureScreenshot().WithQuality(90).Do(ctx)
+			return err
+		}),
+	}
+}
+
 //Получить список резюме
 func getResumeList(ctx context.Context, cancel context.CancelFunc) (result []string) {
 	defer cancel()
@@ -64,15 +82,21 @@ func getResumeList(ctx context.Context, cancel context.CancelFunc) (result []str
 	defer cancel()
 	var nodes, children []*cdp.Node
 	var resume, status string
+	var screen []byte
 
 	err := chromedp.Run(
 		ctx,
 		chromedp.Navigate("https://togliatti.hh.ru/applicant/resumes?from=header_new"),
+		screenshotTasks(&screen),
 		chromedp.Nodes(`div.bloko-column.bloko-column_xs-4.bloko-column_s-8.bloko-column_m-8.bloko-column_l-11`,
 			&nodes),
 	)
+
+	ioutil.WriteFile("out.png", screen, 0644)
+
 	if err != nil {
 		fmt.Println(err)
+		panic(err)
 	}
 	err = chromedp.Run(
 		ctx,
