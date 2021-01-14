@@ -61,28 +61,30 @@ func getResumeList(ctx context.Context, cancel context.CancelFunc) []string {
 	defer cancel()
 	ctx, cancel = context.WithTimeout(ctx, 25*time.Second)
 	defer cancel()
-	var nodes []*cdp.Node
-	var children []*cdp.Node
+	var nodes, children []*cdp.Node
+	var resume, status string
+
 	err := chromedp.Run(
 		ctx,
 		chromedp.Navigate("https://togliatti.hh.ru/applicant/resumes?from=header_new"),
 		chromedp.Nodes(`div.bloko-column.bloko-column_xs-4.bloko-column_s-8.bloko-column_m-8.bloko-column_l-11`,
 			&nodes),
 	)
-	chromedp.Run(
+	if err != nil {
+		fmt.Println(err)
+	}
+	err = chromedp.Run(
 		ctx,
 		chromedp.Nodes("div.bloko-gap.bloko-gap_top.bloko-gap_bottom", &children, chromedp.ByQueryAll, chromedp.FromNode(nodes[0])),
 	)
 	if err != nil {
 		fmt.Println(err)
 	}
-	var childer2 []*cdp.Node
-	_ = childer2
-	var text string
 	for _, n := range children {
 		chromedp.Run(
 			ctx,
-			chromedp.Text("div>h3>a>span", &text, chromedp.ByQueryAll, chromedp.FromNode(n)),
+			chromedp.Text("div>h3>a>span", &resume, chromedp.ByQueryAll, chromedp.FromNode(n)),
+			chromedp.Text("div>div.applicant-resumes-status", &status, chromedp.ByQueryAll, chromedp.FromNode(n)),
 		)
 		fmt.Println("")
 	}
