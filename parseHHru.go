@@ -39,7 +39,7 @@ func prepareChrome(visibleBrowser bool) (context.Context, context.CancelFunc) {
 	return ctx, cancel
 }
 
-//При превом запуске необходимо авторизоваться вручную
+//При первом запуске необходимо авторизоваться вручную
 func firstRunChrome(ctx context.Context, cancel context.CancelFunc) {
 	chromedp.Run(ctx,
 		chromedp.Navigate("https://togliatti.hh.ru/account/login?backurl=%2F"),
