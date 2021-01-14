@@ -2,6 +2,7 @@ package main
 
 import (
 	// "fmt"
+	"fmt"
 	"os"
 	"sync"
 )
@@ -23,6 +24,7 @@ var (
 
 func checkErr(err error) {
 	if err != nil {
+		fmt.Println(err)
 		os.Exit(2)
 	}
 }
