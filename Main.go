@@ -30,15 +30,8 @@ func checkErr(err error) {
 
 func main() {
 	parseCfg()
-	// getResumeList() //tmp
-	ctx, cancel := prepareChrome(false) //tmp
-	// firstRunChrome(ctx, cancel)
-	resumeList := getResumeList(ctx, cancel)
-	for _, resu := range resumeList {
-		println(resu)
-	}
 	wg := sync.WaitGroup{}
 	wg.Add(1)
-	// go startBot()
-	// wg.Wait()
+	go startBot()
+	wg.Wait()
 }

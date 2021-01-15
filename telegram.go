@@ -18,6 +18,7 @@ func helpAndStart(m *tb.Message, bot *tb.Bot) {
 		msg := `loginHHru=<Задать логин от сайта hh.ru>
 passwordHHru=<Задать пароль от сайта hh.ru>
 timeoutResumeUpdate=<Установить частоту обновления резюме (в минутах)>
+setResume=<Сохранить выбранные резюме для обновления (перечислить номера резюме (результат команды getResume) через запятую)>
 getResume Получить список резюме
 getLoginHHru Получить логин на hh.ru
 getTimeoutResumeUpdate Получить тайм-аут`
@@ -44,7 +45,17 @@ func startBot() {
 				savePasswordHHru(m, bot)
 			} else if strings.HasPrefix(strings.ToLower(m.Text), "timeoutresumeupdate") {
 				saveTimeoutResumeUpdate(m, bot)
+			} else if strings.HasPrefix(strings.ToLower(m.Text), "setresume") {
+				saveResume(m, bot)
 			} else if strings.HasPrefix(strings.ToLower(m.Text), "getresume") {
+				bot.Send(m.Sender, "Получаем данные, ожидайте...")
+				ctx, cancel := prepareChrome(false)
+				resumeList := getResumeList(ctx, cancel)
+				msg := ""
+				for i, resume := range resumeList {
+					msg += msg + strconv.Itoa(i+1) + " - " + resume + "\n"
+				}
+				bot.Send(m.Sender, msg)
 			} else if strings.HasPrefix(strings.ToLower(m.Text), "getloginhhru") {
 				lock.Lock()
 				bot.Send(m.Sender, loginHHru)
@@ -60,6 +71,39 @@ func startBot() {
 	})
 	bot.Send(&teleAdminUser, "Запуск - "+time.Now().Format(time.ANSIC))
 	bot.Start()
+}
+
+func saveResume(m *tb.Message, bot *tb.Bot) {
+	text := strings.Split(m.Text, "=")
+	if len(text) == 2 {
+		lock.Lock()
+		if len(strings.TrimSpace(text[1])) > 0 {
+			resumeTmpList := strings.Split(strings.TrimSpace(text[1]), ",")
+			for _, v := range resumeTmpList {
+				var err error
+				_, err = strconv.Atoi(v)
+				if err != nil {
+					bot.Send(m.Sender, "Минимум в одном из параметров не числовое значение")
+					lock.Unlock()
+					return
+				}
+			}
+			resumeForUpdates = []string{}
+			for _, v := range resumeTmpList {
+				resumeForUpdates = append(resumeForUpdates, strings.TrimSpace(v))
+			}
+			saveCfg()
+			lock.Unlock()
+			bot.Send(m.Sender, "Список резюме успешно сохранён")
+			return
+		} else {
+			bot.Send(m.Sender, "Не задано не одного значения")
+			lock.Unlock()
+			return
+		}
+	} else {
+		bot.Send(m.Sender, "Не верная команда")
+	}
 }
 
 func saveTimeoutResumeUpdate(m *tb.Message, bot *tb.Bot) {
