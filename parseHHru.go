@@ -112,3 +112,24 @@ func getResumeList(ctx context.Context, cancel context.CancelFunc) (result []str
 	}
 	return
 }
+
+func goUpdateMonitor() {
+	timeout := 0
+	timeUntilUpdate := 0
+	for {
+		if timeout != timeoutResumeUpdate {
+			lock.Lock()
+			timeout = timeoutResumeUpdate
+			timeUntilUpdate = 0
+			lock.Unlock()
+		}
+		time.Sleep(1 * time.Second)
+		timeUntilUpdate++
+		lock.Lock()
+		tmp := timeoutResumeUpdate
+		lock.Unlock()
+		if timeUntilUpdate >= (tmp * 60) {
+			// TODO...
+		}
+	}
+}
