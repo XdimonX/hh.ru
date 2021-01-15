@@ -3,7 +3,6 @@ package main
 import (
 	"context"
 	"fmt"
-	"io/ioutil"
 	"log"
 	"strings"
 	"time"
@@ -36,17 +35,16 @@ func prepareChrome(visibleBrowser bool) (context.Context, context.CancelFunc) {
 	} else {
 		opts := append(chromedp.DefaultExecAllocatorOptions[:],
 			// chromedp.DisableGPU,
-			chromedp.Flag("headless", true),
+			chromedp.Flag("headless", false),
 			chromedp.Flag("no-first-run", true),
 			chromedp.Flag("no-sandbox", true),
 			// chromedp.Flag("disable-gpu", true),
 			chromedp.Flag("enable-automation", true),
 			chromedp.Flag("restore-on-startup", true),
-			// chromedp.Flag("start-minimized", true),
-			// chromedp.Flag("start-fullscreen", true),
 			chromedp.UserDataDir(userDir),
 			// chromedp.WindowSize(10, 10),
 			chromedp.Flag("minimal", true),
+			chromedp.Flag("window-position", "-1000,-1000"),
 		)
 		ctx, cancel = chromedp.NewExecAllocator(context.Background(), opts...)
 		ctx, cancel = chromedp.NewContext(ctx, chromedp.WithErrorf(log.Printf))
@@ -82,21 +80,16 @@ func getResumeList(ctx context.Context, cancel context.CancelFunc) (result []str
 	defer cancel()
 	var nodes, children []*cdp.Node
 	var resume, status string
-	var screen []byte
 
 	err := chromedp.Run(
 		ctx,
 		chromedp.Navigate("https://togliatti.hh.ru/applicant/resumes?from=header_new"),
-		screenshotTasks(&screen),
 		chromedp.Nodes(`div.bloko-column.bloko-column_xs-4.bloko-column_s-8.bloko-column_m-8.bloko-column_l-11`,
 			&nodes),
 	)
 
-	ioutil.WriteFile("out.png", screen, 0644)
-
 	if err != nil {
 		fmt.Println(err)
-		panic(err)
 	}
 	err = chromedp.Run(
 		ctx,
