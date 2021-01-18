@@ -3,6 +3,7 @@ package main
 import (
 	"context"
 	"fmt"
+	"os/user"
 	"strconv"
 	"strings"
 	"time"
@@ -11,17 +12,28 @@ import (
 	"github.com/chromedp/chromedp"
 )
 
+//Получить домашнюю директорию пользователя
+func getUsrHomeDir() string {
+	usr, err := user.Current()
+	if err != nil {
+		fmt.Println(err)
+	}
+	return usr.HomeDir
+}
+
 //Подготовить контекст для запуска браузера
 func prepareChrome(visibleBrowser bool) (context.Context, context.CancelFunc) {
 	var ctx context.Context
 	var cancel context.CancelFunc
-	userDir := `C:\Users\user`
+	// userDir := `C:\Users\user`
+	userDir := getUsrHomeDir()
 	if visibleBrowser {
 		opts := append(chromedp.DefaultExecAllocatorOptions[:],
-			chromedp.DisableGPU,
+			// chromedp.DisableGPU,
+			chromedp.Flag("start-maximized", true),
 			chromedp.Flag("headless", false),
 			chromedp.Flag("no-first-run", true),
-			// chromedp.Flag("no-sandbox", true),
+			chromedp.Flag("no-sandbox", true),
 			chromedp.Flag("disable-gpu", true),
 			chromedp.Flag("enable-automation", true),
 			chromedp.Flag("restore-on-startup", false),
@@ -37,12 +49,12 @@ func prepareChrome(visibleBrowser bool) (context.Context, context.CancelFunc) {
 			chromedp.Flag("headless", false),
 			chromedp.Flag("no-first-run", true),
 			chromedp.Flag("no-sandbox", true),
-			// chromedp.Flag("disable-gpu", true),
+			chromedp.Flag("disable-gpu", true),
 			chromedp.Flag("enable-automation", true),
 			chromedp.Flag("restore-on-startup", true),
 			chromedp.UserDataDir(userDir),
 			// chromedp.WindowSize(10, 10),
-			chromedp.Flag("minimal", true),
+			// chromedp.Flag("minimal", true),
 			chromedp.Flag("window-position", "-1000,-1000"),
 		)
 		ctx, cancel = chromedp.NewExecAllocator(context.Background(), opts...)
@@ -162,7 +174,7 @@ func updateResume(ctx context.Context, resume string) {
 		if (i + 1) == resumeInt {
 			chromedp.Run(
 				ctx,
-				chromedp.Click("div>div.bloko-gap.bloko-gap_top>div>div>div>div:nth-child(1)>span>button",chromedp.ByQueryAll, chromedp.FromNode(n)),
+				chromedp.Click("div>div.bloko-gap.bloko-gap_top>div>div>div>div:nth-child(1)>span>button", chromedp.ByQueryAll, chromedp.FromNode(n)),
 			)
 		}
 	}

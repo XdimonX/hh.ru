@@ -16,12 +16,21 @@ const (
 func helpAndStart(m *tb.Message, bot *tb.Bot) {
 	if m.Sender.ID == teleAdminID {
 		msg := `loginHHru=<Задать логин от сайта hh.ru>
+
 passwordHHru=<Задать пароль от сайта hh.ru>
+
 timeoutResumeUpdate=<Установить частоту обновления резюме (в минутах)>
+
 setResume=<Сохранить выбранные резюме для обновления (перечислить номера резюме (результат команды getResume) через запятую)>
+
 startUpdate=<(true, false)  принудительно запустить обновление резюме в видимом или не видимом режиме>
+
+startAuthentication Запустить браузер для авторизации
+
 getResume Получить список резюме
+
 getLoginHHru Получить логин на hh.ru
+
 getTimeoutResumeUpdate Получить тайм-аут`
 		bot.Send(m.Sender, msg)
 	}
@@ -43,20 +52,27 @@ func startBot() {
 			if strings.HasPrefix(strings.ToLower(m.Text), "startupdate") {
 				text := strings.Split(m.Text, "=")[1]
 				if strings.ToLower(strings.TrimSpace(text)) == "false" {
+					bot.Send(m.Sender, "Обновляем...")
 					ctx, cancel := prepareChrome(false)
 					for _, resume := range resumeForUpdates {
 						updateResume(ctx, resume)
 					}
 					cancel()
+					bot.Send(m.Sender, "Готово")
 				} else if strings.ToLower(strings.TrimSpace(text)) == "true" {
+					bot.Send(m.Sender, "Обновляем...")
 					ctx, cancel := prepareChrome(true)
 					for _, resume := range resumeForUpdates {
 						updateResume(ctx, resume)
 					}
 					cancel()
+					bot.Send(m.Sender, "Готово")
 				} else {
 					bot.Send(m.Sender, "Не верная команда")
 				}
+			} else if strings.HasPrefix(strings.ToLower(m.Text), "startauthentication") {
+				ctx, cancel := prepareChrome(true)
+				firstRunChrome(ctx, cancel)
 			} else if strings.HasPrefix(strings.ToLower(m.Text), "loginhhru") {
 				saveLoginHHru(m, bot)
 			} else if strings.HasPrefix(strings.ToLower(m.Text), "passwordhhru") {
