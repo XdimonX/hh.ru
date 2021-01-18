@@ -3,12 +3,11 @@ package main
 import (
 	"context"
 	"fmt"
-	"log"
+	"strconv"
 	"strings"
 	"time"
 
 	"github.com/chromedp/cdproto/cdp"
-	"github.com/chromedp/cdproto/page"
 	"github.com/chromedp/chromedp"
 )
 
@@ -30,7 +29,7 @@ func prepareChrome(visibleBrowser bool) (context.Context, context.CancelFunc) {
 		)
 		ctx, cancel = chromedp.NewExecAllocator(context.Background(), opts...)
 		// defer cancel()
-		ctx, cancel = chromedp.NewContext(ctx, chromedp.WithLogf(log.Printf))
+		ctx, cancel = chromedp.NewContext(ctx)
 		// defer cancel()
 	} else {
 		opts := append(chromedp.DefaultExecAllocatorOptions[:],
@@ -47,7 +46,7 @@ func prepareChrome(visibleBrowser bool) (context.Context, context.CancelFunc) {
 			chromedp.Flag("window-position", "-1000,-1000"),
 		)
 		ctx, cancel = chromedp.NewExecAllocator(context.Background(), opts...)
-		ctx, cancel = chromedp.NewContext(ctx, chromedp.WithErrorf(log.Printf))
+		ctx, cancel = chromedp.NewContext(ctx)
 
 		// defer cancel()
 		_ = ctx
@@ -62,15 +61,6 @@ func firstRunChrome(ctx context.Context, cancel context.CancelFunc) {
 		chromedp.WaitVisible(`/html/body/div[4]/div[1]/div/div/div[1]/div[1]/a`),
 	)
 	cancel()
-}
-
-func screenshotTasks(imageBuf *[]byte) chromedp.Tasks {
-	return chromedp.Tasks{
-		chromedp.ActionFunc(func(ctx context.Context) (err error) {
-			*imageBuf, err = page.CaptureScreenshot().WithQuality(90).Do(ctx)
-			return err
-		}),
-	}
 }
 
 //Получить список резюме
@@ -113,7 +103,8 @@ func getResumeList(ctx context.Context, cancel context.CancelFunc) (result []str
 	return
 }
 
-func goUpdateMonitor() {
+//Монитор обновлния резюме
+func goUpdateMonitor(visibleBrowser bool) {
 	timeout := 0
 	timeUntilUpdate := 0
 	for {
@@ -130,6 +121,49 @@ func goUpdateMonitor() {
 		lock.Unlock()
 		if timeUntilUpdate >= (tmp * 60) {
 			// TODO...
+			var ctx context.Context
+			var cancel context.CancelFunc
+			if visibleBrowser {
+				ctx, cancel = prepareChrome(true)
+			} else {
+				ctx, cancel = prepareChrome(false)
+			}
+			for _, v := range resumeForUpdates {
+				updateResume(ctx, v)
+			}
+			cancel()
+			timeUntilUpdate = 0
+		}
+	}
+}
+
+func updateResume(ctx context.Context, resume string) {
+	var nodes, children []*cdp.Node
+	ctx, _ = context.WithTimeout(ctx, 25*time.Second)
+	err := chromedp.Run(
+		ctx,
+		chromedp.Navigate("https://togliatti.hh.ru/applicant/resumes?from=header_new"),
+		chromedp.Nodes(`div.bloko-column.bloko-column_xs-4.bloko-column_s-8.bloko-column_m-8.bloko-column_l-11`,
+			&nodes),
+	)
+	if err != nil {
+		fmt.Println(err)
+	}
+	err = chromedp.Run(
+		ctx,
+		chromedp.Nodes("div.bloko-gap.bloko-gap_top.bloko-gap_bottom",
+			&children, chromedp.ByQueryAll, chromedp.FromNode(nodes[0])),
+	)
+	if err != nil {
+		fmt.Println(err)
+	}
+	for i, n := range children {
+		resumeInt, _ := strconv.Atoi(resume)
+		if (i + 1) == resumeInt {
+			chromedp.Run(
+				ctx,
+				chromedp.Click("div>div.bloko-gap.bloko-gap_top>div>div>div>div:nth-child(1)>span>button",chromedp.ByQueryAll, chromedp.FromNode(n)),
+			)
 		}
 	}
 }

@@ -19,6 +19,7 @@ func helpAndStart(m *tb.Message, bot *tb.Bot) {
 passwordHHru=<Задать пароль от сайта hh.ru>
 timeoutResumeUpdate=<Установить частоту обновления резюме (в минутах)>
 setResume=<Сохранить выбранные резюме для обновления (перечислить номера резюме (результат команды getResume) через запятую)>
+startUpdate=<(true, false)  принудительно запустить обновление резюме в видимом или не видимом режиме>
 getResume Получить список резюме
 getLoginHHru Получить логин на hh.ru
 getTimeoutResumeUpdate Получить тайм-аут`
@@ -39,7 +40,24 @@ func startBot() {
 
 	bot.Handle(tb.OnText, func(m *tb.Message) {
 		if m.Sender.ID == teleAdminID {
-			if strings.HasPrefix(strings.ToLower(m.Text), "loginhhru") {
+			if strings.HasPrefix(strings.ToLower(m.Text), "startupdate") {
+				text := strings.Split(m.Text, "=")[1]
+				if strings.ToLower(strings.TrimSpace(text)) == "false" {
+					ctx, cancel := prepareChrome(false)
+					for _, resume := range resumeForUpdates {
+						updateResume(ctx, resume)
+					}
+					cancel()
+				} else if strings.ToLower(strings.TrimSpace(text)) == "true" {
+					ctx, cancel := prepareChrome(true)
+					for _, resume := range resumeForUpdates {
+						updateResume(ctx, resume)
+					}
+					cancel()
+				} else {
+					bot.Send(m.Sender, "Не верная команда")
+				}
+			} else if strings.HasPrefix(strings.ToLower(m.Text), "loginhhru") {
 				saveLoginHHru(m, bot)
 			} else if strings.HasPrefix(strings.ToLower(m.Text), "passwordhhru") {
 				savePasswordHHru(m, bot)
