@@ -37,6 +37,7 @@ getTimeoutResumeUpdate Получить тайм-аут`
 }
 
 func startBot() {
+	chromeIsRunning := false
 	bot, err := tb.NewBot(tb.Settings{Token: token, Poller: &tb.LongPoller{Timeout: 10 * time.Second}})
 	checkErr(err)
 	teleAdminUser := tb.User{ID: teleAdminID}
@@ -51,28 +52,40 @@ func startBot() {
 		if m.Sender.ID == teleAdminID {
 			if strings.HasPrefix(strings.ToLower(m.Text), "startupdate") {
 				text := strings.Split(m.Text, "=")[1]
-				if strings.ToLower(strings.TrimSpace(text)) == "false" {
-					bot.Send(m.Sender, "Обновляем...")
-					ctx, cancel := prepareChrome(false)
-					for _, resume := range resumeForUpdates {
-						updateResume(ctx, resume)
+				if !chromeIsRunning {
+					chromeIsRunning = true
+					if strings.ToLower(strings.TrimSpace(text)) == "false" {
+						bot.Send(m.Sender, "Обновляем...")
+						ctx, cancel := prepareChrome(false)
+						for _, resume := range resumeForUpdates {
+							updateResume(ctx, resume)
+						}
+						cancel()
+						bot.Send(m.Sender, "Готово")
+					} else if strings.ToLower(strings.TrimSpace(text)) == "true" {
+						bot.Send(m.Sender, "Обновляем...")
+						ctx, cancel := prepareChrome(true)
+						for _, resume := range resumeForUpdates {
+							updateResume(ctx, resume)
+						}
+						cancel()
+						bot.Send(m.Sender, "Готово")
+					} else {
+						bot.Send(m.Sender, "Не верная команда")
 					}
-					cancel()
-					bot.Send(m.Sender, "Готово")
-				} else if strings.ToLower(strings.TrimSpace(text)) == "true" {
-					bot.Send(m.Sender, "Обновляем...")
-					ctx, cancel := prepareChrome(true)
-					for _, resume := range resumeForUpdates {
-						updateResume(ctx, resume)
-					}
-					cancel()
-					bot.Send(m.Sender, "Готово")
+					chromeIsRunning = false
 				} else {
-					bot.Send(m.Sender, "Не верная команда")
+					bot.Send(m.Sender, "Процедура уже запущена")
 				}
 			} else if strings.HasPrefix(strings.ToLower(m.Text), "startauthentication") {
-				ctx, cancel := prepareChrome(true)
-				firstRunChrome(ctx, cancel)
+				if !chromeIsRunning {
+					chromeIsRunning = true
+					ctx, cancel := prepareChrome(true)
+					firstRunChrome(ctx, cancel)
+					chromeIsRunning = false
+				} else {
+					bot.Send(m.Sender, "Процедура уже запущена")
+				}
 			} else if strings.HasPrefix(strings.ToLower(m.Text), "loginhhru") {
 				saveLoginHHru(m, bot)
 			} else if strings.HasPrefix(strings.ToLower(m.Text), "passwordhhru") {
@@ -82,14 +95,20 @@ func startBot() {
 			} else if strings.HasPrefix(strings.ToLower(m.Text), "setresume") {
 				saveResume(m, bot)
 			} else if strings.HasPrefix(strings.ToLower(m.Text), "getresume") {
-				bot.Send(m.Sender, "Получаем данные, ожидайте...")
-				ctx, cancel := prepareChrome(false)
-				resumeList := getResumeList(ctx, cancel)
-				msg := ""
-				for i, resume := range resumeList {
-					msg += msg + strconv.Itoa(i+1) + " - " + resume + "\n"
+				if !chromeIsRunning {
+					chromeIsRunning = true
+					bot.Send(m.Sender, "Получаем данные, ожидайте...")
+					ctx, cancel := prepareChrome(false)
+					resumeList := getResumeList(ctx, cancel)
+					msg := ""
+					for i, resume := range resumeList {
+						msg += msg + strconv.Itoa(i+1) + " - " + resume + "\n"
+					}
+					bot.Send(m.Sender, msg)
+					chromeIsRunning = false
+				} else {
+					bot.Send(m.Sender, "Процедура уже запущена")
 				}
-				bot.Send(m.Sender, msg)
 			} else if strings.HasPrefix(strings.ToLower(m.Text), "getloginhhru") {
 				lock.Lock()
 				bot.Send(m.Sender, loginHHru)

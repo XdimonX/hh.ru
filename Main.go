@@ -33,5 +33,6 @@ func main() {
 	wg := sync.WaitGroup{}
 	wg.Add(1)
 	go startBot()
+	go goUpdateMonitor(true)
 	wg.Wait()
 }
