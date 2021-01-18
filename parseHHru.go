@@ -77,6 +77,10 @@ func firstRunChrome(ctx context.Context, cancel context.CancelFunc) {
 
 //Получить список резюме
 func getResumeList(ctx context.Context, cancel context.CancelFunc) (result []string) {
+	if ctx.Err()!=nil{
+		fmt.Println(ctx.Err())
+		return
+	}
 	defer cancel()
 	ctx, cancel = context.WithTimeout(ctx, 25*time.Second)
 	defer cancel()
@@ -92,6 +96,7 @@ func getResumeList(ctx context.Context, cancel context.CancelFunc) (result []str
 
 	if err != nil {
 		fmt.Println(err)
+		return
 	}
 	err = chromedp.Run(
 		ctx,
@@ -100,6 +105,7 @@ func getResumeList(ctx context.Context, cancel context.CancelFunc) (result []str
 	)
 	if err != nil {
 		fmt.Println(err)
+		return
 	}
 	for _, n := range children {
 		chromedp.Run(
@@ -132,7 +138,6 @@ func goUpdateMonitor(visibleBrowser bool) {
 		tmp := timeoutResumeUpdate
 		lock.Unlock()
 		if timeUntilUpdate >= (tmp * 60) {
-			// TODO...
 			var ctx context.Context
 			var cancel context.CancelFunc
 			if visibleBrowser {
@@ -160,6 +165,7 @@ func updateResume(ctx context.Context, resume string) {
 	)
 	if err != nil {
 		fmt.Println(err)
+		return
 	}
 	err = chromedp.Run(
 		ctx,
@@ -168,6 +174,7 @@ func updateResume(ctx context.Context, resume string) {
 	)
 	if err != nil {
 		fmt.Println(err)
+		return
 	}
 	for i, n := range children {
 		resumeInt, _ := strconv.Atoi(resume)

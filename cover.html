@@ -63,7 +63,7 @@
 				
 				<option value="file3">x.hh.ru/firstEncrypt.go (0.0%)</option>
 				
-				<option value="file4">x.hh.ru/parseHHru.go (4.3%)</option>
+				<option value="file4">x.hh.ru/parseHHru.go (73.7%)</option>
 				
 				<option value="file5">x.hh.ru/telegram.go (0.0%)</option>
 				
@@ -283,12 +283,12 @@ func getUsrHomeDir() string <span class="cov8" title="1">{
 }
 
 //Подготовить контекст для запуска браузера
-func prepareChrome(visibleBrowser bool) (context.Context, context.CancelFunc) <span class="cov0" title="0">{
+func prepareChrome(visibleBrowser bool) (context.Context, context.CancelFunc) <span class="cov8" title="1">{
         var ctx context.Context
         var cancel context.CancelFunc
         // userDir := `C:\Users\user`
         userDir := getUsrHomeDir()
-        if visibleBrowser </span><span class="cov0" title="0">{
+        if visibleBrowser </span><span class="cov8" title="1">{
                 opts := append(chromedp.DefaultExecAllocatorOptions[:],
                         // chromedp.DisableGPU,
                         chromedp.Flag("start-maximized", true),
@@ -304,7 +304,7 @@ func prepareChrome(visibleBrowser bool) (context.Context, context.CancelFunc) <s
                 // defer cancel()
                 ctx, cancel = chromedp.NewContext(ctx)
                 // defer cancel()
-        }</span> else<span class="cov0" title="0"> {
+        }</span> else<span class="cov8" title="1"> {
                 opts := append(chromedp.DefaultExecAllocatorOptions[:],
                         // chromedp.DisableGPU,
                         chromedp.Flag("headless", false),
@@ -324,11 +324,11 @@ func prepareChrome(visibleBrowser bool) (context.Context, context.CancelFunc) <s
                 // defer cancel()
                 _ = ctx
         }</span>
-        <span class="cov0" title="0">return ctx, cancel</span>
+        <span class="cov8" title="1">return ctx, cancel</span>
 }
 
 //При первом запуске необходимо авторизоваться вручную
-func firstRunChrome(ctx context.Context, cancel context.CancelFunc) <span class="cov0" title="0">{
+func firstRunChrome(ctx context.Context, cancel context.CancelFunc) <span class="cov8" title="1">{
         chromedp.Run(ctx,
                 chromedp.Navigate("https://togliatti.hh.ru/account/login?backurl=%2F"),
                 chromedp.WaitVisible(`/html/body/div[4]/div[1]/div/div/div[1]/div[1]/a`),
@@ -337,8 +337,12 @@ func firstRunChrome(ctx context.Context, cancel context.CancelFunc) <span class=
 }</span>
 
 //Получить список резюме
-func getResumeList(ctx context.Context, cancel context.CancelFunc) (result []string) <span class="cov0" title="0">{
-        defer cancel()
+func getResumeList(ctx context.Context, cancel context.CancelFunc) (result []string) <span class="cov8" title="1">{
+        if ctx.Err()!=nil</span><span class="cov0" title="0">{
+                fmt.Println(ctx.Err())
+                return
+        }</span>
+        <span class="cov8" title="1">defer cancel()
         ctx, cancel = context.WithTimeout(ctx, 25*time.Second)
         defer cancel()
         var nodes, children []*cdp.Node
@@ -353,47 +357,48 @@ func getResumeList(ctx context.Context, cancel context.CancelFunc) (result []str
 
         if err != nil </span><span class="cov0" title="0">{
                 fmt.Println(err)
+                return
         }</span>
-        <span class="cov0" title="0">err = chromedp.Run(
+        <span class="cov8" title="1">err = chromedp.Run(
                 ctx,
                 chromedp.Nodes("div.bloko-gap.bloko-gap_top.bloko-gap_bottom",
                         &amp;children, chromedp.ByQueryAll, chromedp.FromNode(nodes[0])),
         )
         if err != nil </span><span class="cov0" title="0">{
                 fmt.Println(err)
+                return
         }</span>
-        <span class="cov0" title="0">for _, n := range children </span><span class="cov0" title="0">{
+        <span class="cov8" title="1">for _, n := range children </span><span class="cov8" title="1">{
                 chromedp.Run(
                         ctx,
                         chromedp.Text("div&gt;h3&gt;a&gt;span", &amp;resume, chromedp.ByQueryAll, chromedp.FromNode(n)),
                         chromedp.Text("div&gt;div.applicant-resumes-status",
                                 &amp;status, chromedp.ByQueryAll, chromedp.FromNode(n)),
                 )
-                if strings.ToLower(status) != "не видно никому" </span><span class="cov0" title="0">{
+                if strings.ToLower(status) != "не видно никому" </span><span class="cov8" title="1">{
                         result = append(result, resume)
                 }</span>
         }
-        <span class="cov0" title="0">return</span>
+        <span class="cov8" title="1">return</span>
 }
 
 //Монитор обновлния резюме
-func goUpdateMonitor(visibleBrowser bool) <span class="cov0" title="0">{
+func goUpdateMonitor(visibleBrowser bool) <span class="cov8" title="1">{
         timeout := 0
         timeUntilUpdate := 0
-        for </span><span class="cov0" title="0">{
-                if timeout != timeoutResumeUpdate </span><span class="cov0" title="0">{
+        for </span><span class="cov8" title="1">{
+                if timeout != timeoutResumeUpdate </span><span class="cov8" title="1">{
                         lock.Lock()
                         timeout = timeoutResumeUpdate
                         timeUntilUpdate = 0
                         lock.Unlock()
                 }</span>
-                <span class="cov0" title="0">time.Sleep(1 * time.Second)
+                <span class="cov8" title="1">time.Sleep(1 * time.Second)
                 timeUntilUpdate++
                 lock.Lock()
                 tmp := timeoutResumeUpdate
                 lock.Unlock()
                 if timeUntilUpdate &gt;= (tmp * 60) </span><span class="cov0" title="0">{
-                        // TODO...
                         var ctx context.Context
                         var cancel context.CancelFunc
                         if visibleBrowser </span><span class="cov0" title="0">{
@@ -410,7 +415,7 @@ func goUpdateMonitor(visibleBrowser bool) <span class="cov0" title="0">{
         }
 }
 
-func updateResume(ctx context.Context, resume string) <span class="cov0" title="0">{
+func updateResume(ctx context.Context, resume string) <span class="cov8" title="1">{
         var nodes, children []*cdp.Node
         ctx, _ = context.WithTimeout(ctx, 25*time.Second)
         err := chromedp.Run(
@@ -421,18 +426,20 @@ func updateResume(ctx context.Context, resume string) <span class="cov0" title="
         )
         if err != nil </span><span class="cov0" title="0">{
                 fmt.Println(err)
+                return
         }</span>
-        <span class="cov0" title="0">err = chromedp.Run(
+        <span class="cov8" title="1">err = chromedp.Run(
                 ctx,
                 chromedp.Nodes("div.bloko-gap.bloko-gap_top.bloko-gap_bottom",
                         &amp;children, chromedp.ByQueryAll, chromedp.FromNode(nodes[0])),
         )
         if err != nil </span><span class="cov0" title="0">{
                 fmt.Println(err)
+                return
         }</span>
-        <span class="cov0" title="0">for i, n := range children </span><span class="cov0" title="0">{
+        <span class="cov8" title="1">for i, n := range children </span><span class="cov8" title="1">{
                 resumeInt, _ := strconv.Atoi(resume)
-                if (i + 1) == resumeInt </span><span class="cov0" title="0">{
+                if (i + 1) == resumeInt </span><span class="cov8" title="1">{
                         chromedp.Run(
                                 ctx,
                                 chromedp.Click("div&gt;div.bloko-gap.bloko-gap_top&gt;div&gt;div&gt;div&gt;div:nth-child(1)&gt;span&gt;button", chromedp.ByQueryAll, chromedp.FromNode(n)),
