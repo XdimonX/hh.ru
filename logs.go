@@ -12,4 +12,5 @@ func prepareLogger() {
 	}
 	log.SetOutput(logFile)
 	// log.SetPrefix("")
+	log.SetFlags(log.Lshortfile)
 }
