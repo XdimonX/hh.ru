@@ -3,6 +3,7 @@ package main
 import (
 	"context"
 	"fmt"
+	"log"
 	"os/user"
 	"strconv"
 	"strings"
@@ -168,6 +169,7 @@ func updateResume(ctx context.Context, resume string) {
 	)
 	if err != nil {
 		fmt.Println(err)
+		log.Println(err)
 		return
 	}
 	err = chromedp.Run(
@@ -177,15 +179,20 @@ func updateResume(ctx context.Context, resume string) {
 	)
 	if err != nil {
 		fmt.Println(err)
+		log.Println(err)
 		return
 	}
 	for i, n := range children {
 		resumeInt, _ := strconv.Atoi(resume)
 		if (i + 1) == resumeInt {
-			chromedp.Run(
+			err = chromedp.Run(
 				ctx,
 				chromedp.Click("div>div.bloko-gap.bloko-gap_top>div>div>div>div:nth-child(1)>span>button", chromedp.ByQueryAll, chromedp.FromNode(n)),
 			)
+			if err != nil {
+				log.Println(err)
+				return
+			}
 		}
 	}
 }

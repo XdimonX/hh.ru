@@ -29,6 +29,7 @@ func checkErr(err error) {
 }
 
 func main() {
+	prepareLogger()
 	parseCfg()
 	wg := sync.WaitGroup{}
 	wg.Add(1)
