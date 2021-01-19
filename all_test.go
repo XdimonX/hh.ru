@@ -11,6 +11,9 @@ func TestParseCfg(t *testing.T) {
 }
 
 func TestSaveCfg(t *testing.T) {
+	resumeForUpdates = append(resumeForUpdates, "2")
+	saveCfg()
+	resumeForUpdates = []string{"1"}
 	saveCfg()
 }
 
@@ -38,6 +41,8 @@ func TestPrepareChrome2(t *testing.T) {
 	cancel()
 	ctx, cancel = prepareChrome(false)
 	getResumeList(ctx, cancel)
+	cancel()
+	getResumeList(nil, cancel)
 	cancel()
 	ctx, cancel = prepareChrome(false)
 	firstRunChrome(ctx, cancel)

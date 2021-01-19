@@ -77,7 +77,10 @@ func firstRunChrome(ctx context.Context, cancel context.CancelFunc) {
 
 //Получить список резюме
 func getResumeList(ctx context.Context, cancel context.CancelFunc) (result []string) {
-	if ctx.Err()!=nil{
+	if ctx == nil {
+		return
+	}
+	if ctx.Err() != nil {
 		fmt.Println(ctx.Err())
 		return
 	}
@@ -121,22 +124,22 @@ func getResumeList(ctx context.Context, cancel context.CancelFunc) (result []str
 	return
 }
 
-//Монитор обновлния резюме
+//Монитор обновления резюме
 func goUpdateMonitor(visibleBrowser bool) {
 	timeout := 0
 	timeUntilUpdate := 0
 	for {
-		if timeout != timeoutResumeUpdate {
+		lock.Lock()
+		tmp := timeoutResumeUpdate
+		lock.Unlock()
+		if timeout != tmp {
 			lock.Lock()
-			timeout = timeoutResumeUpdate
+			timeout = tmp
 			timeUntilUpdate = 0
 			lock.Unlock()
 		}
 		time.Sleep(1 * time.Second)
 		timeUntilUpdate++
-		lock.Lock()
-		tmp := timeoutResumeUpdate
-		lock.Unlock()
 		if timeUntilUpdate >= (tmp * 60) {
 			var ctx context.Context
 			var cancel context.CancelFunc
