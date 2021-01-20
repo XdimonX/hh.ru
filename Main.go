@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+	"log"
 	"os"
 	"sync"
 )
@@ -24,6 +25,7 @@ var (
 func checkErr(err error) {
 	if err != nil {
 		fmt.Println(err)
+		log.Fatal(err)
 		os.Exit(2)
 	}
 }

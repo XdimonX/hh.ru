@@ -162,6 +162,7 @@ func goUpdateMonitor(visibleBrowser bool) {
 	}
 }
 
+//Функция обновления резюме
 func updateResume(ctx context.Context, resume string) {
 	var nodes, children []*cdp.Node
 	ctx, _ = context.WithTimeout(ctx, 25*time.Second)
@@ -189,12 +190,8 @@ func updateResume(ctx context.Context, resume string) {
 	for i, n := range children {
 		resumeInt, _ := strconv.Atoi(resume)
 		if (i + 1) == resumeInt {
-			var buttonNode []*cdp.Node
 			err = chromedp.Run(
 				ctx,
-				// chromedp.ScrollIntoView("div>div.bloko-gap.bloko-gap_top>div>div>div>div:nth-child(1)>span>button", chromedp.ByQueryAll, chromedp.FromNode(n)),
-				// chromedp.Focus("div>div.bloko-gap.bloko-gap_top>div>div>div>div:nth-child(1)>span>button", chromedp.ByQueryAll, chromedp.FromNode(n)),
-				chromedp.Nodes("div>div.bloko-gap.bloko-gap_top>div>div>div>div:nth-child(1)>span>button", &buttonNode, chromedp.ByQueryAll, chromedp.FromNode(n)),
 				chromedp.Click("div>div.bloko-gap.bloko-gap_top>div>div>div>div:nth-child(1)>span>button", chromedp.ByQueryAll, chromedp.FromNode(n), chromedp.NodeVisible),
 				chromedp.DoubleClick("div>div.bloko-gap.bloko-gap_top>div>div>div>div:nth-child(1)>span>button", chromedp.ByQueryAll, chromedp.FromNode(n), chromedp.NodeVisible),
 			)
@@ -202,17 +199,7 @@ func updateResume(ctx context.Context, resume string) {
 				log.Println(err)
 				return
 			}
-			// var screen []byte
-			// err = chromedp.Run(
-			// 	ctx,
-			// 	fullScreenshot("screenBefore.png", 90, &screen),
-			// 	chromedp.MouseClickNode(buttonNode[0], chromedp.ButtonLeft, chromedp.ClickCount(10)),
-			// 	fullScreenshot("screenAfter.png", 90, &screen),
-			// )
-			// if err != nil {
-			// 	log.Println(err)
-			// 	return
-			// }
+			log.Println("Successful resume update")
 		}
 	}
 }

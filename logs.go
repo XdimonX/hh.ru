@@ -11,6 +11,5 @@ func prepareLogger() {
 		os.Exit(2)
 	}
 	log.SetOutput(logFile)
-	// log.SetPrefix("")
 	log.SetFlags(log.Ldate | log.Ltime | log.Lshortfile)
 }
