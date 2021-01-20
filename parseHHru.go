@@ -3,13 +3,17 @@ package main
 import (
 	"context"
 	"fmt"
+	"io/ioutil"
 	"log"
+	"math"
 	"os/user"
 	"strconv"
 	"strings"
 	"time"
 
 	"github.com/chromedp/cdproto/cdp"
+	"github.com/chromedp/cdproto/emulation"
+	"github.com/chromedp/cdproto/page"
 	"github.com/chromedp/chromedp"
 )
 
@@ -54,9 +58,9 @@ func prepareChrome(visibleBrowser bool) (context.Context, context.CancelFunc) {
 			chromedp.Flag("enable-automation", true),
 			chromedp.Flag("restore-on-startup", true),
 			chromedp.UserDataDir(userDir),
-			// chromedp.WindowSize(10, 10),
+			chromedp.WindowSize(1280, 1024),
 			// chromedp.Flag("minimal", true),
-			chromedp.Flag("window-position", "-1000,-1000"),
+			chromedp.Flag("window-position", "-10000,-10000"),
 		)
 		ctx, cancel = chromedp.NewExecAllocator(context.Background(), opts...)
 		ctx, cancel = chromedp.NewContext(ctx)
@@ -188,22 +192,68 @@ func updateResume(ctx context.Context, resume string) {
 			var buttonNode []*cdp.Node
 			err = chromedp.Run(
 				ctx,
-				chromedp.ScrollIntoView("div>div.bloko-gap.bloko-gap_top>div>div>div>div:nth-child(1)>span>button", chromedp.ByQueryAll, chromedp.FromNode(n)),
-				chromedp.Focus("div>div.bloko-gap.bloko-gap_top>div>div>div>div:nth-child(1)>span>button", chromedp.ByQueryAll, chromedp.FromNode(n)),
+				// chromedp.ScrollIntoView("div>div.bloko-gap.bloko-gap_top>div>div>div>div:nth-child(1)>span>button", chromedp.ByQueryAll, chromedp.FromNode(n)),
+				// chromedp.Focus("div>div.bloko-gap.bloko-gap_top>div>div>div>div:nth-child(1)>span>button", chromedp.ByQueryAll, chromedp.FromNode(n)),
 				chromedp.Nodes("div>div.bloko-gap.bloko-gap_top>div>div>div>div:nth-child(1)>span>button", &buttonNode, chromedp.ByQueryAll, chromedp.FromNode(n)),
+				chromedp.Click("div>div.bloko-gap.bloko-gap_top>div>div>div>div:nth-child(1)>span>button", chromedp.ByQueryAll, chromedp.FromNode(n), chromedp.NodeVisible),
+				chromedp.DoubleClick("div>div.bloko-gap.bloko-gap_top>div>div>div>div:nth-child(1)>span>button", chromedp.ByQueryAll, chromedp.FromNode(n), chromedp.NodeVisible),
 			)
 			if err != nil {
 				log.Println(err)
 				return
 			}
-			err = chromedp.Run(
-				ctx,
-				chromedp.MouseClickNode(buttonNode[0], chromedp.ButtonLeft),
-			)
-			if err != nil {
-				log.Println(err)
-				return
-			}
+			// var screen []byte
+			// err = chromedp.Run(
+			// 	ctx,
+			// 	fullScreenshot("screenBefore.png", 90, &screen),
+			// 	chromedp.MouseClickNode(buttonNode[0], chromedp.ButtonLeft, chromedp.ClickCount(10)),
+			// 	fullScreenshot("screenAfter.png", 90, &screen),
+			// )
+			// if err != nil {
+			// 	log.Println(err)
+			// 	return
+			// }
 		}
+	}
+}
+
+func fullScreenshot(filename string, quality int64, res *[]byte) chromedp.Tasks {
+	return chromedp.Tasks{
+		chromedp.ActionFunc(func(ctx context.Context) error {
+			// get layout metrics
+			_, _, contentSize, err := page.GetLayoutMetrics().Do(ctx)
+			if err != nil {
+				return err
+			}
+
+			width, height := int64(math.Ceil(contentSize.Width)), int64(math.Ceil(contentSize.Height))
+
+			// force viewport emulation
+			err = emulation.SetDeviceMetricsOverride(width, height, 1, false).
+				WithScreenOrientation(&emulation.ScreenOrientation{
+					Type:  emulation.OrientationTypePortraitPrimary,
+					Angle: 0,
+				}).
+				Do(ctx)
+			if err != nil {
+				return err
+			}
+
+			// capture screenshot
+			*res, err = page.CaptureScreenshot().
+				WithQuality(quality).
+				WithClip(&page.Viewport{
+					X:      contentSize.X,
+					Y:      contentSize.Y,
+					Width:  contentSize.Width,
+					Height: contentSize.Height,
+					Scale:  1,
+				}).Do(ctx)
+			if err != nil {
+				return err
+			}
+			ioutil.WriteFile(filename, *res, 0644)
+			return nil
+		}),
 	}
 }

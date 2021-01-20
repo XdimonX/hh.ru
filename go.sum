@@ -1,3 +1,5 @@
+github.com/BurntSushi/xgb v0.0.0-20201008132610-5f9e7b3c49cd h1:u7K2oMFMd8APDV3fM1j2rO3U/XJf1g1qC3DDTKou8iM=
+github.com/BurntSushi/xgb v0.0.0-20201008132610-5f9e7b3c49cd/go.mod h1:IVnqGOEym/WlBOVXweHU+Q+/VP0lqqI8lqeDx9IjBqo=
 github.com/chromedp/cdproto v0.0.0-20210113043257-dabd2f2e7693 h1:11eq/RkpaotwdF6b1TRMcdgQUPNmyFEJOB7zLvh0O/Y=
 github.com/chromedp/cdproto v0.0.0-20210113043257-dabd2f2e7693/go.mod h1:55pim6Ht4LJKdVLlyFJV/g++HsEA1hQxPbB5JyNdZC0=
 github.com/chromedp/chromedp v0.6.1 h1:5jUNWGaXezV5jckiM+Y2AnJ3KU3xmvIFh9CsOjx1QqA=
