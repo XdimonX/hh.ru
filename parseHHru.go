@@ -164,7 +164,9 @@ func goUpdateMonitor(visibleBrowser bool) {
 
 //Функция обновления резюме
 func updateResume(ctx context.Context, resume string) {
-	var nodes, children []*cdp.Node
+	var (
+		nodes, children []*cdp.Node
+	)
 	ctx, _ = context.WithTimeout(ctx, 25*time.Second)
 	err := chromedp.Run(
 		ctx,
