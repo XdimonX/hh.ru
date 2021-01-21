@@ -135,6 +135,12 @@ func goUpdateMonitor(visibleBrowser bool) {
 	timeUntilUpdate := 0
 	for {
 		lock.Lock()
+		if !working {
+			timeout = 0
+			timeUntilUpdate = 0
+			lock.Unlock()
+			continue
+		}
 		tmp := timeoutResumeUpdate
 		lock.Unlock()
 		if timeout != tmp {

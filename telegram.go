@@ -19,13 +19,17 @@ func helpAndStart(m *tb.Message, bot *tb.Bot) {
 
 setResume=<Сохранить выбранные резюме для обновления (перечислить номера резюме (результат команды getResume) через запятую)>
 
+setUpdateService=<true|false остановить или запустить службу обновления резюме
+
 startUpdate=<(true, false)  принудительно запустить обновление резюме в видимом или не видимом режиме>
 
 startAuthentication Запустить браузер для авторизации
 
 getResume Получить список резюме
 
-getTimeoutResumeUpdate Получить тайм-аут`
+getTimeoutResumeUpdate Получить тайм-аут
+
+getUpdateStatus Получить состояние службы обновления резюме`
 		bot.Send(m.Sender, msg)
 	}
 }
@@ -71,6 +75,16 @@ func startBot() {
 				} else {
 					bot.Send(m.Sender, "Процедура уже запущена")
 				}
+			} else if strings.HasPrefix(strings.ToLower(m.Text), "setupdateservice") {
+				setUpdateService(m, bot)
+			} else if strings.HasPrefix(strings.ToLower(m.Text), "getupdatestatus") {
+				lock.Lock()
+				if working {
+					bot.Send(m.Sender, "Служба обновления резюме работает")
+				} else {
+					bot.Send(m.Sender, "Служба обновления резюме не работает")
+				}
+				lock.Unlock()
 			} else if strings.HasPrefix(strings.ToLower(m.Text), "startauthentication") {
 				if !chromeIsRunning {
 					chromeIsRunning = true
@@ -185,6 +199,26 @@ func savePasswordHHru(m *tb.Message, bot *tb.Bot) {
 		saveCfg()
 		lock.Unlock()
 		bot.Send(m.Sender, "Пароль успешно сохранён")
+	} else {
+		bot.Send(m.Sender, "Не верная команда")
+	}
+}
+
+func setUpdateService(m *tb.Message, bot *tb.Bot) {
+	message := strings.Split(m.Text, "=")
+	if len(message) == 2 && (strings.ToLower(message[1]) == "true" || strings.ToLower(message[1]) == "false") {
+		lock.Lock()
+		switch strings.ToLower(message[1]) {
+		case "true":
+			working = true
+			bot.Send(m.Sender, "Служба обновления резюме теперь работает")
+		case "false":
+			working = false
+			bot.Send(m.Sender, "Служба обновления резюме теперь не работает")
+		default:
+			bot.Send(m.Sender, "Не верная команда")
+		}
+		lock.Unlock()
 	} else {
 		bot.Send(m.Sender, "Не верная команда")
 	}

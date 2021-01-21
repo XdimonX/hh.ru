@@ -20,6 +20,7 @@ var (
 	resumeForUpdates    []string
 	timeoutResumeUpdate = 0
 	lock                = &sync.Mutex{}
+	working             = true
 )
 
 func checkErr(err error) {
