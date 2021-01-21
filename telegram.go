@@ -15,11 +15,7 @@ const (
 
 func helpAndStart(m *tb.Message, bot *tb.Bot) {
 	if m.Sender.ID == teleAdminID {
-		msg := `loginHHru=<Задать логин от сайта hh.ru>
-
-passwordHHru=<Задать пароль от сайта hh.ru>
-
-timeoutResumeUpdate=<Установить частоту обновления резюме (в минутах)>
+		msg := `timeoutResumeUpdate=<Установить частоту обновления резюме (в минутах)>
 
 setResume=<Сохранить выбранные резюме для обновления (перечислить номера резюме (результат команды getResume) через запятую)>
 
@@ -28,8 +24,6 @@ startUpdate=<(true, false)  принудительно запустить обн
 startAuthentication Запустить браузер для авторизации
 
 getResume Получить список резюме
-
-getLoginHHru Получить логин на hh.ru
 
 getTimeoutResumeUpdate Получить тайм-аут`
 		bot.Send(m.Sender, msg)
@@ -86,10 +80,6 @@ func startBot() {
 				} else {
 					bot.Send(m.Sender, "Процедура уже запущена")
 				}
-			} else if strings.HasPrefix(strings.ToLower(m.Text), "loginhhru") {
-				saveLoginHHru(m, bot)
-			} else if strings.HasPrefix(strings.ToLower(m.Text), "passwordhhru") {
-				savePasswordHHru(m, bot)
 			} else if strings.HasPrefix(strings.ToLower(m.Text), "timeoutresumeupdate") {
 				saveTimeoutResumeUpdate(m, bot)
 			} else if strings.HasPrefix(strings.ToLower(m.Text), "setresume") {
@@ -109,10 +99,6 @@ func startBot() {
 				} else {
 					bot.Send(m.Sender, "Процедура уже запущена")
 				}
-			} else if strings.HasPrefix(strings.ToLower(m.Text), "getloginhhru") {
-				lock.Lock()
-				bot.Send(m.Sender, loginHHru)
-				lock.Unlock()
 			} else if strings.HasPrefix(strings.ToLower(m.Text), "gettimeoutresumeupdate") {
 				lock.Lock()
 				bot.Send(m.Sender, strconv.Itoa(timeoutResumeUpdate))
