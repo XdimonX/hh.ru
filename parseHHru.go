@@ -134,6 +134,7 @@ func goUpdateMonitor(visibleBrowser bool) {
 	timeout := 0
 	timeUntilUpdate := 0
 	for {
+		time.Sleep(1 * time.Second)
 		lock.Lock()
 		if !working {
 			timeout = 0
@@ -149,7 +150,6 @@ func goUpdateMonitor(visibleBrowser bool) {
 			timeUntilUpdate = 0
 			lock.Unlock()
 		}
-		time.Sleep(1 * time.Second)
 		timeUntilUpdate++
 		if timeUntilUpdate >= (tmp * 60) {
 			var ctx context.Context
@@ -201,6 +201,7 @@ func updateResume(ctx context.Context, resume string) {
 			err = chromedp.Run(
 				ctx,
 				chromedp.Click("div>div.bloko-gap.bloko-gap_top>div>div>div>div:nth-child(1)>span>button", chromedp.ByQueryAll, chromedp.FromNode(n), chromedp.NodeVisible),
+				chromedp.DoubleClick("div>div.bloko-gap.bloko-gap_top>div>div>div>div:nth-child(1)>span>button", chromedp.ByQueryAll, chromedp.FromNode(n), chromedp.NodeVisible),
 				chromedp.DoubleClick("div>div.bloko-gap.bloko-gap_top>div>div>div>div:nth-child(1)>span>button", chromedp.ByQueryAll, chromedp.FromNode(n), chromedp.NodeVisible),
 			)
 			if err != nil {
