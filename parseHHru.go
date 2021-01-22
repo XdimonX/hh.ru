@@ -203,6 +203,7 @@ func updateResume(ctx context.Context, resume string) {
 				chromedp.Click("div>div.bloko-gap.bloko-gap_top>div>div>div>div:nth-child(1)>span>button", chromedp.ByQueryAll, chromedp.FromNode(n), chromedp.NodeVisible),
 				chromedp.DoubleClick("div>div.bloko-gap.bloko-gap_top>div>div>div>div:nth-child(1)>span>button", chromedp.ByQueryAll, chromedp.FromNode(n), chromedp.NodeVisible),
 				chromedp.DoubleClick("div>div.bloko-gap.bloko-gap_top>div>div>div>div:nth-child(1)>span>button", chromedp.ByQueryAll, chromedp.FromNode(n), chromedp.NodeVisible),
+				chromedp.Sleep((5 * time.Second)),
 			)
 			if err != nil {
 				log.Println(err)
