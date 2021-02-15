@@ -55,17 +55,21 @@ func startBot() {
 					if strings.ToLower(strings.TrimSpace(text)) == "false" {
 						bot.Send(m.Sender, "Обновляем...")
 						ctx, cancel := prepareChrome(false)
+						lock.Lock()
 						for _, resume := range resumeForUpdates {
 							updateResume(ctx, resume)
 						}
+						lock.Unlock()
 						cancel()
 						bot.Send(m.Sender, "Готово")
 					} else if strings.ToLower(strings.TrimSpace(text)) == "true" {
 						bot.Send(m.Sender, "Обновляем...")
 						ctx, cancel := prepareChrome(true)
+						lock.Lock()
 						for _, resume := range resumeForUpdates {
 							updateResume(ctx, resume)
 						}
+						lock.Unlock()
 						cancel()
 						bot.Send(m.Sender, "Готово")
 					} else {
