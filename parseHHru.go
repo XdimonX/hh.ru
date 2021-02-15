@@ -159,9 +159,11 @@ func goUpdateMonitor(visibleBrowser bool) {
 			} else {
 				ctx, cancel = prepareChrome(false)
 			}
+			lock.Lock()
 			for _, v := range resumeForUpdates {
 				updateResume(ctx, v)
 			}
+			lock.Unlock()
 			cancel()
 			timeUntilUpdate = 0
 		}
