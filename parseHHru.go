@@ -175,7 +175,8 @@ func updateResume(ctx context.Context, resume string) {
 	var (
 		nodes, children []*cdp.Node
 	)
-	ctx, _ = context.WithTimeout(ctx, 25*time.Second)
+	var cancel context.CancelFunc
+	ctx, cancel = context.WithTimeout(ctx, 25*time.Second)
 	err := chromedp.Run(
 		ctx,
 		chromedp.Navigate("https://togliatti.hh.ru/applicant/resumes?from=header_new"),
@@ -185,6 +186,7 @@ func updateResume(ctx context.Context, resume string) {
 	if err != nil {
 		fmt.Println(err)
 		log.Println(err)
+		cancel()
 		return
 	}
 	err = chromedp.Run(
@@ -195,6 +197,7 @@ func updateResume(ctx context.Context, resume string) {
 	if err != nil {
 		fmt.Println(err)
 		log.Println(err)
+		cancel()
 		return
 	}
 	for i, n := range children {
@@ -209,8 +212,10 @@ func updateResume(ctx context.Context, resume string) {
 			)
 			if err != nil {
 				log.Println(err)
+				cancel()
 				return
 			}
+			cancel()
 			log.Println("Successful resume update")
 		}
 	}
