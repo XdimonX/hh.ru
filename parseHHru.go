@@ -215,10 +215,10 @@ func updateResume(ctx context.Context, resume string) {
 				cancel()
 				return
 			}
-			cancel()
 			log.Println("Successful resume update")
 		}
 	}
+	cancel()
 }
 
 func fullScreenshot(filename string, quality int64, res *[]byte) chromedp.Tasks {
