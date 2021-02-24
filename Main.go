@@ -35,7 +35,7 @@ func main() {
 	prepareLogger()
 	parseCfg()
 	wg := sync.WaitGroup{}
-	wg.Add(1)
+	wg.Add(2)
 	go startBot()
 	go goUpdateMonitor(false)
 	wg.Wait()
