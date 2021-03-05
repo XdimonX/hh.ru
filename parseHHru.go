@@ -133,6 +133,7 @@ func getResumeList(ctx context.Context, cancel context.CancelFunc) (result []str
 func goUpdateMonitor(visibleBrowser bool) {
 	timeout := 0
 	timeUntilUpdate := 0
+	defer log.Println("Exit from goUpdateMonitor")
 	for {
 		time.Sleep(1 * time.Second)
 		lock.Lock()
@@ -161,6 +162,7 @@ func goUpdateMonitor(visibleBrowser bool) {
 			}
 			lock.Lock()
 			for _, v := range resumeForUpdates {
+				log.Println("Run update resume from goUpdateMonitor")
 				updateResume(ctx, v)
 			}
 			lock.Unlock()
