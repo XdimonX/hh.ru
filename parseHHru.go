@@ -45,9 +45,7 @@ func prepareChrome(visibleBrowser bool) (context.Context, context.CancelFunc) {
 			chromedp.UserDataDir(userDir),
 		)
 		ctx, cancel = chromedp.NewExecAllocator(context.Background(), opts...)
-		// defer cancel()
 		ctx, cancel = chromedp.NewContext(ctx)
-		// defer cancel()
 	} else {
 		opts := append(chromedp.DefaultExecAllocatorOptions[:],
 			// chromedp.DisableGPU,
@@ -64,8 +62,6 @@ func prepareChrome(visibleBrowser bool) (context.Context, context.CancelFunc) {
 		)
 		ctx, cancel = chromedp.NewExecAllocator(context.Background(), opts...)
 		ctx, cancel = chromedp.NewContext(ctx)
-
-		// defer cancel()
 		_ = ctx
 	}
 	return ctx, cancel
@@ -164,6 +160,7 @@ func goUpdateMonitor(visibleBrowser bool) {
 			for _, v := range resumeForUpdates {
 				log.Println("Run update resume from goUpdateMonitor")
 				updateResume(ctx, v)
+				cancel()
 			}
 			lock.Unlock()
 			cancel()
