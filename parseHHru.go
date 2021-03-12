@@ -171,6 +171,8 @@ func goUpdateMonitor(visibleBrowser bool) {
 
 //Функция обновления резюме
 func updateResume(ctx context.Context, resume string) {
+	log.Println("Run update resume from updateResume")
+	defer log.Println("Exit from updateResume")
 	var (
 		nodes, children []*cdp.Node
 	)
