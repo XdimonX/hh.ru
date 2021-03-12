@@ -186,7 +186,6 @@ func updateResume(ctx context.Context, resume string) {
 	if err != nil {
 		fmt.Println(err)
 		log.Println(err)
-		// cancel()
 		return
 	}
 	err = chromedp.Run(
@@ -197,7 +196,6 @@ func updateResume(ctx context.Context, resume string) {
 	if err != nil {
 		fmt.Println(err)
 		log.Println(err)
-		// cancel()
 		return
 	}
 	for i, n := range children {
@@ -212,13 +210,11 @@ func updateResume(ctx context.Context, resume string) {
 			)
 			if err != nil {
 				log.Println(err)
-				// cancel()
 				return
 			}
 			log.Println("Successful resume update")
 		}
 	}
-	// cancel()
 }
 
 func fullScreenshot(filename string, quality int64, res *[]byte) chromedp.Tasks {
