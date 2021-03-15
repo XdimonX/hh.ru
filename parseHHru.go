@@ -178,6 +178,7 @@ func updateResume(ctx context.Context, resume string) {
 	)
 	var cancel context.CancelFunc
 	ctx, cancel = context.WithTimeout(ctx, 25*time.Second)
+	log.Println("Getting context with timeout")
 	defer cancel()
 	err := chromedp.Run(
 		ctx,
@@ -185,6 +186,7 @@ func updateResume(ctx context.Context, resume string) {
 		chromedp.Nodes(`div.bloko-column.bloko-column_xs-4.bloko-column_s-8.bloko-column_m-8.bloko-column_l-11`,
 			&nodes),
 	)
+	log.Println("Open hh.ru and get first nodes")
 	if err != nil {
 		fmt.Println(err)
 		log.Println(err)
@@ -195,6 +197,7 @@ func updateResume(ctx context.Context, resume string) {
 		chromedp.Nodes("div.bloko-gap.bloko-gap_top.bloko-gap_bottom",
 			&children, chromedp.ByQueryAll, chromedp.FromNode(nodes[0])),
 	)
+	log.Println("Getting next nodes array")
 	if err != nil {
 		fmt.Println(err)
 		log.Println(err)
@@ -210,6 +213,7 @@ func updateResume(ctx context.Context, resume string) {
 				chromedp.DoubleClick("div>div.bloko-gap.bloko-gap_top>div>div>div>div:nth-child(1)>span>button", chromedp.ByQueryAll, chromedp.FromNode(n), chromedp.NodeVisible),
 				chromedp.Sleep((5 * time.Second)),
 			)
+			log.Println("Click by element")
 			if err != nil {
 				log.Println(err)
 				return
