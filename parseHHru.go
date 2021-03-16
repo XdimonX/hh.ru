@@ -177,7 +177,7 @@ func updateResume(ctx context.Context, resume string) {
 		nodes, children []*cdp.Node
 	)
 	var cancel context.CancelFunc
-	ctx, cancel = context.WithTimeout(ctx, 25*time.Second)
+	ctx, cancel = context.WithTimeout(ctx, 60*time.Second)
 	log.Println("Getting context with timeout")
 	defer cancel()
 	err := chromedp.Run(
