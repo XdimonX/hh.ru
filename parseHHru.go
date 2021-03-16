@@ -183,10 +183,19 @@ func updateResume(ctx context.Context, resume string) {
 	err := chromedp.Run(
 		ctx,
 		chromedp.Navigate("https://togliatti.hh.ru/applicant/resumes?from=header_new"),
+	)
+	log.Println("Open hh.ru")
+	if err != nil {
+		fmt.Println(err)
+		log.Println(err)
+		return
+	}
+	err = chromedp.Run(
+		ctx,
 		chromedp.Nodes(`div.bloko-column.bloko-column_xs-4.bloko-column_s-8.bloko-column_m-8.bloko-column_l-11`,
 			&nodes),
 	)
-	log.Println("Open hh.ru and get first nodes")
+	log.Println("Get first nodes")
 	if err != nil {
 		fmt.Println(err)
 		log.Println(err)
