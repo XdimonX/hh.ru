@@ -166,7 +166,7 @@ func goUpdateMonitor(visibleBrowser bool) {
 				}(done)
 				select {
 				case <-done:
-				case <-time.After(timeOutContextUpdateResumeInSeconds * time.Second):
+				case <-time.After((timeOutContextUpdateResumeInSeconds + 30) * time.Second):
 				}
 				cancel()
 			}
