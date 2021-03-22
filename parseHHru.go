@@ -159,7 +159,15 @@ func goUpdateMonitor(visibleBrowser bool) {
 			lock.Lock()
 			for _, v := range resumeForUpdates {
 				log.Println("Run update resume from goUpdateMonitor")
-				updateResume(ctx, v)
+				done := make(chan bool)
+				go func(done chan bool) {
+					updateResume(ctx, v)
+					done <- true
+				}(done)
+				select {
+				case <-done:
+				case <-time.After(timeOutContextUpdateResumeInSeconds * time.Second):
+				}
 				cancel()
 			}
 			lock.Unlock()
@@ -177,7 +185,7 @@ func updateResume(ctx context.Context, resume string) {
 		nodes, children []*cdp.Node
 	)
 	var cancel context.CancelFunc
-	ctx, cancel = context.WithTimeout(ctx, 60*time.Second)
+	ctx, cancel = context.WithTimeout(ctx, timeOutContextUpdateResumeInSeconds*time.Second)
 	log.Println("Getting context with timeout")
 	defer cancel()
 	err := chromedp.Run(
