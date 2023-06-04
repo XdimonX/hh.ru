@@ -1,1 +1,2230 @@
 2021/01/21 15:29:11 parseHHru.go:204: context deadline exceeded
+2021/11/10 09:45:36 util.go:18: telegram unknown: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running (409)
+gopkg.in/tucnak/telebot%2ev2.(*Bot).debug
+	C:/Users/user/go/pkg/mod/gopkg.in/tucnak/telebot.v2@v2.3.5/util.go:14
+gopkg.in/tucnak/telebot%2ev2.(*LongPoller).Poll
+	C:/Users/user/go/pkg/mod/gopkg.in/tucnak/telebot.v2@v2.3.5/poller.go:102
+runtime.goexit
+	C:/Go/src/runtime/asm_amd64.s:1371
+2021/11/10 09:45:36 util.go:18: telebot: could not fetch new updates
+gopkg.in/tucnak/telebot%2ev2.init
+	C:/Users/user/go/pkg/mod/gopkg.in/tucnak/telebot.v2@v2.3.5/telebot.go:36
+runtime.doInit
+	C:/Go/src/runtime/proc.go:6265
+runtime.doInit
+	C:/Go/src/runtime/proc.go:6242
+runtime.main
+	C:/Go/src/runtime/proc.go:208
+runtime.goexit
+	C:/Go/src/runtime/asm_amd64.s:1371
+gopkg.in/tucnak/telebot%2ev2.(*Bot).debug
+	C:/Users/user/go/pkg/mod/gopkg.in/tucnak/telebot.v2@v2.3.5/util.go:14
+gopkg.in/tucnak/telebot%2ev2.(*LongPoller).Poll
+	C:/Users/user/go/pkg/mod/gopkg.in/tucnak/telebot.v2@v2.3.5/poller.go:103
+runtime.goexit
+	C:/Go/src/runtime/asm_amd64.s:1371
+2021/11/10 09:45:39 util.go:18: telegram unknown: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running (409)
+gopkg.in/tucnak/telebot%2ev2.(*Bot).debug
+	C:/Users/user/go/pkg/mod/gopkg.in/tucnak/telebot.v2@v2.3.5/util.go:14
+gopkg.in/tucnak/telebot%2ev2.(*LongPoller).Poll
+	C:/Users/user/go/pkg/mod/gopkg.in/tucnak/telebot.v2@v2.3.5/poller.go:102
+runtime.goexit
+	C:/Go/src/runtime/asm_amd64.s:1371
+2021/11/10 09:45:39 util.go:18: telebot: could not fetch new updates
+gopkg.in/tucnak/telebot%2ev2.init
+	C:/Users/user/go/pkg/mod/gopkg.in/tucnak/telebot.v2@v2.3.5/telebot.go:36
+runtime.doInit
+	C:/Go/src/runtime/proc.go:6265
+runtime.doInit
+	C:/Go/src/runtime/proc.go:6242
+runtime.main
+	C:/Go/src/runtime/proc.go:208
+runtime.goexit
+	C:/Go/src/runtime/asm_amd64.s:1371
+gopkg.in/tucnak/telebot%2ev2.(*Bot).debug
+	C:/Users/user/go/pkg/mod/gopkg.in/tucnak/telebot.v2@v2.3.5/util.go:14
+gopkg.in/tucnak/telebot%2ev2.(*LongPoller).Poll
+	C:/Users/user/go/pkg/mod/gopkg.in/tucnak/telebot.v2@v2.3.5/poller.go:103
+runtime.goexit
+	C:/Go/src/runtime/asm_amd64.s:1371
+2021/11/10 09:45:42 util.go:18: telegram unknown: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running (409)
+gopkg.in/tucnak/telebot%2ev2.(*Bot).debug
+	C:/Users/user/go/pkg/mod/gopkg.in/tucnak/telebot.v2@v2.3.5/util.go:14
+gopkg.in/tucnak/telebot%2ev2.(*LongPoller).Poll
+	C:/Users/user/go/pkg/mod/gopkg.in/tucnak/telebot.v2@v2.3.5/poller.go:102
+runtime.goexit
+	C:/Go/src/runtime/asm_amd64.s:1371
+2021/11/10 09:45:42 util.go:18: telebot: could not fetch new updates
+gopkg.in/tucnak/telebot%2ev2.init
+	C:/Users/user/go/pkg/mod/gopkg.in/tucnak/telebot.v2@v2.3.5/telebot.go:36
+runtime.doInit
+	C:/Go/src/runtime/proc.go:6265
+runtime.doInit
+	C:/Go/src/runtime/proc.go:6242
+runtime.main
+	C:/Go/src/runtime/proc.go:208
+runtime.goexit
+	C:/Go/src/runtime/asm_amd64.s:1371
+gopkg.in/tucnak/telebot%2ev2.(*Bot).debug
+	C:/Users/user/go/pkg/mod/gopkg.in/tucnak/telebot.v2@v2.3.5/util.go:14
+gopkg.in/tucnak/telebot%2ev2.(*LongPoller).Poll
+	C:/Users/user/go/pkg/mod/gopkg.in/tucnak/telebot.v2@v2.3.5/poller.go:103
+runtime.goexit
+	C:/Go/src/runtime/asm_amd64.s:1371
+2021/11/10 09:45:45 util.go:18: telegram unknown: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running (409)
+gopkg.in/tucnak/telebot%2ev2.(*Bot).debug
+	C:/Users/user/go/pkg/mod/gopkg.in/tucnak/telebot.v2@v2.3.5/util.go:14
+gopkg.in/tucnak/telebot%2ev2.(*LongPoller).Poll
+	C:/Users/user/go/pkg/mod/gopkg.in/tucnak/telebot.v2@v2.3.5/poller.go:102
+runtime.goexit
+	C:/Go/src/runtime/asm_amd64.s:1371
+2021/11/10 09:45:45 util.go:18: telebot: could not fetch new updates
+gopkg.in/tucnak/telebot%2ev2.init
+	C:/Users/user/go/pkg/mod/gopkg.in/tucnak/telebot.v2@v2.3.5/telebot.go:36
+runtime.doInit
+	C:/Go/src/runtime/proc.go:6265
+runtime.doInit
+	C:/Go/src/runtime/proc.go:6242
+runtime.main
+	C:/Go/src/runtime/proc.go:208
+runtime.goexit
+	C:/Go/src/runtime/asm_amd64.s:1371
+gopkg.in/tucnak/telebot%2ev2.(*Bot).debug
+	C:/Users/user/go/pkg/mod/gopkg.in/tucnak/telebot.v2@v2.3.5/util.go:14
+gopkg.in/tucnak/telebot%2ev2.(*LongPoller).Poll
+	C:/Users/user/go/pkg/mod/gopkg.in/tucnak/telebot.v2@v2.3.5/poller.go:103
+runtime.goexit
+	C:/Go/src/runtime/asm_amd64.s:1371
+2021/11/10 09:45:49 util.go:18: telegram unknown: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running (409)
+gopkg.in/tucnak/telebot%2ev2.(*Bot).debug
+	C:/Users/user/go/pkg/mod/gopkg.in/tucnak/telebot.v2@v2.3.5/util.go:14
+gopkg.in/tucnak/telebot%2ev2.(*LongPoller).Poll
+	C:/Users/user/go/pkg/mod/gopkg.in/tucnak/telebot.v2@v2.3.5/poller.go:102
+runtime.goexit
+	C:/Go/src/runtime/asm_amd64.s:1371
+2021/11/10 09:45:49 util.go:18: telebot: could not fetch new updates
+gopkg.in/tucnak/telebot%2ev2.init
+	C:/Users/user/go/pkg/mod/gopkg.in/tucnak/telebot.v2@v2.3.5/telebot.go:36
+runtime.doInit
+	C:/Go/src/runtime/proc.go:6265
+runtime.doInit
+	C:/Go/src/runtime/proc.go:6242
+runtime.main
+	C:/Go/src/runtime/proc.go:208
+runtime.goexit
+	C:/Go/src/runtime/asm_amd64.s:1371
+gopkg.in/tucnak/telebot%2ev2.(*Bot).debug
+	C:/Users/user/go/pkg/mod/gopkg.in/tucnak/telebot.v2@v2.3.5/util.go:14
+gopkg.in/tucnak/telebot%2ev2.(*LongPoller).Poll
+	C:/Users/user/go/pkg/mod/gopkg.in/tucnak/telebot.v2@v2.3.5/poller.go:103
+runtime.goexit
+	C:/Go/src/runtime/asm_amd64.s:1371
+2021/11/10 09:45:52 util.go:18: telegram unknown: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running (409)
+gopkg.in/tucnak/telebot%2ev2.(*Bot).debug
+	C:/Users/user/go/pkg/mod/gopkg.in/tucnak/telebot.v2@v2.3.5/util.go:14
+gopkg.in/tucnak/telebot%2ev2.(*LongPoller).Poll
+	C:/Users/user/go/pkg/mod/gopkg.in/tucnak/telebot.v2@v2.3.5/poller.go:102
+runtime.goexit
+	C:/Go/src/runtime/asm_amd64.s:1371
+2021/11/10 09:45:52 util.go:18: telebot: could not fetch new updates
+gopkg.in/tucnak/telebot%2ev2.init
+	C:/Users/user/go/pkg/mod/gopkg.in/tucnak/telebot.v2@v2.3.5/telebot.go:36
+runtime.doInit
+	C:/Go/src/runtime/proc.go:6265
+runtime.doInit
+	C:/Go/src/runtime/proc.go:6242
+runtime.main
+	C:/Go/src/runtime/proc.go:208
+runtime.goexit
+	C:/Go/src/runtime/asm_amd64.s:1371
+gopkg.in/tucnak/telebot%2ev2.(*Bot).debug
+	C:/Users/user/go/pkg/mod/gopkg.in/tucnak/telebot.v2@v2.3.5/util.go:14
+gopkg.in/tucnak/telebot%2ev2.(*LongPoller).Poll
+	C:/Users/user/go/pkg/mod/gopkg.in/tucnak/telebot.v2@v2.3.5/poller.go:103
+runtime.goexit
+	C:/Go/src/runtime/asm_amd64.s:1371
+2021/11/10 09:45:55 util.go:18: telegram unknown: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running (409)
+gopkg.in/tucnak/telebot%2ev2.(*Bot).debug
+	C:/Users/user/go/pkg/mod/gopkg.in/tucnak/telebot.v2@v2.3.5/util.go:14
+gopkg.in/tucnak/telebot%2ev2.(*LongPoller).Poll
+	C:/Users/user/go/pkg/mod/gopkg.in/tucnak/telebot.v2@v2.3.5/poller.go:102
+runtime.goexit
+	C:/Go/src/runtime/asm_amd64.s:1371
+2021/11/10 09:45:55 util.go:18: telebot: could not fetch new updates
+gopkg.in/tucnak/telebot%2ev2.init
+	C:/Users/user/go/pkg/mod/gopkg.in/tucnak/telebot.v2@v2.3.5/telebot.go:36
+runtime.doInit
+	C:/Go/src/runtime/proc.go:6265
+runtime.doInit
+	C:/Go/src/runtime/proc.go:6242
+runtime.main
+	C:/Go/src/runtime/proc.go:208
+runtime.goexit
+	C:/Go/src/runtime/asm_amd64.s:1371
+gopkg.in/tucnak/telebot%2ev2.(*Bot).debug
+	C:/Users/user/go/pkg/mod/gopkg.in/tucnak/telebot.v2@v2.3.5/util.go:14
+gopkg.in/tucnak/telebot%2ev2.(*LongPoller).Poll
+	C:/Users/user/go/pkg/mod/gopkg.in/tucnak/telebot.v2@v2.3.5/poller.go:103
+runtime.goexit
+	C:/Go/src/runtime/asm_amd64.s:1371
+2021/11/10 09:45:58 util.go:18: telegram unknown: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running (409)
+gopkg.in/tucnak/telebot%2ev2.(*Bot).debug
+	C:/Users/user/go/pkg/mod/gopkg.in/tucnak/telebot.v2@v2.3.5/util.go:14
+gopkg.in/tucnak/telebot%2ev2.(*LongPoller).Poll
+	C:/Users/user/go/pkg/mod/gopkg.in/tucnak/telebot.v2@v2.3.5/poller.go:102
+runtime.goexit
+	C:/Go/src/runtime/asm_amd64.s:1371
+2021/11/10 09:45:58 util.go:18: telebot: could not fetch new updates
+gopkg.in/tucnak/telebot%2ev2.init
+	C:/Users/user/go/pkg/mod/gopkg.in/tucnak/telebot.v2@v2.3.5/telebot.go:36
+runtime.doInit
+	C:/Go/src/runtime/proc.go:6265
+runtime.doInit
+	C:/Go/src/runtime/proc.go:6242
+runtime.main
+	C:/Go/src/runtime/proc.go:208
+runtime.goexit
+	C:/Go/src/runtime/asm_amd64.s:1371
+gopkg.in/tucnak/telebot%2ev2.(*Bot).debug
+	C:/Users/user/go/pkg/mod/gopkg.in/tucnak/telebot.v2@v2.3.5/util.go:14
+gopkg.in/tucnak/telebot%2ev2.(*LongPoller).Poll
+	C:/Users/user/go/pkg/mod/gopkg.in/tucnak/telebot.v2@v2.3.5/poller.go:103
+runtime.goexit
+	C:/Go/src/runtime/asm_amd64.s:1371
+2021/11/10 09:46:01 util.go:18: telegram unknown: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running (409)
+gopkg.in/tucnak/telebot%2ev2.(*Bot).debug
+	C:/Users/user/go/pkg/mod/gopkg.in/tucnak/telebot.v2@v2.3.5/util.go:14
+gopkg.in/tucnak/telebot%2ev2.(*LongPoller).Poll
+	C:/Users/user/go/pkg/mod/gopkg.in/tucnak/telebot.v2@v2.3.5/poller.go:102
+runtime.goexit
+	C:/Go/src/runtime/asm_amd64.s:1371
+2021/11/10 09:46:01 util.go:18: telebot: could not fetch new updates
+gopkg.in/tucnak/telebot%2ev2.init
+	C:/Users/user/go/pkg/mod/gopkg.in/tucnak/telebot.v2@v2.3.5/telebot.go:36
+runtime.doInit
+	C:/Go/src/runtime/proc.go:6265
+runtime.doInit
+	C:/Go/src/runtime/proc.go:6242
+runtime.main
+	C:/Go/src/runtime/proc.go:208
+runtime.goexit
+	C:/Go/src/runtime/asm_amd64.s:1371
+gopkg.in/tucnak/telebot%2ev2.(*Bot).debug
+	C:/Users/user/go/pkg/mod/gopkg.in/tucnak/telebot.v2@v2.3.5/util.go:14
+gopkg.in/tucnak/telebot%2ev2.(*LongPoller).Poll
+	C:/Users/user/go/pkg/mod/gopkg.in/tucnak/telebot.v2@v2.3.5/poller.go:103
+runtime.goexit
+	C:/Go/src/runtime/asm_amd64.s:1371
+2021/11/10 09:46:04 util.go:18: telegram unknown: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running (409)
+gopkg.in/tucnak/telebot%2ev2.(*Bot).debug
+	C:/Users/user/go/pkg/mod/gopkg.in/tucnak/telebot.v2@v2.3.5/util.go:14
+gopkg.in/tucnak/telebot%2ev2.(*LongPoller).Poll
+	C:/Users/user/go/pkg/mod/gopkg.in/tucnak/telebot.v2@v2.3.5/poller.go:102
+runtime.goexit
+	C:/Go/src/runtime/asm_amd64.s:1371
+2021/11/10 09:46:04 util.go:18: telebot: could not fetch new updates
+gopkg.in/tucnak/telebot%2ev2.init
+	C:/Users/user/go/pkg/mod/gopkg.in/tucnak/telebot.v2@v2.3.5/telebot.go:36
+runtime.doInit
+	C:/Go/src/runtime/proc.go:6265
+runtime.doInit
+	C:/Go/src/runtime/proc.go:6242
+runtime.main
+	C:/Go/src/runtime/proc.go:208
+runtime.goexit
+	C:/Go/src/runtime/asm_amd64.s:1371
+gopkg.in/tucnak/telebot%2ev2.(*Bot).debug
+	C:/Users/user/go/pkg/mod/gopkg.in/tucnak/telebot.v2@v2.3.5/util.go:14
+gopkg.in/tucnak/telebot%2ev2.(*LongPoller).Poll
+	C:/Users/user/go/pkg/mod/gopkg.in/tucnak/telebot.v2@v2.3.5/poller.go:103
+runtime.goexit
+	C:/Go/src/runtime/asm_amd64.s:1371
+2021/11/10 09:46:07 util.go:18: telegram unknown: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running (409)
+gopkg.in/tucnak/telebot%2ev2.(*Bot).debug
+	C:/Users/user/go/pkg/mod/gopkg.in/tucnak/telebot.v2@v2.3.5/util.go:14
+gopkg.in/tucnak/telebot%2ev2.(*LongPoller).Poll
+	C:/Users/user/go/pkg/mod/gopkg.in/tucnak/telebot.v2@v2.3.5/poller.go:102
+runtime.goexit
+	C:/Go/src/runtime/asm_amd64.s:1371
+2021/11/10 09:46:07 util.go:18: telebot: could not fetch new updates
+gopkg.in/tucnak/telebot%2ev2.init
+	C:/Users/user/go/pkg/mod/gopkg.in/tucnak/telebot.v2@v2.3.5/telebot.go:36
+runtime.doInit
+	C:/Go/src/runtime/proc.go:6265
+runtime.doInit
+	C:/Go/src/runtime/proc.go:6242
+runtime.main
+	C:/Go/src/runtime/proc.go:208
+runtime.goexit
+	C:/Go/src/runtime/asm_amd64.s:1371
+gopkg.in/tucnak/telebot%2ev2.(*Bot).debug
+	C:/Users/user/go/pkg/mod/gopkg.in/tucnak/telebot.v2@v2.3.5/util.go:14
+gopkg.in/tucnak/telebot%2ev2.(*LongPoller).Poll
+	C:/Users/user/go/pkg/mod/gopkg.in/tucnak/telebot.v2@v2.3.5/poller.go:103
+runtime.goexit
+	C:/Go/src/runtime/asm_amd64.s:1371
+2021/11/10 09:46:11 util.go:18: telegram unknown: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running (409)
+gopkg.in/tucnak/telebot%2ev2.(*Bot).debug
+	C:/Users/user/go/pkg/mod/gopkg.in/tucnak/telebot.v2@v2.3.5/util.go:14
+gopkg.in/tucnak/telebot%2ev2.(*LongPoller).Poll
+	C:/Users/user/go/pkg/mod/gopkg.in/tucnak/telebot.v2@v2.3.5/poller.go:102
+runtime.goexit
+	C:/Go/src/runtime/asm_amd64.s:1371
+2021/11/10 09:46:11 util.go:18: telebot: could not fetch new updates
+gopkg.in/tucnak/telebot%2ev2.init
+	C:/Users/user/go/pkg/mod/gopkg.in/tucnak/telebot.v2@v2.3.5/telebot.go:36
+runtime.doInit
+	C:/Go/src/runtime/proc.go:6265
+runtime.doInit
+	C:/Go/src/runtime/proc.go:6242
+runtime.main
+	C:/Go/src/runtime/proc.go:208
+runtime.goexit
+	C:/Go/src/runtime/asm_amd64.s:1371
+gopkg.in/tucnak/telebot%2ev2.(*Bot).debug
+	C:/Users/user/go/pkg/mod/gopkg.in/tucnak/telebot.v2@v2.3.5/util.go:14
+gopkg.in/tucnak/telebot%2ev2.(*LongPoller).Poll
+	C:/Users/user/go/pkg/mod/gopkg.in/tucnak/telebot.v2@v2.3.5/poller.go:103
+runtime.goexit
+	C:/Go/src/runtime/asm_amd64.s:1371
+2021/11/10 09:46:14 util.go:18: telegram unknown: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running (409)
+gopkg.in/tucnak/telebot%2ev2.(*Bot).debug
+	C:/Users/user/go/pkg/mod/gopkg.in/tucnak/telebot.v2@v2.3.5/util.go:14
+gopkg.in/tucnak/telebot%2ev2.(*LongPoller).Poll
+	C:/Users/user/go/pkg/mod/gopkg.in/tucnak/telebot.v2@v2.3.5/poller.go:102
+runtime.goexit
+	C:/Go/src/runtime/asm_amd64.s:1371
+2021/11/10 09:46:14 util.go:18: telebot: could not fetch new updates
+gopkg.in/tucnak/telebot%2ev2.init
+	C:/Users/user/go/pkg/mod/gopkg.in/tucnak/telebot.v2@v2.3.5/telebot.go:36
+runtime.doInit
+	C:/Go/src/runtime/proc.go:6265
+runtime.doInit
+	C:/Go/src/runtime/proc.go:6242
+runtime.main
+	C:/Go/src/runtime/proc.go:208
+runtime.goexit
+	C:/Go/src/runtime/asm_amd64.s:1371
+gopkg.in/tucnak/telebot%2ev2.(*Bot).debug
+	C:/Users/user/go/pkg/mod/gopkg.in/tucnak/telebot.v2@v2.3.5/util.go:14
+gopkg.in/tucnak/telebot%2ev2.(*LongPoller).Poll
+	C:/Users/user/go/pkg/mod/gopkg.in/tucnak/telebot.v2@v2.3.5/poller.go:103
+runtime.goexit
+	C:/Go/src/runtime/asm_amd64.s:1371
+2021/11/10 09:46:17 util.go:18: telegram unknown: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running (409)
+gopkg.in/tucnak/telebot%2ev2.(*Bot).debug
+	C:/Users/user/go/pkg/mod/gopkg.in/tucnak/telebot.v2@v2.3.5/util.go:14
+gopkg.in/tucnak/telebot%2ev2.(*LongPoller).Poll
+	C:/Users/user/go/pkg/mod/gopkg.in/tucnak/telebot.v2@v2.3.5/poller.go:102
+runtime.goexit
+	C:/Go/src/runtime/asm_amd64.s:1371
+2021/11/10 09:46:17 util.go:18: telebot: could not fetch new updates
+gopkg.in/tucnak/telebot%2ev2.init
+	C:/Users/user/go/pkg/mod/gopkg.in/tucnak/telebot.v2@v2.3.5/telebot.go:36
+runtime.doInit
+	C:/Go/src/runtime/proc.go:6265
+runtime.doInit
+	C:/Go/src/runtime/proc.go:6242
+runtime.main
+	C:/Go/src/runtime/proc.go:208
+runtime.goexit
+	C:/Go/src/runtime/asm_amd64.s:1371
+gopkg.in/tucnak/telebot%2ev2.(*Bot).debug
+	C:/Users/user/go/pkg/mod/gopkg.in/tucnak/telebot.v2@v2.3.5/util.go:14
+gopkg.in/tucnak/telebot%2ev2.(*LongPoller).Poll
+	C:/Users/user/go/pkg/mod/gopkg.in/tucnak/telebot.v2@v2.3.5/poller.go:103
+runtime.goexit
+	C:/Go/src/runtime/asm_amd64.s:1371
+2021/11/10 09:46:20 util.go:18: telegram unknown: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running (409)
+gopkg.in/tucnak/telebot%2ev2.(*Bot).debug
+	C:/Users/user/go/pkg/mod/gopkg.in/tucnak/telebot.v2@v2.3.5/util.go:14
+gopkg.in/tucnak/telebot%2ev2.(*LongPoller).Poll
+	C:/Users/user/go/pkg/mod/gopkg.in/tucnak/telebot.v2@v2.3.5/poller.go:102
+runtime.goexit
+	C:/Go/src/runtime/asm_amd64.s:1371
+2021/11/10 09:46:20 util.go:18: telebot: could not fetch new updates
+gopkg.in/tucnak/telebot%2ev2.init
+	C:/Users/user/go/pkg/mod/gopkg.in/tucnak/telebot.v2@v2.3.5/telebot.go:36
+runtime.doInit
+	C:/Go/src/runtime/proc.go:6265
+runtime.doInit
+	C:/Go/src/runtime/proc.go:6242
+runtime.main
+	C:/Go/src/runtime/proc.go:208
+runtime.goexit
+	C:/Go/src/runtime/asm_amd64.s:1371
+gopkg.in/tucnak/telebot%2ev2.(*Bot).debug
+	C:/Users/user/go/pkg/mod/gopkg.in/tucnak/telebot.v2@v2.3.5/util.go:14
+gopkg.in/tucnak/telebot%2ev2.(*LongPoller).Poll
+	C:/Users/user/go/pkg/mod/gopkg.in/tucnak/telebot.v2@v2.3.5/poller.go:103
+runtime.goexit
+	C:/Go/src/runtime/asm_amd64.s:1371
+2021/11/10 09:46:23 util.go:18: telegram unknown: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running (409)
+gopkg.in/tucnak/telebot%2ev2.(*Bot).debug
+	C:/Users/user/go/pkg/mod/gopkg.in/tucnak/telebot.v2@v2.3.5/util.go:14
+gopkg.in/tucnak/telebot%2ev2.(*LongPoller).Poll
+	C:/Users/user/go/pkg/mod/gopkg.in/tucnak/telebot.v2@v2.3.5/poller.go:102
+runtime.goexit
+	C:/Go/src/runtime/asm_amd64.s:1371
+2021/11/10 09:46:23 util.go:18: telebot: could not fetch new updates
+gopkg.in/tucnak/telebot%2ev2.init
+	C:/Users/user/go/pkg/mod/gopkg.in/tucnak/telebot.v2@v2.3.5/telebot.go:36
+runtime.doInit
+	C:/Go/src/runtime/proc.go:6265
+runtime.doInit
+	C:/Go/src/runtime/proc.go:6242
+runtime.main
+	C:/Go/src/runtime/proc.go:208
+runtime.goexit
+	C:/Go/src/runtime/asm_amd64.s:1371
+gopkg.in/tucnak/telebot%2ev2.(*Bot).debug
+	C:/Users/user/go/pkg/mod/gopkg.in/tucnak/telebot.v2@v2.3.5/util.go:14
+gopkg.in/tucnak/telebot%2ev2.(*LongPoller).Poll
+	C:/Users/user/go/pkg/mod/gopkg.in/tucnak/telebot.v2@v2.3.5/poller.go:103
+runtime.goexit
+	C:/Go/src/runtime/asm_amd64.s:1371
+2021/11/10 09:46:26 util.go:18: telegram unknown: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running (409)
+gopkg.in/tucnak/telebot%2ev2.(*Bot).debug
+	C:/Users/user/go/pkg/mod/gopkg.in/tucnak/telebot.v2@v2.3.5/util.go:14
+gopkg.in/tucnak/telebot%2ev2.(*LongPoller).Poll
+	C:/Users/user/go/pkg/mod/gopkg.in/tucnak/telebot.v2@v2.3.5/poller.go:102
+runtime.goexit
+	C:/Go/src/runtime/asm_amd64.s:1371
+2021/11/10 09:46:26 util.go:18: telebot: could not fetch new updates
+gopkg.in/tucnak/telebot%2ev2.init
+	C:/Users/user/go/pkg/mod/gopkg.in/tucnak/telebot.v2@v2.3.5/telebot.go:36
+runtime.doInit
+	C:/Go/src/runtime/proc.go:6265
+runtime.doInit
+	C:/Go/src/runtime/proc.go:6242
+runtime.main
+	C:/Go/src/runtime/proc.go:208
+runtime.goexit
+	C:/Go/src/runtime/asm_amd64.s:1371
+gopkg.in/tucnak/telebot%2ev2.(*Bot).debug
+	C:/Users/user/go/pkg/mod/gopkg.in/tucnak/telebot.v2@v2.3.5/util.go:14
+gopkg.in/tucnak/telebot%2ev2.(*LongPoller).Poll
+	C:/Users/user/go/pkg/mod/gopkg.in/tucnak/telebot.v2@v2.3.5/poller.go:103
+runtime.goexit
+	C:/Go/src/runtime/asm_amd64.s:1371
+2021/11/10 09:46:29 util.go:18: telegram unknown: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running (409)
+gopkg.in/tucnak/telebot%2ev2.(*Bot).debug
+	C:/Users/user/go/pkg/mod/gopkg.in/tucnak/telebot.v2@v2.3.5/util.go:14
+gopkg.in/tucnak/telebot%2ev2.(*LongPoller).Poll
+	C:/Users/user/go/pkg/mod/gopkg.in/tucnak/telebot.v2@v2.3.5/poller.go:102
+runtime.goexit
+	C:/Go/src/runtime/asm_amd64.s:1371
+2021/11/10 09:46:29 util.go:18: telebot: could not fetch new updates
+gopkg.in/tucnak/telebot%2ev2.init
+	C:/Users/user/go/pkg/mod/gopkg.in/tucnak/telebot.v2@v2.3.5/telebot.go:36
+runtime.doInit
+	C:/Go/src/runtime/proc.go:6265
+runtime.doInit
+	C:/Go/src/runtime/proc.go:6242
+runtime.main
+	C:/Go/src/runtime/proc.go:208
+runtime.goexit
+	C:/Go/src/runtime/asm_amd64.s:1371
+gopkg.in/tucnak/telebot%2ev2.(*Bot).debug
+	C:/Users/user/go/pkg/mod/gopkg.in/tucnak/telebot.v2@v2.3.5/util.go:14
+gopkg.in/tucnak/telebot%2ev2.(*LongPoller).Poll
+	C:/Users/user/go/pkg/mod/gopkg.in/tucnak/telebot.v2@v2.3.5/poller.go:103
+runtime.goexit
+	C:/Go/src/runtime/asm_amd64.s:1371
+2021/11/10 09:46:32 util.go:18: telegram unknown: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running (409)
+gopkg.in/tucnak/telebot%2ev2.(*Bot).debug
+	C:/Users/user/go/pkg/mod/gopkg.in/tucnak/telebot.v2@v2.3.5/util.go:14
+gopkg.in/tucnak/telebot%2ev2.(*LongPoller).Poll
+	C:/Users/user/go/pkg/mod/gopkg.in/tucnak/telebot.v2@v2.3.5/poller.go:102
+runtime.goexit
+	C:/Go/src/runtime/asm_amd64.s:1371
+2021/11/10 09:46:32 util.go:18: telebot: could not fetch new updates
+gopkg.in/tucnak/telebot%2ev2.init
+	C:/Users/user/go/pkg/mod/gopkg.in/tucnak/telebot.v2@v2.3.5/telebot.go:36
+runtime.doInit
+	C:/Go/src/runtime/proc.go:6265
+runtime.doInit
+	C:/Go/src/runtime/proc.go:6242
+runtime.main
+	C:/Go/src/runtime/proc.go:208
+runtime.goexit
+	C:/Go/src/runtime/asm_amd64.s:1371
+gopkg.in/tucnak/telebot%2ev2.(*Bot).debug
+	C:/Users/user/go/pkg/mod/gopkg.in/tucnak/telebot.v2@v2.3.5/util.go:14
+gopkg.in/tucnak/telebot%2ev2.(*LongPoller).Poll
+	C:/Users/user/go/pkg/mod/gopkg.in/tucnak/telebot.v2@v2.3.5/poller.go:103
+runtime.goexit
+	C:/Go/src/runtime/asm_amd64.s:1371
+2021/11/10 09:46:36 util.go:18: telegram unknown: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running (409)
+gopkg.in/tucnak/telebot%2ev2.(*Bot).debug
+	C:/Users/user/go/pkg/mod/gopkg.in/tucnak/telebot.v2@v2.3.5/util.go:14
+gopkg.in/tucnak/telebot%2ev2.(*LongPoller).Poll
+	C:/Users/user/go/pkg/mod/gopkg.in/tucnak/telebot.v2@v2.3.5/poller.go:102
+runtime.goexit
+	C:/Go/src/runtime/asm_amd64.s:1371
+2021/11/10 09:46:36 util.go:18: telebot: could not fetch new updates
+gopkg.in/tucnak/telebot%2ev2.init
+	C:/Users/user/go/pkg/mod/gopkg.in/tucnak/telebot.v2@v2.3.5/telebot.go:36
+runtime.doInit
+	C:/Go/src/runtime/proc.go:6265
+runtime.doInit
+	C:/Go/src/runtime/proc.go:6242
+runtime.main
+	C:/Go/src/runtime/proc.go:208
+runtime.goexit
+	C:/Go/src/runtime/asm_amd64.s:1371
+gopkg.in/tucnak/telebot%2ev2.(*Bot).debug
+	C:/Users/user/go/pkg/mod/gopkg.in/tucnak/telebot.v2@v2.3.5/util.go:14
+gopkg.in/tucnak/telebot%2ev2.(*LongPoller).Poll
+	C:/Users/user/go/pkg/mod/gopkg.in/tucnak/telebot.v2@v2.3.5/poller.go:103
+runtime.goexit
+	C:/Go/src/runtime/asm_amd64.s:1371
+2021/11/10 09:46:39 util.go:18: telegram unknown: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running (409)
+gopkg.in/tucnak/telebot%2ev2.(*Bot).debug
+	C:/Users/user/go/pkg/mod/gopkg.in/tucnak/telebot.v2@v2.3.5/util.go:14
+gopkg.in/tucnak/telebot%2ev2.(*LongPoller).Poll
+	C:/Users/user/go/pkg/mod/gopkg.in/tucnak/telebot.v2@v2.3.5/poller.go:102
+runtime.goexit
+	C:/Go/src/runtime/asm_amd64.s:1371
+2021/11/10 09:46:39 util.go:18: telebot: could not fetch new updates
+gopkg.in/tucnak/telebot%2ev2.init
+	C:/Users/user/go/pkg/mod/gopkg.in/tucnak/telebot.v2@v2.3.5/telebot.go:36
+runtime.doInit
+	C:/Go/src/runtime/proc.go:6265
+runtime.doInit
+	C:/Go/src/runtime/proc.go:6242
+runtime.main
+	C:/Go/src/runtime/proc.go:208
+runtime.goexit
+	C:/Go/src/runtime/asm_amd64.s:1371
+gopkg.in/tucnak/telebot%2ev2.(*Bot).debug
+	C:/Users/user/go/pkg/mod/gopkg.in/tucnak/telebot.v2@v2.3.5/util.go:14
+gopkg.in/tucnak/telebot%2ev2.(*LongPoller).Poll
+	C:/Users/user/go/pkg/mod/gopkg.in/tucnak/telebot.v2@v2.3.5/poller.go:103
+runtime.goexit
+	C:/Go/src/runtime/asm_amd64.s:1371
+2021/11/10 09:46:42 util.go:18: telegram unknown: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running (409)
+gopkg.in/tucnak/telebot%2ev2.(*Bot).debug
+	C:/Users/user/go/pkg/mod/gopkg.in/tucnak/telebot.v2@v2.3.5/util.go:14
+gopkg.in/tucnak/telebot%2ev2.(*LongPoller).Poll
+	C:/Users/user/go/pkg/mod/gopkg.in/tucnak/telebot.v2@v2.3.5/poller.go:102
+runtime.goexit
+	C:/Go/src/runtime/asm_amd64.s:1371
+2021/11/10 09:46:42 util.go:18: telebot: could not fetch new updates
+gopkg.in/tucnak/telebot%2ev2.init
+	C:/Users/user/go/pkg/mod/gopkg.in/tucnak/telebot.v2@v2.3.5/telebot.go:36
+runtime.doInit
+	C:/Go/src/runtime/proc.go:6265
+runtime.doInit
+	C:/Go/src/runtime/proc.go:6242
+runtime.main
+	C:/Go/src/runtime/proc.go:208
+runtime.goexit
+	C:/Go/src/runtime/asm_amd64.s:1371
+gopkg.in/tucnak/telebot%2ev2.(*Bot).debug
+	C:/Users/user/go/pkg/mod/gopkg.in/tucnak/telebot.v2@v2.3.5/util.go:14
+gopkg.in/tucnak/telebot%2ev2.(*LongPoller).Poll
+	C:/Users/user/go/pkg/mod/gopkg.in/tucnak/telebot.v2@v2.3.5/poller.go:103
+runtime.goexit
+	C:/Go/src/runtime/asm_amd64.s:1371
+2021/11/10 09:46:45 util.go:18: telegram unknown: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running (409)
+gopkg.in/tucnak/telebot%2ev2.(*Bot).debug
+	C:/Users/user/go/pkg/mod/gopkg.in/tucnak/telebot.v2@v2.3.5/util.go:14
+gopkg.in/tucnak/telebot%2ev2.(*LongPoller).Poll
+	C:/Users/user/go/pkg/mod/gopkg.in/tucnak/telebot.v2@v2.3.5/poller.go:102
+runtime.goexit
+	C:/Go/src/runtime/asm_amd64.s:1371
+2021/11/10 09:46:45 util.go:18: telebot: could not fetch new updates
+gopkg.in/tucnak/telebot%2ev2.init
+	C:/Users/user/go/pkg/mod/gopkg.in/tucnak/telebot.v2@v2.3.5/telebot.go:36
+runtime.doInit
+	C:/Go/src/runtime/proc.go:6265
+runtime.doInit
+	C:/Go/src/runtime/proc.go:6242
+runtime.main
+	C:/Go/src/runtime/proc.go:208
+runtime.goexit
+	C:/Go/src/runtime/asm_amd64.s:1371
+gopkg.in/tucnak/telebot%2ev2.(*Bot).debug
+	C:/Users/user/go/pkg/mod/gopkg.in/tucnak/telebot.v2@v2.3.5/util.go:14
+gopkg.in/tucnak/telebot%2ev2.(*LongPoller).Poll
+	C:/Users/user/go/pkg/mod/gopkg.in/tucnak/telebot.v2@v2.3.5/poller.go:103
+runtime.goexit
+	C:/Go/src/runtime/asm_amd64.s:1371
+2021/11/10 09:46:48 util.go:18: telegram unknown: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running (409)
+gopkg.in/tucnak/telebot%2ev2.(*Bot).debug
+	C:/Users/user/go/pkg/mod/gopkg.in/tucnak/telebot.v2@v2.3.5/util.go:14
+gopkg.in/tucnak/telebot%2ev2.(*LongPoller).Poll
+	C:/Users/user/go/pkg/mod/gopkg.in/tucnak/telebot.v2@v2.3.5/poller.go:102
+runtime.goexit
+	C:/Go/src/runtime/asm_amd64.s:1371
+2021/11/10 09:46:48 util.go:18: telebot: could not fetch new updates
+gopkg.in/tucnak/telebot%2ev2.init
+	C:/Users/user/go/pkg/mod/gopkg.in/tucnak/telebot.v2@v2.3.5/telebot.go:36
+runtime.doInit
+	C:/Go/src/runtime/proc.go:6265
+runtime.doInit
+	C:/Go/src/runtime/proc.go:6242
+runtime.main
+	C:/Go/src/runtime/proc.go:208
+runtime.goexit
+	C:/Go/src/runtime/asm_amd64.s:1371
+gopkg.in/tucnak/telebot%2ev2.(*Bot).debug
+	C:/Users/user/go/pkg/mod/gopkg.in/tucnak/telebot.v2@v2.3.5/util.go:14
+gopkg.in/tucnak/telebot%2ev2.(*LongPoller).Poll
+	C:/Users/user/go/pkg/mod/gopkg.in/tucnak/telebot.v2@v2.3.5/poller.go:103
+runtime.goexit
+	C:/Go/src/runtime/asm_amd64.s:1371
+2021/11/10 09:46:51 util.go:18: telegram unknown: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running (409)
+gopkg.in/tucnak/telebot%2ev2.(*Bot).debug
+	C:/Users/user/go/pkg/mod/gopkg.in/tucnak/telebot.v2@v2.3.5/util.go:14
+gopkg.in/tucnak/telebot%2ev2.(*LongPoller).Poll
+	C:/Users/user/go/pkg/mod/gopkg.in/tucnak/telebot.v2@v2.3.5/poller.go:102
+runtime.goexit
+	C:/Go/src/runtime/asm_amd64.s:1371
+2021/11/10 09:46:51 util.go:18: telebot: could not fetch new updates
+gopkg.in/tucnak/telebot%2ev2.init
+	C:/Users/user/go/pkg/mod/gopkg.in/tucnak/telebot.v2@v2.3.5/telebot.go:36
+runtime.doInit
+	C:/Go/src/runtime/proc.go:6265
+runtime.doInit
+	C:/Go/src/runtime/proc.go:6242
+runtime.main
+	C:/Go/src/runtime/proc.go:208
+runtime.goexit
+	C:/Go/src/runtime/asm_amd64.s:1371
+gopkg.in/tucnak/telebot%2ev2.(*Bot).debug
+	C:/Users/user/go/pkg/mod/gopkg.in/tucnak/telebot.v2@v2.3.5/util.go:14
+gopkg.in/tucnak/telebot%2ev2.(*LongPoller).Poll
+	C:/Users/user/go/pkg/mod/gopkg.in/tucnak/telebot.v2@v2.3.5/poller.go:103
+runtime.goexit
+	C:/Go/src/runtime/asm_amd64.s:1371
+2021/11/10 09:46:55 util.go:18: telegram unknown: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running (409)
+gopkg.in/tucnak/telebot%2ev2.(*Bot).debug
+	C:/Users/user/go/pkg/mod/gopkg.in/tucnak/telebot.v2@v2.3.5/util.go:14
+gopkg.in/tucnak/telebot%2ev2.(*LongPoller).Poll
+	C:/Users/user/go/pkg/mod/gopkg.in/tucnak/telebot.v2@v2.3.5/poller.go:102
+runtime.goexit
+	C:/Go/src/runtime/asm_amd64.s:1371
+2021/11/10 09:46:55 util.go:18: telebot: could not fetch new updates
+gopkg.in/tucnak/telebot%2ev2.init
+	C:/Users/user/go/pkg/mod/gopkg.in/tucnak/telebot.v2@v2.3.5/telebot.go:36
+runtime.doInit
+	C:/Go/src/runtime/proc.go:6265
+runtime.doInit
+	C:/Go/src/runtime/proc.go:6242
+runtime.main
+	C:/Go/src/runtime/proc.go:208
+runtime.goexit
+	C:/Go/src/runtime/asm_amd64.s:1371
+gopkg.in/tucnak/telebot%2ev2.(*Bot).debug
+	C:/Users/user/go/pkg/mod/gopkg.in/tucnak/telebot.v2@v2.3.5/util.go:14
+gopkg.in/tucnak/telebot%2ev2.(*LongPoller).Poll
+	C:/Users/user/go/pkg/mod/gopkg.in/tucnak/telebot.v2@v2.3.5/poller.go:103
+runtime.goexit
+	C:/Go/src/runtime/asm_amd64.s:1371
+2021/11/10 09:46:58 util.go:18: telegram unknown: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running (409)
+gopkg.in/tucnak/telebot%2ev2.(*Bot).debug
+	C:/Users/user/go/pkg/mod/gopkg.in/tucnak/telebot.v2@v2.3.5/util.go:14
+gopkg.in/tucnak/telebot%2ev2.(*LongPoller).Poll
+	C:/Users/user/go/pkg/mod/gopkg.in/tucnak/telebot.v2@v2.3.5/poller.go:102
+runtime.goexit
+	C:/Go/src/runtime/asm_amd64.s:1371
+2021/11/10 09:46:58 util.go:18: telebot: could not fetch new updates
+gopkg.in/tucnak/telebot%2ev2.init
+	C:/Users/user/go/pkg/mod/gopkg.in/tucnak/telebot.v2@v2.3.5/telebot.go:36
+runtime.doInit
+	C:/Go/src/runtime/proc.go:6265
+runtime.doInit
+	C:/Go/src/runtime/proc.go:6242
+runtime.main
+	C:/Go/src/runtime/proc.go:208
+runtime.goexit
+	C:/Go/src/runtime/asm_amd64.s:1371
+gopkg.in/tucnak/telebot%2ev2.(*Bot).debug
+	C:/Users/user/go/pkg/mod/gopkg.in/tucnak/telebot.v2@v2.3.5/util.go:14
+gopkg.in/tucnak/telebot%2ev2.(*LongPoller).Poll
+	C:/Users/user/go/pkg/mod/gopkg.in/tucnak/telebot.v2@v2.3.5/poller.go:103
+runtime.goexit
+	C:/Go/src/runtime/asm_amd64.s:1371
+2021/11/10 09:47:01 util.go:18: telegram unknown: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running (409)
+gopkg.in/tucnak/telebot%2ev2.(*Bot).debug
+	C:/Users/user/go/pkg/mod/gopkg.in/tucnak/telebot.v2@v2.3.5/util.go:14
+gopkg.in/tucnak/telebot%2ev2.(*LongPoller).Poll
+	C:/Users/user/go/pkg/mod/gopkg.in/tucnak/telebot.v2@v2.3.5/poller.go:102
+runtime.goexit
+	C:/Go/src/runtime/asm_amd64.s:1371
+2021/11/10 09:47:01 util.go:18: telebot: could not fetch new updates
+gopkg.in/tucnak/telebot%2ev2.init
+	C:/Users/user/go/pkg/mod/gopkg.in/tucnak/telebot.v2@v2.3.5/telebot.go:36
+runtime.doInit
+	C:/Go/src/runtime/proc.go:6265
+runtime.doInit
+	C:/Go/src/runtime/proc.go:6242
+runtime.main
+	C:/Go/src/runtime/proc.go:208
+runtime.goexit
+	C:/Go/src/runtime/asm_amd64.s:1371
+gopkg.in/tucnak/telebot%2ev2.(*Bot).debug
+	C:/Users/user/go/pkg/mod/gopkg.in/tucnak/telebot.v2@v2.3.5/util.go:14
+gopkg.in/tucnak/telebot%2ev2.(*LongPoller).Poll
+	C:/Users/user/go/pkg/mod/gopkg.in/tucnak/telebot.v2@v2.3.5/poller.go:103
+runtime.goexit
+	C:/Go/src/runtime/asm_amd64.s:1371
+2021/11/10 09:47:04 util.go:18: telegram unknown: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running (409)
+gopkg.in/tucnak/telebot%2ev2.(*Bot).debug
+	C:/Users/user/go/pkg/mod/gopkg.in/tucnak/telebot.v2@v2.3.5/util.go:14
+gopkg.in/tucnak/telebot%2ev2.(*LongPoller).Poll
+	C:/Users/user/go/pkg/mod/gopkg.in/tucnak/telebot.v2@v2.3.5/poller.go:102
+runtime.goexit
+	C:/Go/src/runtime/asm_amd64.s:1371
+2021/11/10 09:47:04 util.go:18: telebot: could not fetch new updates
+gopkg.in/tucnak/telebot%2ev2.init
+	C:/Users/user/go/pkg/mod/gopkg.in/tucnak/telebot.v2@v2.3.5/telebot.go:36
+runtime.doInit
+	C:/Go/src/runtime/proc.go:6265
+runtime.doInit
+	C:/Go/src/runtime/proc.go:6242
+runtime.main
+	C:/Go/src/runtime/proc.go:208
+runtime.goexit
+	C:/Go/src/runtime/asm_amd64.s:1371
+gopkg.in/tucnak/telebot%2ev2.(*Bot).debug
+	C:/Users/user/go/pkg/mod/gopkg.in/tucnak/telebot.v2@v2.3.5/util.go:14
+gopkg.in/tucnak/telebot%2ev2.(*LongPoller).Poll
+	C:/Users/user/go/pkg/mod/gopkg.in/tucnak/telebot.v2@v2.3.5/poller.go:103
+runtime.goexit
+	C:/Go/src/runtime/asm_amd64.s:1371
+2021/11/10 09:47:07 util.go:18: telegram unknown: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running (409)
+gopkg.in/tucnak/telebot%2ev2.(*Bot).debug
+	C:/Users/user/go/pkg/mod/gopkg.in/tucnak/telebot.v2@v2.3.5/util.go:14
+gopkg.in/tucnak/telebot%2ev2.(*LongPoller).Poll
+	C:/Users/user/go/pkg/mod/gopkg.in/tucnak/telebot.v2@v2.3.5/poller.go:102
+runtime.goexit
+	C:/Go/src/runtime/asm_amd64.s:1371
+2021/11/10 09:47:07 util.go:18: telebot: could not fetch new updates
+gopkg.in/tucnak/telebot%2ev2.init
+	C:/Users/user/go/pkg/mod/gopkg.in/tucnak/telebot.v2@v2.3.5/telebot.go:36
+runtime.doInit
+	C:/Go/src/runtime/proc.go:6265
+runtime.doInit
+	C:/Go/src/runtime/proc.go:6242
+runtime.main
+	C:/Go/src/runtime/proc.go:208
+runtime.goexit
+	C:/Go/src/runtime/asm_amd64.s:1371
+gopkg.in/tucnak/telebot%2ev2.(*Bot).debug
+	C:/Users/user/go/pkg/mod/gopkg.in/tucnak/telebot.v2@v2.3.5/util.go:14
+gopkg.in/tucnak/telebot%2ev2.(*LongPoller).Poll
+	C:/Users/user/go/pkg/mod/gopkg.in/tucnak/telebot.v2@v2.3.5/poller.go:103
+runtime.goexit
+	C:/Go/src/runtime/asm_amd64.s:1371
+2021/11/10 09:47:10 util.go:18: telegram unknown: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running (409)
+gopkg.in/tucnak/telebot%2ev2.(*Bot).debug
+	C:/Users/user/go/pkg/mod/gopkg.in/tucnak/telebot.v2@v2.3.5/util.go:14
+gopkg.in/tucnak/telebot%2ev2.(*LongPoller).Poll
+	C:/Users/user/go/pkg/mod/gopkg.in/tucnak/telebot.v2@v2.3.5/poller.go:102
+runtime.goexit
+	C:/Go/src/runtime/asm_amd64.s:1371
+2021/11/10 09:47:10 util.go:18: telebot: could not fetch new updates
+gopkg.in/tucnak/telebot%2ev2.init
+	C:/Users/user/go/pkg/mod/gopkg.in/tucnak/telebot.v2@v2.3.5/telebot.go:36
+runtime.doInit
+	C:/Go/src/runtime/proc.go:6265
+runtime.doInit
+	C:/Go/src/runtime/proc.go:6242
+runtime.main
+	C:/Go/src/runtime/proc.go:208
+runtime.goexit
+	C:/Go/src/runtime/asm_amd64.s:1371
+gopkg.in/tucnak/telebot%2ev2.(*Bot).debug
+	C:/Users/user/go/pkg/mod/gopkg.in/tucnak/telebot.v2@v2.3.5/util.go:14
+gopkg.in/tucnak/telebot%2ev2.(*LongPoller).Poll
+	C:/Users/user/go/pkg/mod/gopkg.in/tucnak/telebot.v2@v2.3.5/poller.go:103
+runtime.goexit
+	C:/Go/src/runtime/asm_amd64.s:1371
+2021/11/10 09:47:13 util.go:18: telegram unknown: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running (409)
+gopkg.in/tucnak/telebot%2ev2.(*Bot).debug
+	C:/Users/user/go/pkg/mod/gopkg.in/tucnak/telebot.v2@v2.3.5/util.go:14
+gopkg.in/tucnak/telebot%2ev2.(*LongPoller).Poll
+	C:/Users/user/go/pkg/mod/gopkg.in/tucnak/telebot.v2@v2.3.5/poller.go:102
+runtime.goexit
+	C:/Go/src/runtime/asm_amd64.s:1371
+2021/11/10 09:47:13 util.go:18: telebot: could not fetch new updates
+gopkg.in/tucnak/telebot%2ev2.init
+	C:/Users/user/go/pkg/mod/gopkg.in/tucnak/telebot.v2@v2.3.5/telebot.go:36
+runtime.doInit
+	C:/Go/src/runtime/proc.go:6265
+runtime.doInit
+	C:/Go/src/runtime/proc.go:6242
+runtime.main
+	C:/Go/src/runtime/proc.go:208
+runtime.goexit
+	C:/Go/src/runtime/asm_amd64.s:1371
+gopkg.in/tucnak/telebot%2ev2.(*Bot).debug
+	C:/Users/user/go/pkg/mod/gopkg.in/tucnak/telebot.v2@v2.3.5/util.go:14
+gopkg.in/tucnak/telebot%2ev2.(*LongPoller).Poll
+	C:/Users/user/go/pkg/mod/gopkg.in/tucnak/telebot.v2@v2.3.5/poller.go:103
+runtime.goexit
+	C:/Go/src/runtime/asm_amd64.s:1371
+2021/11/10 09:47:16 util.go:18: telegram unknown: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running (409)
+gopkg.in/tucnak/telebot%2ev2.(*Bot).debug
+	C:/Users/user/go/pkg/mod/gopkg.in/tucnak/telebot.v2@v2.3.5/util.go:14
+gopkg.in/tucnak/telebot%2ev2.(*LongPoller).Poll
+	C:/Users/user/go/pkg/mod/gopkg.in/tucnak/telebot.v2@v2.3.5/poller.go:102
+runtime.goexit
+	C:/Go/src/runtime/asm_amd64.s:1371
+2021/11/10 09:47:16 util.go:18: telebot: could not fetch new updates
+gopkg.in/tucnak/telebot%2ev2.init
+	C:/Users/user/go/pkg/mod/gopkg.in/tucnak/telebot.v2@v2.3.5/telebot.go:36
+runtime.doInit
+	C:/Go/src/runtime/proc.go:6265
+runtime.doInit
+	C:/Go/src/runtime/proc.go:6242
+runtime.main
+	C:/Go/src/runtime/proc.go:208
+runtime.goexit
+	C:/Go/src/runtime/asm_amd64.s:1371
+gopkg.in/tucnak/telebot%2ev2.(*Bot).debug
+	C:/Users/user/go/pkg/mod/gopkg.in/tucnak/telebot.v2@v2.3.5/util.go:14
+gopkg.in/tucnak/telebot%2ev2.(*LongPoller).Poll
+	C:/Users/user/go/pkg/mod/gopkg.in/tucnak/telebot.v2@v2.3.5/poller.go:103
+runtime.goexit
+	C:/Go/src/runtime/asm_amd64.s:1371
+2021/11/10 09:47:20 util.go:18: telegram unknown: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running (409)
+gopkg.in/tucnak/telebot%2ev2.(*Bot).debug
+	C:/Users/user/go/pkg/mod/gopkg.in/tucnak/telebot.v2@v2.3.5/util.go:14
+gopkg.in/tucnak/telebot%2ev2.(*LongPoller).Poll
+	C:/Users/user/go/pkg/mod/gopkg.in/tucnak/telebot.v2@v2.3.5/poller.go:102
+runtime.goexit
+	C:/Go/src/runtime/asm_amd64.s:1371
+2021/11/10 09:47:20 util.go:18: telebot: could not fetch new updates
+gopkg.in/tucnak/telebot%2ev2.init
+	C:/Users/user/go/pkg/mod/gopkg.in/tucnak/telebot.v2@v2.3.5/telebot.go:36
+runtime.doInit
+	C:/Go/src/runtime/proc.go:6265
+runtime.doInit
+	C:/Go/src/runtime/proc.go:6242
+runtime.main
+	C:/Go/src/runtime/proc.go:208
+runtime.goexit
+	C:/Go/src/runtime/asm_amd64.s:1371
+gopkg.in/tucnak/telebot%2ev2.(*Bot).debug
+	C:/Users/user/go/pkg/mod/gopkg.in/tucnak/telebot.v2@v2.3.5/util.go:14
+gopkg.in/tucnak/telebot%2ev2.(*LongPoller).Poll
+	C:/Users/user/go/pkg/mod/gopkg.in/tucnak/telebot.v2@v2.3.5/poller.go:103
+runtime.goexit
+	C:/Go/src/runtime/asm_amd64.s:1371
+2021/11/10 09:47:23 util.go:18: telegram unknown: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running (409)
+gopkg.in/tucnak/telebot%2ev2.(*Bot).debug
+	C:/Users/user/go/pkg/mod/gopkg.in/tucnak/telebot.v2@v2.3.5/util.go:14
+gopkg.in/tucnak/telebot%2ev2.(*LongPoller).Poll
+	C:/Users/user/go/pkg/mod/gopkg.in/tucnak/telebot.v2@v2.3.5/poller.go:102
+runtime.goexit
+	C:/Go/src/runtime/asm_amd64.s:1371
+2021/11/10 09:47:23 util.go:18: telebot: could not fetch new updates
+gopkg.in/tucnak/telebot%2ev2.init
+	C:/Users/user/go/pkg/mod/gopkg.in/tucnak/telebot.v2@v2.3.5/telebot.go:36
+runtime.doInit
+	C:/Go/src/runtime/proc.go:6265
+runtime.doInit
+	C:/Go/src/runtime/proc.go:6242
+runtime.main
+	C:/Go/src/runtime/proc.go:208
+runtime.goexit
+	C:/Go/src/runtime/asm_amd64.s:1371
+gopkg.in/tucnak/telebot%2ev2.(*Bot).debug
+	C:/Users/user/go/pkg/mod/gopkg.in/tucnak/telebot.v2@v2.3.5/util.go:14
+gopkg.in/tucnak/telebot%2ev2.(*LongPoller).Poll
+	C:/Users/user/go/pkg/mod/gopkg.in/tucnak/telebot.v2@v2.3.5/poller.go:103
+runtime.goexit
+	C:/Go/src/runtime/asm_amd64.s:1371
+2021/11/10 09:47:26 util.go:18: telegram unknown: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running (409)
+gopkg.in/tucnak/telebot%2ev2.(*Bot).debug
+	C:/Users/user/go/pkg/mod/gopkg.in/tucnak/telebot.v2@v2.3.5/util.go:14
+gopkg.in/tucnak/telebot%2ev2.(*LongPoller).Poll
+	C:/Users/user/go/pkg/mod/gopkg.in/tucnak/telebot.v2@v2.3.5/poller.go:102
+runtime.goexit
+	C:/Go/src/runtime/asm_amd64.s:1371
+2021/11/10 09:47:26 util.go:18: telebot: could not fetch new updates
+gopkg.in/tucnak/telebot%2ev2.init
+	C:/Users/user/go/pkg/mod/gopkg.in/tucnak/telebot.v2@v2.3.5/telebot.go:36
+runtime.doInit
+	C:/Go/src/runtime/proc.go:6265
+runtime.doInit
+	C:/Go/src/runtime/proc.go:6242
+runtime.main
+	C:/Go/src/runtime/proc.go:208
+runtime.goexit
+	C:/Go/src/runtime/asm_amd64.s:1371
+gopkg.in/tucnak/telebot%2ev2.(*Bot).debug
+	C:/Users/user/go/pkg/mod/gopkg.in/tucnak/telebot.v2@v2.3.5/util.go:14
+gopkg.in/tucnak/telebot%2ev2.(*LongPoller).Poll
+	C:/Users/user/go/pkg/mod/gopkg.in/tucnak/telebot.v2@v2.3.5/poller.go:103
+runtime.goexit
+	C:/Go/src/runtime/asm_amd64.s:1371
+2021/11/10 09:47:29 util.go:18: telegram unknown: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running (409)
+gopkg.in/tucnak/telebot%2ev2.(*Bot).debug
+	C:/Users/user/go/pkg/mod/gopkg.in/tucnak/telebot.v2@v2.3.5/util.go:14
+gopkg.in/tucnak/telebot%2ev2.(*LongPoller).Poll
+	C:/Users/user/go/pkg/mod/gopkg.in/tucnak/telebot.v2@v2.3.5/poller.go:102
+runtime.goexit
+	C:/Go/src/runtime/asm_amd64.s:1371
+2021/11/10 09:47:29 util.go:18: telebot: could not fetch new updates
+gopkg.in/tucnak/telebot%2ev2.init
+	C:/Users/user/go/pkg/mod/gopkg.in/tucnak/telebot.v2@v2.3.5/telebot.go:36
+runtime.doInit
+	C:/Go/src/runtime/proc.go:6265
+runtime.doInit
+	C:/Go/src/runtime/proc.go:6242
+runtime.main
+	C:/Go/src/runtime/proc.go:208
+runtime.goexit
+	C:/Go/src/runtime/asm_amd64.s:1371
+gopkg.in/tucnak/telebot%2ev2.(*Bot).debug
+	C:/Users/user/go/pkg/mod/gopkg.in/tucnak/telebot.v2@v2.3.5/util.go:14
+gopkg.in/tucnak/telebot%2ev2.(*LongPoller).Poll
+	C:/Users/user/go/pkg/mod/gopkg.in/tucnak/telebot.v2@v2.3.5/poller.go:103
+runtime.goexit
+	C:/Go/src/runtime/asm_amd64.s:1371
+2021/11/10 09:47:32 util.go:18: telegram unknown: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running (409)
+gopkg.in/tucnak/telebot%2ev2.(*Bot).debug
+	C:/Users/user/go/pkg/mod/gopkg.in/tucnak/telebot.v2@v2.3.5/util.go:14
+gopkg.in/tucnak/telebot%2ev2.(*LongPoller).Poll
+	C:/Users/user/go/pkg/mod/gopkg.in/tucnak/telebot.v2@v2.3.5/poller.go:102
+runtime.goexit
+	C:/Go/src/runtime/asm_amd64.s:1371
+2021/11/10 09:47:32 util.go:18: telebot: could not fetch new updates
+gopkg.in/tucnak/telebot%2ev2.init
+	C:/Users/user/go/pkg/mod/gopkg.in/tucnak/telebot.v2@v2.3.5/telebot.go:36
+runtime.doInit
+	C:/Go/src/runtime/proc.go:6265
+runtime.doInit
+	C:/Go/src/runtime/proc.go:6242
+runtime.main
+	C:/Go/src/runtime/proc.go:208
+runtime.goexit
+	C:/Go/src/runtime/asm_amd64.s:1371
+gopkg.in/tucnak/telebot%2ev2.(*Bot).debug
+	C:/Users/user/go/pkg/mod/gopkg.in/tucnak/telebot.v2@v2.3.5/util.go:14
+gopkg.in/tucnak/telebot%2ev2.(*LongPoller).Poll
+	C:/Users/user/go/pkg/mod/gopkg.in/tucnak/telebot.v2@v2.3.5/poller.go:103
+runtime.goexit
+	C:/Go/src/runtime/asm_amd64.s:1371
+2021/11/10 09:47:35 util.go:18: telegram unknown: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running (409)
+gopkg.in/tucnak/telebot%2ev2.(*Bot).debug
+	C:/Users/user/go/pkg/mod/gopkg.in/tucnak/telebot.v2@v2.3.5/util.go:14
+gopkg.in/tucnak/telebot%2ev2.(*LongPoller).Poll
+	C:/Users/user/go/pkg/mod/gopkg.in/tucnak/telebot.v2@v2.3.5/poller.go:102
+runtime.goexit
+	C:/Go/src/runtime/asm_amd64.s:1371
+2021/11/10 09:47:35 util.go:18: telebot: could not fetch new updates
+gopkg.in/tucnak/telebot%2ev2.init
+	C:/Users/user/go/pkg/mod/gopkg.in/tucnak/telebot.v2@v2.3.5/telebot.go:36
+runtime.doInit
+	C:/Go/src/runtime/proc.go:6265
+runtime.doInit
+	C:/Go/src/runtime/proc.go:6242
+runtime.main
+	C:/Go/src/runtime/proc.go:208
+runtime.goexit
+	C:/Go/src/runtime/asm_amd64.s:1371
+gopkg.in/tucnak/telebot%2ev2.(*Bot).debug
+	C:/Users/user/go/pkg/mod/gopkg.in/tucnak/telebot.v2@v2.3.5/util.go:14
+gopkg.in/tucnak/telebot%2ev2.(*LongPoller).Poll
+	C:/Users/user/go/pkg/mod/gopkg.in/tucnak/telebot.v2@v2.3.5/poller.go:103
+runtime.goexit
+	C:/Go/src/runtime/asm_amd64.s:1371
+2021/11/10 09:47:38 util.go:18: telegram unknown: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running (409)
+gopkg.in/tucnak/telebot%2ev2.(*Bot).debug
+	C:/Users/user/go/pkg/mod/gopkg.in/tucnak/telebot.v2@v2.3.5/util.go:14
+gopkg.in/tucnak/telebot%2ev2.(*LongPoller).Poll
+	C:/Users/user/go/pkg/mod/gopkg.in/tucnak/telebot.v2@v2.3.5/poller.go:102
+runtime.goexit
+	C:/Go/src/runtime/asm_amd64.s:1371
+2021/11/10 09:47:38 util.go:18: telebot: could not fetch new updates
+gopkg.in/tucnak/telebot%2ev2.init
+	C:/Users/user/go/pkg/mod/gopkg.in/tucnak/telebot.v2@v2.3.5/telebot.go:36
+runtime.doInit
+	C:/Go/src/runtime/proc.go:6265
+runtime.doInit
+	C:/Go/src/runtime/proc.go:6242
+runtime.main
+	C:/Go/src/runtime/proc.go:208
+runtime.goexit
+	C:/Go/src/runtime/asm_amd64.s:1371
+gopkg.in/tucnak/telebot%2ev2.(*Bot).debug
+	C:/Users/user/go/pkg/mod/gopkg.in/tucnak/telebot.v2@v2.3.5/util.go:14
+gopkg.in/tucnak/telebot%2ev2.(*LongPoller).Poll
+	C:/Users/user/go/pkg/mod/gopkg.in/tucnak/telebot.v2@v2.3.5/poller.go:103
+runtime.goexit
+	C:/Go/src/runtime/asm_amd64.s:1371
+2021/11/10 09:47:42 util.go:18: telegram unknown: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running (409)
+gopkg.in/tucnak/telebot%2ev2.(*Bot).debug
+	C:/Users/user/go/pkg/mod/gopkg.in/tucnak/telebot.v2@v2.3.5/util.go:14
+gopkg.in/tucnak/telebot%2ev2.(*LongPoller).Poll
+	C:/Users/user/go/pkg/mod/gopkg.in/tucnak/telebot.v2@v2.3.5/poller.go:102
+runtime.goexit
+	C:/Go/src/runtime/asm_amd64.s:1371
+2021/11/10 09:47:42 util.go:18: telebot: could not fetch new updates
+gopkg.in/tucnak/telebot%2ev2.init
+	C:/Users/user/go/pkg/mod/gopkg.in/tucnak/telebot.v2@v2.3.5/telebot.go:36
+runtime.doInit
+	C:/Go/src/runtime/proc.go:6265
+runtime.doInit
+	C:/Go/src/runtime/proc.go:6242
+runtime.main
+	C:/Go/src/runtime/proc.go:208
+runtime.goexit
+	C:/Go/src/runtime/asm_amd64.s:1371
+gopkg.in/tucnak/telebot%2ev2.(*Bot).debug
+	C:/Users/user/go/pkg/mod/gopkg.in/tucnak/telebot.v2@v2.3.5/util.go:14
+gopkg.in/tucnak/telebot%2ev2.(*LongPoller).Poll
+	C:/Users/user/go/pkg/mod/gopkg.in/tucnak/telebot.v2@v2.3.5/poller.go:103
+runtime.goexit
+	C:/Go/src/runtime/asm_amd64.s:1371
+2021/11/10 09:47:45 util.go:18: telegram unknown: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running (409)
+gopkg.in/tucnak/telebot%2ev2.(*Bot).debug
+	C:/Users/user/go/pkg/mod/gopkg.in/tucnak/telebot.v2@v2.3.5/util.go:14
+gopkg.in/tucnak/telebot%2ev2.(*LongPoller).Poll
+	C:/Users/user/go/pkg/mod/gopkg.in/tucnak/telebot.v2@v2.3.5/poller.go:102
+runtime.goexit
+	C:/Go/src/runtime/asm_amd64.s:1371
+2021/11/10 09:47:45 util.go:18: telebot: could not fetch new updates
+gopkg.in/tucnak/telebot%2ev2.init
+	C:/Users/user/go/pkg/mod/gopkg.in/tucnak/telebot.v2@v2.3.5/telebot.go:36
+runtime.doInit
+	C:/Go/src/runtime/proc.go:6265
+runtime.doInit
+	C:/Go/src/runtime/proc.go:6242
+runtime.main
+	C:/Go/src/runtime/proc.go:208
+runtime.goexit
+	C:/Go/src/runtime/asm_amd64.s:1371
+gopkg.in/tucnak/telebot%2ev2.(*Bot).debug
+	C:/Users/user/go/pkg/mod/gopkg.in/tucnak/telebot.v2@v2.3.5/util.go:14
+gopkg.in/tucnak/telebot%2ev2.(*LongPoller).Poll
+	C:/Users/user/go/pkg/mod/gopkg.in/tucnak/telebot.v2@v2.3.5/poller.go:103
+runtime.goexit
+	C:/Go/src/runtime/asm_amd64.s:1371
+2021/11/10 09:47:48 util.go:18: telegram unknown: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running (409)
+gopkg.in/tucnak/telebot%2ev2.(*Bot).debug
+	C:/Users/user/go/pkg/mod/gopkg.in/tucnak/telebot.v2@v2.3.5/util.go:14
+gopkg.in/tucnak/telebot%2ev2.(*LongPoller).Poll
+	C:/Users/user/go/pkg/mod/gopkg.in/tucnak/telebot.v2@v2.3.5/poller.go:102
+runtime.goexit
+	C:/Go/src/runtime/asm_amd64.s:1371
+2021/11/10 09:47:48 util.go:18: telebot: could not fetch new updates
+gopkg.in/tucnak/telebot%2ev2.init
+	C:/Users/user/go/pkg/mod/gopkg.in/tucnak/telebot.v2@v2.3.5/telebot.go:36
+runtime.doInit
+	C:/Go/src/runtime/proc.go:6265
+runtime.doInit
+	C:/Go/src/runtime/proc.go:6242
+runtime.main
+	C:/Go/src/runtime/proc.go:208
+runtime.goexit
+	C:/Go/src/runtime/asm_amd64.s:1371
+gopkg.in/tucnak/telebot%2ev2.(*Bot).debug
+	C:/Users/user/go/pkg/mod/gopkg.in/tucnak/telebot.v2@v2.3.5/util.go:14
+gopkg.in/tucnak/telebot%2ev2.(*LongPoller).Poll
+	C:/Users/user/go/pkg/mod/gopkg.in/tucnak/telebot.v2@v2.3.5/poller.go:103
+runtime.goexit
+	C:/Go/src/runtime/asm_amd64.s:1371
+2021/11/10 09:47:51 util.go:18: telegram unknown: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running (409)
+gopkg.in/tucnak/telebot%2ev2.(*Bot).debug
+	C:/Users/user/go/pkg/mod/gopkg.in/tucnak/telebot.v2@v2.3.5/util.go:14
+gopkg.in/tucnak/telebot%2ev2.(*LongPoller).Poll
+	C:/Users/user/go/pkg/mod/gopkg.in/tucnak/telebot.v2@v2.3.5/poller.go:102
+runtime.goexit
+	C:/Go/src/runtime/asm_amd64.s:1371
+2021/11/10 09:47:51 util.go:18: telebot: could not fetch new updates
+gopkg.in/tucnak/telebot%2ev2.init
+	C:/Users/user/go/pkg/mod/gopkg.in/tucnak/telebot.v2@v2.3.5/telebot.go:36
+runtime.doInit
+	C:/Go/src/runtime/proc.go:6265
+runtime.doInit
+	C:/Go/src/runtime/proc.go:6242
+runtime.main
+	C:/Go/src/runtime/proc.go:208
+runtime.goexit
+	C:/Go/src/runtime/asm_amd64.s:1371
+gopkg.in/tucnak/telebot%2ev2.(*Bot).debug
+	C:/Users/user/go/pkg/mod/gopkg.in/tucnak/telebot.v2@v2.3.5/util.go:14
+gopkg.in/tucnak/telebot%2ev2.(*LongPoller).Poll
+	C:/Users/user/go/pkg/mod/gopkg.in/tucnak/telebot.v2@v2.3.5/poller.go:103
+runtime.goexit
+	C:/Go/src/runtime/asm_amd64.s:1371
+2021/11/10 09:47:54 util.go:18: telegram unknown: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running (409)
+gopkg.in/tucnak/telebot%2ev2.(*Bot).debug
+	C:/Users/user/go/pkg/mod/gopkg.in/tucnak/telebot.v2@v2.3.5/util.go:14
+gopkg.in/tucnak/telebot%2ev2.(*LongPoller).Poll
+	C:/Users/user/go/pkg/mod/gopkg.in/tucnak/telebot.v2@v2.3.5/poller.go:102
+runtime.goexit
+	C:/Go/src/runtime/asm_amd64.s:1371
+2021/11/10 09:47:54 util.go:18: telebot: could not fetch new updates
+gopkg.in/tucnak/telebot%2ev2.init
+	C:/Users/user/go/pkg/mod/gopkg.in/tucnak/telebot.v2@v2.3.5/telebot.go:36
+runtime.doInit
+	C:/Go/src/runtime/proc.go:6265
+runtime.doInit
+	C:/Go/src/runtime/proc.go:6242
+runtime.main
+	C:/Go/src/runtime/proc.go:208
+runtime.goexit
+	C:/Go/src/runtime/asm_amd64.s:1371
+gopkg.in/tucnak/telebot%2ev2.(*Bot).debug
+	C:/Users/user/go/pkg/mod/gopkg.in/tucnak/telebot.v2@v2.3.5/util.go:14
+gopkg.in/tucnak/telebot%2ev2.(*LongPoller).Poll
+	C:/Users/user/go/pkg/mod/gopkg.in/tucnak/telebot.v2@v2.3.5/poller.go:103
+runtime.goexit
+	C:/Go/src/runtime/asm_amd64.s:1371
+2021/11/10 09:55:05 util.go:18: telegram unknown: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running (409)
+gopkg.in/tucnak/telebot%2ev2.(*Bot).debug
+	C:/Users/user/go/pkg/mod/gopkg.in/tucnak/telebot.v2@v2.3.5/util.go:14
+gopkg.in/tucnak/telebot%2ev2.(*LongPoller).Poll
+	C:/Users/user/go/pkg/mod/gopkg.in/tucnak/telebot.v2@v2.3.5/poller.go:102
+runtime.goexit
+	C:/Go/src/runtime/asm_amd64.s:1371
+2021/11/10 09:55:05 util.go:18: telebot: could not fetch new updates
+gopkg.in/tucnak/telebot%2ev2.init
+	C:/Users/user/go/pkg/mod/gopkg.in/tucnak/telebot.v2@v2.3.5/telebot.go:36
+runtime.doInit
+	C:/Go/src/runtime/proc.go:6265
+runtime.doInit
+	C:/Go/src/runtime/proc.go:6242
+runtime.main
+	C:/Go/src/runtime/proc.go:208
+runtime.goexit
+	C:/Go/src/runtime/asm_amd64.s:1371
+gopkg.in/tucnak/telebot%2ev2.(*Bot).debug
+	C:/Users/user/go/pkg/mod/gopkg.in/tucnak/telebot.v2@v2.3.5/util.go:14
+gopkg.in/tucnak/telebot%2ev2.(*LongPoller).Poll
+	C:/Users/user/go/pkg/mod/gopkg.in/tucnak/telebot.v2@v2.3.5/poller.go:103
+runtime.goexit
+	C:/Go/src/runtime/asm_amd64.s:1371
+2021/11/10 09:55:08 util.go:18: telegram unknown: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running (409)
+gopkg.in/tucnak/telebot%2ev2.(*Bot).debug
+	C:/Users/user/go/pkg/mod/gopkg.in/tucnak/telebot.v2@v2.3.5/util.go:14
+gopkg.in/tucnak/telebot%2ev2.(*LongPoller).Poll
+	C:/Users/user/go/pkg/mod/gopkg.in/tucnak/telebot.v2@v2.3.5/poller.go:102
+runtime.goexit
+	C:/Go/src/runtime/asm_amd64.s:1371
+2021/11/10 09:55:08 util.go:18: telebot: could not fetch new updates
+gopkg.in/tucnak/telebot%2ev2.init
+	C:/Users/user/go/pkg/mod/gopkg.in/tucnak/telebot.v2@v2.3.5/telebot.go:36
+runtime.doInit
+	C:/Go/src/runtime/proc.go:6265
+runtime.doInit
+	C:/Go/src/runtime/proc.go:6242
+runtime.main
+	C:/Go/src/runtime/proc.go:208
+runtime.goexit
+	C:/Go/src/runtime/asm_amd64.s:1371
+gopkg.in/tucnak/telebot%2ev2.(*Bot).debug
+	C:/Users/user/go/pkg/mod/gopkg.in/tucnak/telebot.v2@v2.3.5/util.go:14
+gopkg.in/tucnak/telebot%2ev2.(*LongPoller).Poll
+	C:/Users/user/go/pkg/mod/gopkg.in/tucnak/telebot.v2@v2.3.5/poller.go:103
+runtime.goexit
+	C:/Go/src/runtime/asm_amd64.s:1371
+2021/11/10 09:55:12 util.go:18: telegram unknown: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running (409)
+gopkg.in/tucnak/telebot%2ev2.(*Bot).debug
+	C:/Users/user/go/pkg/mod/gopkg.in/tucnak/telebot.v2@v2.3.5/util.go:14
+gopkg.in/tucnak/telebot%2ev2.(*LongPoller).Poll
+	C:/Users/user/go/pkg/mod/gopkg.in/tucnak/telebot.v2@v2.3.5/poller.go:102
+runtime.goexit
+	C:/Go/src/runtime/asm_amd64.s:1371
+2021/11/10 09:55:12 util.go:18: telebot: could not fetch new updates
+gopkg.in/tucnak/telebot%2ev2.init
+	C:/Users/user/go/pkg/mod/gopkg.in/tucnak/telebot.v2@v2.3.5/telebot.go:36
+runtime.doInit
+	C:/Go/src/runtime/proc.go:6265
+runtime.doInit
+	C:/Go/src/runtime/proc.go:6242
+runtime.main
+	C:/Go/src/runtime/proc.go:208
+runtime.goexit
+	C:/Go/src/runtime/asm_amd64.s:1371
+gopkg.in/tucnak/telebot%2ev2.(*Bot).debug
+	C:/Users/user/go/pkg/mod/gopkg.in/tucnak/telebot.v2@v2.3.5/util.go:14
+gopkg.in/tucnak/telebot%2ev2.(*LongPoller).Poll
+	C:/Users/user/go/pkg/mod/gopkg.in/tucnak/telebot.v2@v2.3.5/poller.go:103
+runtime.goexit
+	C:/Go/src/runtime/asm_amd64.s:1371
+2021/11/10 09:55:15 util.go:18: telegram unknown: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running (409)
+gopkg.in/tucnak/telebot%2ev2.(*Bot).debug
+	C:/Users/user/go/pkg/mod/gopkg.in/tucnak/telebot.v2@v2.3.5/util.go:14
+gopkg.in/tucnak/telebot%2ev2.(*LongPoller).Poll
+	C:/Users/user/go/pkg/mod/gopkg.in/tucnak/telebot.v2@v2.3.5/poller.go:102
+runtime.goexit
+	C:/Go/src/runtime/asm_amd64.s:1371
+2021/11/10 09:55:15 util.go:18: telebot: could not fetch new updates
+gopkg.in/tucnak/telebot%2ev2.init
+	C:/Users/user/go/pkg/mod/gopkg.in/tucnak/telebot.v2@v2.3.5/telebot.go:36
+runtime.doInit
+	C:/Go/src/runtime/proc.go:6265
+runtime.doInit
+	C:/Go/src/runtime/proc.go:6242
+runtime.main
+	C:/Go/src/runtime/proc.go:208
+runtime.goexit
+	C:/Go/src/runtime/asm_amd64.s:1371
+gopkg.in/tucnak/telebot%2ev2.(*Bot).debug
+	C:/Users/user/go/pkg/mod/gopkg.in/tucnak/telebot.v2@v2.3.5/util.go:14
+gopkg.in/tucnak/telebot%2ev2.(*LongPoller).Poll
+	C:/Users/user/go/pkg/mod/gopkg.in/tucnak/telebot.v2@v2.3.5/poller.go:103
+runtime.goexit
+	C:/Go/src/runtime/asm_amd64.s:1371
+2021/11/10 09:55:18 util.go:18: telegram unknown: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running (409)
+gopkg.in/tucnak/telebot%2ev2.(*Bot).debug
+	C:/Users/user/go/pkg/mod/gopkg.in/tucnak/telebot.v2@v2.3.5/util.go:14
+gopkg.in/tucnak/telebot%2ev2.(*LongPoller).Poll
+	C:/Users/user/go/pkg/mod/gopkg.in/tucnak/telebot.v2@v2.3.5/poller.go:102
+runtime.goexit
+	C:/Go/src/runtime/asm_amd64.s:1371
+2021/11/10 09:55:18 util.go:18: telebot: could not fetch new updates
+gopkg.in/tucnak/telebot%2ev2.init
+	C:/Users/user/go/pkg/mod/gopkg.in/tucnak/telebot.v2@v2.3.5/telebot.go:36
+runtime.doInit
+	C:/Go/src/runtime/proc.go:6265
+runtime.doInit
+	C:/Go/src/runtime/proc.go:6242
+runtime.main
+	C:/Go/src/runtime/proc.go:208
+runtime.goexit
+	C:/Go/src/runtime/asm_amd64.s:1371
+gopkg.in/tucnak/telebot%2ev2.(*Bot).debug
+	C:/Users/user/go/pkg/mod/gopkg.in/tucnak/telebot.v2@v2.3.5/util.go:14
+gopkg.in/tucnak/telebot%2ev2.(*LongPoller).Poll
+	C:/Users/user/go/pkg/mod/gopkg.in/tucnak/telebot.v2@v2.3.5/poller.go:103
+runtime.goexit
+	C:/Go/src/runtime/asm_amd64.s:1371
+2021/11/10 09:55:21 util.go:18: telegram unknown: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running (409)
+gopkg.in/tucnak/telebot%2ev2.(*Bot).debug
+	C:/Users/user/go/pkg/mod/gopkg.in/tucnak/telebot.v2@v2.3.5/util.go:14
+gopkg.in/tucnak/telebot%2ev2.(*LongPoller).Poll
+	C:/Users/user/go/pkg/mod/gopkg.in/tucnak/telebot.v2@v2.3.5/poller.go:102
+runtime.goexit
+	C:/Go/src/runtime/asm_amd64.s:1371
+2021/11/10 09:55:21 util.go:18: telebot: could not fetch new updates
+gopkg.in/tucnak/telebot%2ev2.init
+	C:/Users/user/go/pkg/mod/gopkg.in/tucnak/telebot.v2@v2.3.5/telebot.go:36
+runtime.doInit
+	C:/Go/src/runtime/proc.go:6265
+runtime.doInit
+	C:/Go/src/runtime/proc.go:6242
+runtime.main
+	C:/Go/src/runtime/proc.go:208
+runtime.goexit
+	C:/Go/src/runtime/asm_amd64.s:1371
+gopkg.in/tucnak/telebot%2ev2.(*Bot).debug
+	C:/Users/user/go/pkg/mod/gopkg.in/tucnak/telebot.v2@v2.3.5/util.go:14
+gopkg.in/tucnak/telebot%2ev2.(*LongPoller).Poll
+	C:/Users/user/go/pkg/mod/gopkg.in/tucnak/telebot.v2@v2.3.5/poller.go:103
+runtime.goexit
+	C:/Go/src/runtime/asm_amd64.s:1371
+2021/11/10 09:55:24 util.go:18: telegram unknown: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running (409)
+gopkg.in/tucnak/telebot%2ev2.(*Bot).debug
+	C:/Users/user/go/pkg/mod/gopkg.in/tucnak/telebot.v2@v2.3.5/util.go:14
+gopkg.in/tucnak/telebot%2ev2.(*LongPoller).Poll
+	C:/Users/user/go/pkg/mod/gopkg.in/tucnak/telebot.v2@v2.3.5/poller.go:102
+runtime.goexit
+	C:/Go/src/runtime/asm_amd64.s:1371
+2021/11/10 09:55:24 util.go:18: telebot: could not fetch new updates
+gopkg.in/tucnak/telebot%2ev2.init
+	C:/Users/user/go/pkg/mod/gopkg.in/tucnak/telebot.v2@v2.3.5/telebot.go:36
+runtime.doInit
+	C:/Go/src/runtime/proc.go:6265
+runtime.doInit
+	C:/Go/src/runtime/proc.go:6242
+runtime.main
+	C:/Go/src/runtime/proc.go:208
+runtime.goexit
+	C:/Go/src/runtime/asm_amd64.s:1371
+gopkg.in/tucnak/telebot%2ev2.(*Bot).debug
+	C:/Users/user/go/pkg/mod/gopkg.in/tucnak/telebot.v2@v2.3.5/util.go:14
+gopkg.in/tucnak/telebot%2ev2.(*LongPoller).Poll
+	C:/Users/user/go/pkg/mod/gopkg.in/tucnak/telebot.v2@v2.3.5/poller.go:103
+runtime.goexit
+	C:/Go/src/runtime/asm_amd64.s:1371
+2021/11/10 09:55:27 util.go:18: telegram unknown: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running (409)
+gopkg.in/tucnak/telebot%2ev2.(*Bot).debug
+	C:/Users/user/go/pkg/mod/gopkg.in/tucnak/telebot.v2@v2.3.5/util.go:14
+gopkg.in/tucnak/telebot%2ev2.(*LongPoller).Poll
+	C:/Users/user/go/pkg/mod/gopkg.in/tucnak/telebot.v2@v2.3.5/poller.go:102
+runtime.goexit
+	C:/Go/src/runtime/asm_amd64.s:1371
+2021/11/10 09:55:27 util.go:18: telebot: could not fetch new updates
+gopkg.in/tucnak/telebot%2ev2.init
+	C:/Users/user/go/pkg/mod/gopkg.in/tucnak/telebot.v2@v2.3.5/telebot.go:36
+runtime.doInit
+	C:/Go/src/runtime/proc.go:6265
+runtime.doInit
+	C:/Go/src/runtime/proc.go:6242
+runtime.main
+	C:/Go/src/runtime/proc.go:208
+runtime.goexit
+	C:/Go/src/runtime/asm_amd64.s:1371
+gopkg.in/tucnak/telebot%2ev2.(*Bot).debug
+	C:/Users/user/go/pkg/mod/gopkg.in/tucnak/telebot.v2@v2.3.5/util.go:14
+gopkg.in/tucnak/telebot%2ev2.(*LongPoller).Poll
+	C:/Users/user/go/pkg/mod/gopkg.in/tucnak/telebot.v2@v2.3.5/poller.go:103
+runtime.goexit
+	C:/Go/src/runtime/asm_amd64.s:1371
+2021/11/10 09:55:30 util.go:18: telegram unknown: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running (409)
+gopkg.in/tucnak/telebot%2ev2.(*Bot).debug
+	C:/Users/user/go/pkg/mod/gopkg.in/tucnak/telebot.v2@v2.3.5/util.go:14
+gopkg.in/tucnak/telebot%2ev2.(*LongPoller).Poll
+	C:/Users/user/go/pkg/mod/gopkg.in/tucnak/telebot.v2@v2.3.5/poller.go:102
+runtime.goexit
+	C:/Go/src/runtime/asm_amd64.s:1371
+2021/11/10 09:55:30 util.go:18: telebot: could not fetch new updates
+gopkg.in/tucnak/telebot%2ev2.init
+	C:/Users/user/go/pkg/mod/gopkg.in/tucnak/telebot.v2@v2.3.5/telebot.go:36
+runtime.doInit
+	C:/Go/src/runtime/proc.go:6265
+runtime.doInit
+	C:/Go/src/runtime/proc.go:6242
+runtime.main
+	C:/Go/src/runtime/proc.go:208
+runtime.goexit
+	C:/Go/src/runtime/asm_amd64.s:1371
+gopkg.in/tucnak/telebot%2ev2.(*Bot).debug
+	C:/Users/user/go/pkg/mod/gopkg.in/tucnak/telebot.v2@v2.3.5/util.go:14
+gopkg.in/tucnak/telebot%2ev2.(*LongPoller).Poll
+	C:/Users/user/go/pkg/mod/gopkg.in/tucnak/telebot.v2@v2.3.5/poller.go:103
+runtime.goexit
+	C:/Go/src/runtime/asm_amd64.s:1371
+2021/11/10 09:55:33 util.go:18: telegram unknown: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running (409)
+gopkg.in/tucnak/telebot%2ev2.(*Bot).debug
+	C:/Users/user/go/pkg/mod/gopkg.in/tucnak/telebot.v2@v2.3.5/util.go:14
+gopkg.in/tucnak/telebot%2ev2.(*LongPoller).Poll
+	C:/Users/user/go/pkg/mod/gopkg.in/tucnak/telebot.v2@v2.3.5/poller.go:102
+runtime.goexit
+	C:/Go/src/runtime/asm_amd64.s:1371
+2021/11/10 09:55:33 util.go:18: telebot: could not fetch new updates
+gopkg.in/tucnak/telebot%2ev2.init
+	C:/Users/user/go/pkg/mod/gopkg.in/tucnak/telebot.v2@v2.3.5/telebot.go:36
+runtime.doInit
+	C:/Go/src/runtime/proc.go:6265
+runtime.doInit
+	C:/Go/src/runtime/proc.go:6242
+runtime.main
+	C:/Go/src/runtime/proc.go:208
+runtime.goexit
+	C:/Go/src/runtime/asm_amd64.s:1371
+gopkg.in/tucnak/telebot%2ev2.(*Bot).debug
+	C:/Users/user/go/pkg/mod/gopkg.in/tucnak/telebot.v2@v2.3.5/util.go:14
+gopkg.in/tucnak/telebot%2ev2.(*LongPoller).Poll
+	C:/Users/user/go/pkg/mod/gopkg.in/tucnak/telebot.v2@v2.3.5/poller.go:103
+runtime.goexit
+	C:/Go/src/runtime/asm_amd64.s:1371
+2021/11/10 09:55:37 util.go:18: telegram unknown: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running (409)
+gopkg.in/tucnak/telebot%2ev2.(*Bot).debug
+	C:/Users/user/go/pkg/mod/gopkg.in/tucnak/telebot.v2@v2.3.5/util.go:14
+gopkg.in/tucnak/telebot%2ev2.(*LongPoller).Poll
+	C:/Users/user/go/pkg/mod/gopkg.in/tucnak/telebot.v2@v2.3.5/poller.go:102
+runtime.goexit
+	C:/Go/src/runtime/asm_amd64.s:1371
+2021/11/10 09:55:37 util.go:18: telebot: could not fetch new updates
+gopkg.in/tucnak/telebot%2ev2.init
+	C:/Users/user/go/pkg/mod/gopkg.in/tucnak/telebot.v2@v2.3.5/telebot.go:36
+runtime.doInit
+	C:/Go/src/runtime/proc.go:6265
+runtime.doInit
+	C:/Go/src/runtime/proc.go:6242
+runtime.main
+	C:/Go/src/runtime/proc.go:208
+runtime.goexit
+	C:/Go/src/runtime/asm_amd64.s:1371
+gopkg.in/tucnak/telebot%2ev2.(*Bot).debug
+	C:/Users/user/go/pkg/mod/gopkg.in/tucnak/telebot.v2@v2.3.5/util.go:14
+gopkg.in/tucnak/telebot%2ev2.(*LongPoller).Poll
+	C:/Users/user/go/pkg/mod/gopkg.in/tucnak/telebot.v2@v2.3.5/poller.go:103
+runtime.goexit
+	C:/Go/src/runtime/asm_amd64.s:1371
+2021/11/10 09:55:40 util.go:18: telegram unknown: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running (409)
+gopkg.in/tucnak/telebot%2ev2.(*Bot).debug
+	C:/Users/user/go/pkg/mod/gopkg.in/tucnak/telebot.v2@v2.3.5/util.go:14
+gopkg.in/tucnak/telebot%2ev2.(*LongPoller).Poll
+	C:/Users/user/go/pkg/mod/gopkg.in/tucnak/telebot.v2@v2.3.5/poller.go:102
+runtime.goexit
+	C:/Go/src/runtime/asm_amd64.s:1371
+2021/11/10 09:55:40 util.go:18: telebot: could not fetch new updates
+gopkg.in/tucnak/telebot%2ev2.init
+	C:/Users/user/go/pkg/mod/gopkg.in/tucnak/telebot.v2@v2.3.5/telebot.go:36
+runtime.doInit
+	C:/Go/src/runtime/proc.go:6265
+runtime.doInit
+	C:/Go/src/runtime/proc.go:6242
+runtime.main
+	C:/Go/src/runtime/proc.go:208
+runtime.goexit
+	C:/Go/src/runtime/asm_amd64.s:1371
+gopkg.in/tucnak/telebot%2ev2.(*Bot).debug
+	C:/Users/user/go/pkg/mod/gopkg.in/tucnak/telebot.v2@v2.3.5/util.go:14
+gopkg.in/tucnak/telebot%2ev2.(*LongPoller).Poll
+	C:/Users/user/go/pkg/mod/gopkg.in/tucnak/telebot.v2@v2.3.5/poller.go:103
+runtime.goexit
+	C:/Go/src/runtime/asm_amd64.s:1371
+2021/11/10 09:55:43 util.go:18: telegram unknown: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running (409)
+gopkg.in/tucnak/telebot%2ev2.(*Bot).debug
+	C:/Users/user/go/pkg/mod/gopkg.in/tucnak/telebot.v2@v2.3.5/util.go:14
+gopkg.in/tucnak/telebot%2ev2.(*LongPoller).Poll
+	C:/Users/user/go/pkg/mod/gopkg.in/tucnak/telebot.v2@v2.3.5/poller.go:102
+runtime.goexit
+	C:/Go/src/runtime/asm_amd64.s:1371
+2021/11/10 09:55:43 util.go:18: telebot: could not fetch new updates
+gopkg.in/tucnak/telebot%2ev2.init
+	C:/Users/user/go/pkg/mod/gopkg.in/tucnak/telebot.v2@v2.3.5/telebot.go:36
+runtime.doInit
+	C:/Go/src/runtime/proc.go:6265
+runtime.doInit
+	C:/Go/src/runtime/proc.go:6242
+runtime.main
+	C:/Go/src/runtime/proc.go:208
+runtime.goexit
+	C:/Go/src/runtime/asm_amd64.s:1371
+gopkg.in/tucnak/telebot%2ev2.(*Bot).debug
+	C:/Users/user/go/pkg/mod/gopkg.in/tucnak/telebot.v2@v2.3.5/util.go:14
+gopkg.in/tucnak/telebot%2ev2.(*LongPoller).Poll
+	C:/Users/user/go/pkg/mod/gopkg.in/tucnak/telebot.v2@v2.3.5/poller.go:103
+runtime.goexit
+	C:/Go/src/runtime/asm_amd64.s:1371
+2021/11/10 09:55:46 util.go:18: telegram unknown: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running (409)
+gopkg.in/tucnak/telebot%2ev2.(*Bot).debug
+	C:/Users/user/go/pkg/mod/gopkg.in/tucnak/telebot.v2@v2.3.5/util.go:14
+gopkg.in/tucnak/telebot%2ev2.(*LongPoller).Poll
+	C:/Users/user/go/pkg/mod/gopkg.in/tucnak/telebot.v2@v2.3.5/poller.go:102
+runtime.goexit
+	C:/Go/src/runtime/asm_amd64.s:1371
+2021/11/10 09:55:46 util.go:18: telebot: could not fetch new updates
+gopkg.in/tucnak/telebot%2ev2.init
+	C:/Users/user/go/pkg/mod/gopkg.in/tucnak/telebot.v2@v2.3.5/telebot.go:36
+runtime.doInit
+	C:/Go/src/runtime/proc.go:6265
+runtime.doInit
+	C:/Go/src/runtime/proc.go:6242
+runtime.main
+	C:/Go/src/runtime/proc.go:208
+runtime.goexit
+	C:/Go/src/runtime/asm_amd64.s:1371
+gopkg.in/tucnak/telebot%2ev2.(*Bot).debug
+	C:/Users/user/go/pkg/mod/gopkg.in/tucnak/telebot.v2@v2.3.5/util.go:14
+gopkg.in/tucnak/telebot%2ev2.(*LongPoller).Poll
+	C:/Users/user/go/pkg/mod/gopkg.in/tucnak/telebot.v2@v2.3.5/poller.go:103
+runtime.goexit
+	C:/Go/src/runtime/asm_amd64.s:1371
+2021/11/10 09:55:49 util.go:18: telegram unknown: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running (409)
+gopkg.in/tucnak/telebot%2ev2.(*Bot).debug
+	C:/Users/user/go/pkg/mod/gopkg.in/tucnak/telebot.v2@v2.3.5/util.go:14
+gopkg.in/tucnak/telebot%2ev2.(*LongPoller).Poll
+	C:/Users/user/go/pkg/mod/gopkg.in/tucnak/telebot.v2@v2.3.5/poller.go:102
+runtime.goexit
+	C:/Go/src/runtime/asm_amd64.s:1371
+2021/11/10 09:55:49 util.go:18: telebot: could not fetch new updates
+gopkg.in/tucnak/telebot%2ev2.init
+	C:/Users/user/go/pkg/mod/gopkg.in/tucnak/telebot.v2@v2.3.5/telebot.go:36
+runtime.doInit
+	C:/Go/src/runtime/proc.go:6265
+runtime.doInit
+	C:/Go/src/runtime/proc.go:6242
+runtime.main
+	C:/Go/src/runtime/proc.go:208
+runtime.goexit
+	C:/Go/src/runtime/asm_amd64.s:1371
+gopkg.in/tucnak/telebot%2ev2.(*Bot).debug
+	C:/Users/user/go/pkg/mod/gopkg.in/tucnak/telebot.v2@v2.3.5/util.go:14
+gopkg.in/tucnak/telebot%2ev2.(*LongPoller).Poll
+	C:/Users/user/go/pkg/mod/gopkg.in/tucnak/telebot.v2@v2.3.5/poller.go:103
+runtime.goexit
+	C:/Go/src/runtime/asm_amd64.s:1371
+2021/11/10 09:55:52 util.go:18: telegram unknown: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running (409)
+gopkg.in/tucnak/telebot%2ev2.(*Bot).debug
+	C:/Users/user/go/pkg/mod/gopkg.in/tucnak/telebot.v2@v2.3.5/util.go:14
+gopkg.in/tucnak/telebot%2ev2.(*LongPoller).Poll
+	C:/Users/user/go/pkg/mod/gopkg.in/tucnak/telebot.v2@v2.3.5/poller.go:102
+runtime.goexit
+	C:/Go/src/runtime/asm_amd64.s:1371
+2021/11/10 09:55:52 util.go:18: telebot: could not fetch new updates
+gopkg.in/tucnak/telebot%2ev2.init
+	C:/Users/user/go/pkg/mod/gopkg.in/tucnak/telebot.v2@v2.3.5/telebot.go:36
+runtime.doInit
+	C:/Go/src/runtime/proc.go:6265
+runtime.doInit
+	C:/Go/src/runtime/proc.go:6242
+runtime.main
+	C:/Go/src/runtime/proc.go:208
+runtime.goexit
+	C:/Go/src/runtime/asm_amd64.s:1371
+gopkg.in/tucnak/telebot%2ev2.(*Bot).debug
+	C:/Users/user/go/pkg/mod/gopkg.in/tucnak/telebot.v2@v2.3.5/util.go:14
+gopkg.in/tucnak/telebot%2ev2.(*LongPoller).Poll
+	C:/Users/user/go/pkg/mod/gopkg.in/tucnak/telebot.v2@v2.3.5/poller.go:103
+runtime.goexit
+	C:/Go/src/runtime/asm_amd64.s:1371
+2021/11/10 09:55:55 util.go:18: telegram unknown: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running (409)
+gopkg.in/tucnak/telebot%2ev2.(*Bot).debug
+	C:/Users/user/go/pkg/mod/gopkg.in/tucnak/telebot.v2@v2.3.5/util.go:14
+gopkg.in/tucnak/telebot%2ev2.(*LongPoller).Poll
+	C:/Users/user/go/pkg/mod/gopkg.in/tucnak/telebot.v2@v2.3.5/poller.go:102
+runtime.goexit
+	C:/Go/src/runtime/asm_amd64.s:1371
+2021/11/10 09:55:55 util.go:18: telebot: could not fetch new updates
+gopkg.in/tucnak/telebot%2ev2.init
+	C:/Users/user/go/pkg/mod/gopkg.in/tucnak/telebot.v2@v2.3.5/telebot.go:36
+runtime.doInit
+	C:/Go/src/runtime/proc.go:6265
+runtime.doInit
+	C:/Go/src/runtime/proc.go:6242
+runtime.main
+	C:/Go/src/runtime/proc.go:208
+runtime.goexit
+	C:/Go/src/runtime/asm_amd64.s:1371
+gopkg.in/tucnak/telebot%2ev2.(*Bot).debug
+	C:/Users/user/go/pkg/mod/gopkg.in/tucnak/telebot.v2@v2.3.5/util.go:14
+gopkg.in/tucnak/telebot%2ev2.(*LongPoller).Poll
+	C:/Users/user/go/pkg/mod/gopkg.in/tucnak/telebot.v2@v2.3.5/poller.go:103
+runtime.goexit
+	C:/Go/src/runtime/asm_amd64.s:1371
+2021/11/10 09:55:58 util.go:18: telegram unknown: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running (409)
+gopkg.in/tucnak/telebot%2ev2.(*Bot).debug
+	C:/Users/user/go/pkg/mod/gopkg.in/tucnak/telebot.v2@v2.3.5/util.go:14
+gopkg.in/tucnak/telebot%2ev2.(*LongPoller).Poll
+	C:/Users/user/go/pkg/mod/gopkg.in/tucnak/telebot.v2@v2.3.5/poller.go:102
+runtime.goexit
+	C:/Go/src/runtime/asm_amd64.s:1371
+2021/11/10 09:55:58 util.go:18: telebot: could not fetch new updates
+gopkg.in/tucnak/telebot%2ev2.init
+	C:/Users/user/go/pkg/mod/gopkg.in/tucnak/telebot.v2@v2.3.5/telebot.go:36
+runtime.doInit
+	C:/Go/src/runtime/proc.go:6265
+runtime.doInit
+	C:/Go/src/runtime/proc.go:6242
+runtime.main
+	C:/Go/src/runtime/proc.go:208
+runtime.goexit
+	C:/Go/src/runtime/asm_amd64.s:1371
+gopkg.in/tucnak/telebot%2ev2.(*Bot).debug
+	C:/Users/user/go/pkg/mod/gopkg.in/tucnak/telebot.v2@v2.3.5/util.go:14
+gopkg.in/tucnak/telebot%2ev2.(*LongPoller).Poll
+	C:/Users/user/go/pkg/mod/gopkg.in/tucnak/telebot.v2@v2.3.5/poller.go:103
+runtime.goexit
+	C:/Go/src/runtime/asm_amd64.s:1371
+2021/11/10 09:56:02 util.go:18: telegram unknown: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running (409)
+gopkg.in/tucnak/telebot%2ev2.(*Bot).debug
+	C:/Users/user/go/pkg/mod/gopkg.in/tucnak/telebot.v2@v2.3.5/util.go:14
+gopkg.in/tucnak/telebot%2ev2.(*LongPoller).Poll
+	C:/Users/user/go/pkg/mod/gopkg.in/tucnak/telebot.v2@v2.3.5/poller.go:102
+runtime.goexit
+	C:/Go/src/runtime/asm_amd64.s:1371
+2021/11/10 09:56:02 util.go:18: telebot: could not fetch new updates
+gopkg.in/tucnak/telebot%2ev2.init
+	C:/Users/user/go/pkg/mod/gopkg.in/tucnak/telebot.v2@v2.3.5/telebot.go:36
+runtime.doInit
+	C:/Go/src/runtime/proc.go:6265
+runtime.doInit
+	C:/Go/src/runtime/proc.go:6242
+runtime.main
+	C:/Go/src/runtime/proc.go:208
+runtime.goexit
+	C:/Go/src/runtime/asm_amd64.s:1371
+gopkg.in/tucnak/telebot%2ev2.(*Bot).debug
+	C:/Users/user/go/pkg/mod/gopkg.in/tucnak/telebot.v2@v2.3.5/util.go:14
+gopkg.in/tucnak/telebot%2ev2.(*LongPoller).Poll
+	C:/Users/user/go/pkg/mod/gopkg.in/tucnak/telebot.v2@v2.3.5/poller.go:103
+runtime.goexit
+	C:/Go/src/runtime/asm_amd64.s:1371
+2021/11/10 09:56:05 util.go:18: telegram unknown: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running (409)
+gopkg.in/tucnak/telebot%2ev2.(*Bot).debug
+	C:/Users/user/go/pkg/mod/gopkg.in/tucnak/telebot.v2@v2.3.5/util.go:14
+gopkg.in/tucnak/telebot%2ev2.(*LongPoller).Poll
+	C:/Users/user/go/pkg/mod/gopkg.in/tucnak/telebot.v2@v2.3.5/poller.go:102
+runtime.goexit
+	C:/Go/src/runtime/asm_amd64.s:1371
+2021/11/10 09:56:05 util.go:18: telebot: could not fetch new updates
+gopkg.in/tucnak/telebot%2ev2.init
+	C:/Users/user/go/pkg/mod/gopkg.in/tucnak/telebot.v2@v2.3.5/telebot.go:36
+runtime.doInit
+	C:/Go/src/runtime/proc.go:6265
+runtime.doInit
+	C:/Go/src/runtime/proc.go:6242
+runtime.main
+	C:/Go/src/runtime/proc.go:208
+runtime.goexit
+	C:/Go/src/runtime/asm_amd64.s:1371
+gopkg.in/tucnak/telebot%2ev2.(*Bot).debug
+	C:/Users/user/go/pkg/mod/gopkg.in/tucnak/telebot.v2@v2.3.5/util.go:14
+gopkg.in/tucnak/telebot%2ev2.(*LongPoller).Poll
+	C:/Users/user/go/pkg/mod/gopkg.in/tucnak/telebot.v2@v2.3.5/poller.go:103
+runtime.goexit
+	C:/Go/src/runtime/asm_amd64.s:1371
+2021/11/10 09:56:08 util.go:18: telegram unknown: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running (409)
+gopkg.in/tucnak/telebot%2ev2.(*Bot).debug
+	C:/Users/user/go/pkg/mod/gopkg.in/tucnak/telebot.v2@v2.3.5/util.go:14
+gopkg.in/tucnak/telebot%2ev2.(*LongPoller).Poll
+	C:/Users/user/go/pkg/mod/gopkg.in/tucnak/telebot.v2@v2.3.5/poller.go:102
+runtime.goexit
+	C:/Go/src/runtime/asm_amd64.s:1371
+2021/11/10 09:56:08 util.go:18: telebot: could not fetch new updates
+gopkg.in/tucnak/telebot%2ev2.init
+	C:/Users/user/go/pkg/mod/gopkg.in/tucnak/telebot.v2@v2.3.5/telebot.go:36
+runtime.doInit
+	C:/Go/src/runtime/proc.go:6265
+runtime.doInit
+	C:/Go/src/runtime/proc.go:6242
+runtime.main
+	C:/Go/src/runtime/proc.go:208
+runtime.goexit
+	C:/Go/src/runtime/asm_amd64.s:1371
+gopkg.in/tucnak/telebot%2ev2.(*Bot).debug
+	C:/Users/user/go/pkg/mod/gopkg.in/tucnak/telebot.v2@v2.3.5/util.go:14
+gopkg.in/tucnak/telebot%2ev2.(*LongPoller).Poll
+	C:/Users/user/go/pkg/mod/gopkg.in/tucnak/telebot.v2@v2.3.5/poller.go:103
+runtime.goexit
+	C:/Go/src/runtime/asm_amd64.s:1371
+2021/11/10 09:56:11 util.go:18: telegram unknown: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running (409)
+gopkg.in/tucnak/telebot%2ev2.(*Bot).debug
+	C:/Users/user/go/pkg/mod/gopkg.in/tucnak/telebot.v2@v2.3.5/util.go:14
+gopkg.in/tucnak/telebot%2ev2.(*LongPoller).Poll
+	C:/Users/user/go/pkg/mod/gopkg.in/tucnak/telebot.v2@v2.3.5/poller.go:102
+runtime.goexit
+	C:/Go/src/runtime/asm_amd64.s:1371
+2021/11/10 09:56:11 util.go:18: telebot: could not fetch new updates
+gopkg.in/tucnak/telebot%2ev2.init
+	C:/Users/user/go/pkg/mod/gopkg.in/tucnak/telebot.v2@v2.3.5/telebot.go:36
+runtime.doInit
+	C:/Go/src/runtime/proc.go:6265
+runtime.doInit
+	C:/Go/src/runtime/proc.go:6242
+runtime.main
+	C:/Go/src/runtime/proc.go:208
+runtime.goexit
+	C:/Go/src/runtime/asm_amd64.s:1371
+gopkg.in/tucnak/telebot%2ev2.(*Bot).debug
+	C:/Users/user/go/pkg/mod/gopkg.in/tucnak/telebot.v2@v2.3.5/util.go:14
+gopkg.in/tucnak/telebot%2ev2.(*LongPoller).Poll
+	C:/Users/user/go/pkg/mod/gopkg.in/tucnak/telebot.v2@v2.3.5/poller.go:103
+runtime.goexit
+	C:/Go/src/runtime/asm_amd64.s:1371
+2021/11/10 09:56:14 util.go:18: telegram unknown: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running (409)
+gopkg.in/tucnak/telebot%2ev2.(*Bot).debug
+	C:/Users/user/go/pkg/mod/gopkg.in/tucnak/telebot.v2@v2.3.5/util.go:14
+gopkg.in/tucnak/telebot%2ev2.(*LongPoller).Poll
+	C:/Users/user/go/pkg/mod/gopkg.in/tucnak/telebot.v2@v2.3.5/poller.go:102
+runtime.goexit
+	C:/Go/src/runtime/asm_amd64.s:1371
+2021/11/10 09:56:14 util.go:18: telebot: could not fetch new updates
+gopkg.in/tucnak/telebot%2ev2.init
+	C:/Users/user/go/pkg/mod/gopkg.in/tucnak/telebot.v2@v2.3.5/telebot.go:36
+runtime.doInit
+	C:/Go/src/runtime/proc.go:6265
+runtime.doInit
+	C:/Go/src/runtime/proc.go:6242
+runtime.main
+	C:/Go/src/runtime/proc.go:208
+runtime.goexit
+	C:/Go/src/runtime/asm_amd64.s:1371
+gopkg.in/tucnak/telebot%2ev2.(*Bot).debug
+	C:/Users/user/go/pkg/mod/gopkg.in/tucnak/telebot.v2@v2.3.5/util.go:14
+gopkg.in/tucnak/telebot%2ev2.(*LongPoller).Poll
+	C:/Users/user/go/pkg/mod/gopkg.in/tucnak/telebot.v2@v2.3.5/poller.go:103
+runtime.goexit
+	C:/Go/src/runtime/asm_amd64.s:1371
+2021/11/10 09:56:17 util.go:18: telegram unknown: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running (409)
+gopkg.in/tucnak/telebot%2ev2.(*Bot).debug
+	C:/Users/user/go/pkg/mod/gopkg.in/tucnak/telebot.v2@v2.3.5/util.go:14
+gopkg.in/tucnak/telebot%2ev2.(*LongPoller).Poll
+	C:/Users/user/go/pkg/mod/gopkg.in/tucnak/telebot.v2@v2.3.5/poller.go:102
+runtime.goexit
+	C:/Go/src/runtime/asm_amd64.s:1371
+2021/11/10 09:56:17 util.go:18: telebot: could not fetch new updates
+gopkg.in/tucnak/telebot%2ev2.init
+	C:/Users/user/go/pkg/mod/gopkg.in/tucnak/telebot.v2@v2.3.5/telebot.go:36
+runtime.doInit
+	C:/Go/src/runtime/proc.go:6265
+runtime.doInit
+	C:/Go/src/runtime/proc.go:6242
+runtime.main
+	C:/Go/src/runtime/proc.go:208
+runtime.goexit
+	C:/Go/src/runtime/asm_amd64.s:1371
+gopkg.in/tucnak/telebot%2ev2.(*Bot).debug
+	C:/Users/user/go/pkg/mod/gopkg.in/tucnak/telebot.v2@v2.3.5/util.go:14
+gopkg.in/tucnak/telebot%2ev2.(*LongPoller).Poll
+	C:/Users/user/go/pkg/mod/gopkg.in/tucnak/telebot.v2@v2.3.5/poller.go:103
+runtime.goexit
+	C:/Go/src/runtime/asm_amd64.s:1371
+2021/11/10 09:56:20 util.go:18: telegram unknown: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running (409)
+gopkg.in/tucnak/telebot%2ev2.(*Bot).debug
+	C:/Users/user/go/pkg/mod/gopkg.in/tucnak/telebot.v2@v2.3.5/util.go:14
+gopkg.in/tucnak/telebot%2ev2.(*LongPoller).Poll
+	C:/Users/user/go/pkg/mod/gopkg.in/tucnak/telebot.v2@v2.3.5/poller.go:102
+runtime.goexit
+	C:/Go/src/runtime/asm_amd64.s:1371
+2021/11/10 09:56:20 util.go:18: telebot: could not fetch new updates
+gopkg.in/tucnak/telebot%2ev2.init
+	C:/Users/user/go/pkg/mod/gopkg.in/tucnak/telebot.v2@v2.3.5/telebot.go:36
+runtime.doInit
+	C:/Go/src/runtime/proc.go:6265
+runtime.doInit
+	C:/Go/src/runtime/proc.go:6242
+runtime.main
+	C:/Go/src/runtime/proc.go:208
+runtime.goexit
+	C:/Go/src/runtime/asm_amd64.s:1371
+gopkg.in/tucnak/telebot%2ev2.(*Bot).debug
+	C:/Users/user/go/pkg/mod/gopkg.in/tucnak/telebot.v2@v2.3.5/util.go:14
+gopkg.in/tucnak/telebot%2ev2.(*LongPoller).Poll
+	C:/Users/user/go/pkg/mod/gopkg.in/tucnak/telebot.v2@v2.3.5/poller.go:103
+runtime.goexit
+	C:/Go/src/runtime/asm_amd64.s:1371
+2021/11/10 09:56:23 util.go:18: telegram unknown: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running (409)
+gopkg.in/tucnak/telebot%2ev2.(*Bot).debug
+	C:/Users/user/go/pkg/mod/gopkg.in/tucnak/telebot.v2@v2.3.5/util.go:14
+gopkg.in/tucnak/telebot%2ev2.(*LongPoller).Poll
+	C:/Users/user/go/pkg/mod/gopkg.in/tucnak/telebot.v2@v2.3.5/poller.go:102
+runtime.goexit
+	C:/Go/src/runtime/asm_amd64.s:1371
+2021/11/10 09:56:23 util.go:18: telebot: could not fetch new updates
+gopkg.in/tucnak/telebot%2ev2.init
+	C:/Users/user/go/pkg/mod/gopkg.in/tucnak/telebot.v2@v2.3.5/telebot.go:36
+runtime.doInit
+	C:/Go/src/runtime/proc.go:6265
+runtime.doInit
+	C:/Go/src/runtime/proc.go:6242
+runtime.main
+	C:/Go/src/runtime/proc.go:208
+runtime.goexit
+	C:/Go/src/runtime/asm_amd64.s:1371
+gopkg.in/tucnak/telebot%2ev2.(*Bot).debug
+	C:/Users/user/go/pkg/mod/gopkg.in/tucnak/telebot.v2@v2.3.5/util.go:14
+gopkg.in/tucnak/telebot%2ev2.(*LongPoller).Poll
+	C:/Users/user/go/pkg/mod/gopkg.in/tucnak/telebot.v2@v2.3.5/poller.go:103
+runtime.goexit
+	C:/Go/src/runtime/asm_amd64.s:1371
+2021/11/10 09:56:27 util.go:18: telegram unknown: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running (409)
+gopkg.in/tucnak/telebot%2ev2.(*Bot).debug
+	C:/Users/user/go/pkg/mod/gopkg.in/tucnak/telebot.v2@v2.3.5/util.go:14
+gopkg.in/tucnak/telebot%2ev2.(*LongPoller).Poll
+	C:/Users/user/go/pkg/mod/gopkg.in/tucnak/telebot.v2@v2.3.5/poller.go:102
+runtime.goexit
+	C:/Go/src/runtime/asm_amd64.s:1371
+2021/11/10 09:56:27 util.go:18: telebot: could not fetch new updates
+gopkg.in/tucnak/telebot%2ev2.init
+	C:/Users/user/go/pkg/mod/gopkg.in/tucnak/telebot.v2@v2.3.5/telebot.go:36
+runtime.doInit
+	C:/Go/src/runtime/proc.go:6265
+runtime.doInit
+	C:/Go/src/runtime/proc.go:6242
+runtime.main
+	C:/Go/src/runtime/proc.go:208
+runtime.goexit
+	C:/Go/src/runtime/asm_amd64.s:1371
+gopkg.in/tucnak/telebot%2ev2.(*Bot).debug
+	C:/Users/user/go/pkg/mod/gopkg.in/tucnak/telebot.v2@v2.3.5/util.go:14
+gopkg.in/tucnak/telebot%2ev2.(*LongPoller).Poll
+	C:/Users/user/go/pkg/mod/gopkg.in/tucnak/telebot.v2@v2.3.5/poller.go:103
+runtime.goexit
+	C:/Go/src/runtime/asm_amd64.s:1371
+2021/11/10 09:56:30 util.go:18: telegram unknown: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running (409)
+gopkg.in/tucnak/telebot%2ev2.(*Bot).debug
+	C:/Users/user/go/pkg/mod/gopkg.in/tucnak/telebot.v2@v2.3.5/util.go:14
+gopkg.in/tucnak/telebot%2ev2.(*LongPoller).Poll
+	C:/Users/user/go/pkg/mod/gopkg.in/tucnak/telebot.v2@v2.3.5/poller.go:102
+runtime.goexit
+	C:/Go/src/runtime/asm_amd64.s:1371
+2021/11/10 09:56:30 util.go:18: telebot: could not fetch new updates
+gopkg.in/tucnak/telebot%2ev2.init
+	C:/Users/user/go/pkg/mod/gopkg.in/tucnak/telebot.v2@v2.3.5/telebot.go:36
+runtime.doInit
+	C:/Go/src/runtime/proc.go:6265
+runtime.doInit
+	C:/Go/src/runtime/proc.go:6242
+runtime.main
+	C:/Go/src/runtime/proc.go:208
+runtime.goexit
+	C:/Go/src/runtime/asm_amd64.s:1371
+gopkg.in/tucnak/telebot%2ev2.(*Bot).debug
+	C:/Users/user/go/pkg/mod/gopkg.in/tucnak/telebot.v2@v2.3.5/util.go:14
+gopkg.in/tucnak/telebot%2ev2.(*LongPoller).Poll
+	C:/Users/user/go/pkg/mod/gopkg.in/tucnak/telebot.v2@v2.3.5/poller.go:103
+runtime.goexit
+	C:/Go/src/runtime/asm_amd64.s:1371
+2021/11/10 09:56:33 util.go:18: telegram unknown: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running (409)
+gopkg.in/tucnak/telebot%2ev2.(*Bot).debug
+	C:/Users/user/go/pkg/mod/gopkg.in/tucnak/telebot.v2@v2.3.5/util.go:14
+gopkg.in/tucnak/telebot%2ev2.(*LongPoller).Poll
+	C:/Users/user/go/pkg/mod/gopkg.in/tucnak/telebot.v2@v2.3.5/poller.go:102
+runtime.goexit
+	C:/Go/src/runtime/asm_amd64.s:1371
+2021/11/10 09:56:33 util.go:18: telebot: could not fetch new updates
+gopkg.in/tucnak/telebot%2ev2.init
+	C:/Users/user/go/pkg/mod/gopkg.in/tucnak/telebot.v2@v2.3.5/telebot.go:36
+runtime.doInit
+	C:/Go/src/runtime/proc.go:6265
+runtime.doInit
+	C:/Go/src/runtime/proc.go:6242
+runtime.main
+	C:/Go/src/runtime/proc.go:208
+runtime.goexit
+	C:/Go/src/runtime/asm_amd64.s:1371
+gopkg.in/tucnak/telebot%2ev2.(*Bot).debug
+	C:/Users/user/go/pkg/mod/gopkg.in/tucnak/telebot.v2@v2.3.5/util.go:14
+gopkg.in/tucnak/telebot%2ev2.(*LongPoller).Poll
+	C:/Users/user/go/pkg/mod/gopkg.in/tucnak/telebot.v2@v2.3.5/poller.go:103
+runtime.goexit
+	C:/Go/src/runtime/asm_amd64.s:1371
+2021/11/10 09:56:36 util.go:18: telegram unknown: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running (409)
+gopkg.in/tucnak/telebot%2ev2.(*Bot).debug
+	C:/Users/user/go/pkg/mod/gopkg.in/tucnak/telebot.v2@v2.3.5/util.go:14
+gopkg.in/tucnak/telebot%2ev2.(*LongPoller).Poll
+	C:/Users/user/go/pkg/mod/gopkg.in/tucnak/telebot.v2@v2.3.5/poller.go:102
+runtime.goexit
+	C:/Go/src/runtime/asm_amd64.s:1371
+2021/11/10 09:56:36 util.go:18: telebot: could not fetch new updates
+gopkg.in/tucnak/telebot%2ev2.init
+	C:/Users/user/go/pkg/mod/gopkg.in/tucnak/telebot.v2@v2.3.5/telebot.go:36
+runtime.doInit
+	C:/Go/src/runtime/proc.go:6265
+runtime.doInit
+	C:/Go/src/runtime/proc.go:6242
+runtime.main
+	C:/Go/src/runtime/proc.go:208
+runtime.goexit
+	C:/Go/src/runtime/asm_amd64.s:1371
+gopkg.in/tucnak/telebot%2ev2.(*Bot).debug
+	C:/Users/user/go/pkg/mod/gopkg.in/tucnak/telebot.v2@v2.3.5/util.go:14
+gopkg.in/tucnak/telebot%2ev2.(*LongPoller).Poll
+	C:/Users/user/go/pkg/mod/gopkg.in/tucnak/telebot.v2@v2.3.5/poller.go:103
+runtime.goexit
+	C:/Go/src/runtime/asm_amd64.s:1371
+2021/11/10 09:56:39 util.go:18: telegram unknown: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running (409)
+gopkg.in/tucnak/telebot%2ev2.(*Bot).debug
+	C:/Users/user/go/pkg/mod/gopkg.in/tucnak/telebot.v2@v2.3.5/util.go:14
+gopkg.in/tucnak/telebot%2ev2.(*LongPoller).Poll
+	C:/Users/user/go/pkg/mod/gopkg.in/tucnak/telebot.v2@v2.3.5/poller.go:102
+runtime.goexit
+	C:/Go/src/runtime/asm_amd64.s:1371
+2021/11/10 09:56:39 util.go:18: telebot: could not fetch new updates
+gopkg.in/tucnak/telebot%2ev2.init
+	C:/Users/user/go/pkg/mod/gopkg.in/tucnak/telebot.v2@v2.3.5/telebot.go:36
+runtime.doInit
+	C:/Go/src/runtime/proc.go:6265
+runtime.doInit
+	C:/Go/src/runtime/proc.go:6242
+runtime.main
+	C:/Go/src/runtime/proc.go:208
+runtime.goexit
+	C:/Go/src/runtime/asm_amd64.s:1371
+gopkg.in/tucnak/telebot%2ev2.(*Bot).debug
+	C:/Users/user/go/pkg/mod/gopkg.in/tucnak/telebot.v2@v2.3.5/util.go:14
+gopkg.in/tucnak/telebot%2ev2.(*LongPoller).Poll
+	C:/Users/user/go/pkg/mod/gopkg.in/tucnak/telebot.v2@v2.3.5/poller.go:103
+runtime.goexit
+	C:/Go/src/runtime/asm_amd64.s:1371
+2021/11/10 09:56:42 util.go:18: telegram unknown: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running (409)
+gopkg.in/tucnak/telebot%2ev2.(*Bot).debug
+	C:/Users/user/go/pkg/mod/gopkg.in/tucnak/telebot.v2@v2.3.5/util.go:14
+gopkg.in/tucnak/telebot%2ev2.(*LongPoller).Poll
+	C:/Users/user/go/pkg/mod/gopkg.in/tucnak/telebot.v2@v2.3.5/poller.go:102
+runtime.goexit
+	C:/Go/src/runtime/asm_amd64.s:1371
+2021/11/10 09:56:42 util.go:18: telebot: could not fetch new updates
+gopkg.in/tucnak/telebot%2ev2.init
+	C:/Users/user/go/pkg/mod/gopkg.in/tucnak/telebot.v2@v2.3.5/telebot.go:36
+runtime.doInit
+	C:/Go/src/runtime/proc.go:6265
+runtime.doInit
+	C:/Go/src/runtime/proc.go:6242
+runtime.main
+	C:/Go/src/runtime/proc.go:208
+runtime.goexit
+	C:/Go/src/runtime/asm_amd64.s:1371
+gopkg.in/tucnak/telebot%2ev2.(*Bot).debug
+	C:/Users/user/go/pkg/mod/gopkg.in/tucnak/telebot.v2@v2.3.5/util.go:14
+gopkg.in/tucnak/telebot%2ev2.(*LongPoller).Poll
+	C:/Users/user/go/pkg/mod/gopkg.in/tucnak/telebot.v2@v2.3.5/poller.go:103
+runtime.goexit
+	C:/Go/src/runtime/asm_amd64.s:1371
+2021/11/10 09:56:45 util.go:18: telegram unknown: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running (409)
+gopkg.in/tucnak/telebot%2ev2.(*Bot).debug
+	C:/Users/user/go/pkg/mod/gopkg.in/tucnak/telebot.v2@v2.3.5/util.go:14
+gopkg.in/tucnak/telebot%2ev2.(*LongPoller).Poll
+	C:/Users/user/go/pkg/mod/gopkg.in/tucnak/telebot.v2@v2.3.5/poller.go:102
+runtime.goexit
+	C:/Go/src/runtime/asm_amd64.s:1371
+2021/11/10 09:56:45 util.go:18: telebot: could not fetch new updates
+gopkg.in/tucnak/telebot%2ev2.init
+	C:/Users/user/go/pkg/mod/gopkg.in/tucnak/telebot.v2@v2.3.5/telebot.go:36
+runtime.doInit
+	C:/Go/src/runtime/proc.go:6265
+runtime.doInit
+	C:/Go/src/runtime/proc.go:6242
+runtime.main
+	C:/Go/src/runtime/proc.go:208
+runtime.goexit
+	C:/Go/src/runtime/asm_amd64.s:1371
+gopkg.in/tucnak/telebot%2ev2.(*Bot).debug
+	C:/Users/user/go/pkg/mod/gopkg.in/tucnak/telebot.v2@v2.3.5/util.go:14
+gopkg.in/tucnak/telebot%2ev2.(*LongPoller).Poll
+	C:/Users/user/go/pkg/mod/gopkg.in/tucnak/telebot.v2@v2.3.5/poller.go:103
+runtime.goexit
+	C:/Go/src/runtime/asm_amd64.s:1371
+2021/11/10 09:56:48 util.go:18: telegram unknown: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running (409)
+gopkg.in/tucnak/telebot%2ev2.(*Bot).debug
+	C:/Users/user/go/pkg/mod/gopkg.in/tucnak/telebot.v2@v2.3.5/util.go:14
+gopkg.in/tucnak/telebot%2ev2.(*LongPoller).Poll
+	C:/Users/user/go/pkg/mod/gopkg.in/tucnak/telebot.v2@v2.3.5/poller.go:102
+runtime.goexit
+	C:/Go/src/runtime/asm_amd64.s:1371
+2021/11/10 09:56:48 util.go:18: telebot: could not fetch new updates
+gopkg.in/tucnak/telebot%2ev2.init
+	C:/Users/user/go/pkg/mod/gopkg.in/tucnak/telebot.v2@v2.3.5/telebot.go:36
+runtime.doInit
+	C:/Go/src/runtime/proc.go:6265
+runtime.doInit
+	C:/Go/src/runtime/proc.go:6242
+runtime.main
+	C:/Go/src/runtime/proc.go:208
+runtime.goexit
+	C:/Go/src/runtime/asm_amd64.s:1371
+gopkg.in/tucnak/telebot%2ev2.(*Bot).debug
+	C:/Users/user/go/pkg/mod/gopkg.in/tucnak/telebot.v2@v2.3.5/util.go:14
+gopkg.in/tucnak/telebot%2ev2.(*LongPoller).Poll
+	C:/Users/user/go/pkg/mod/gopkg.in/tucnak/telebot.v2@v2.3.5/poller.go:103
+runtime.goexit
+	C:/Go/src/runtime/asm_amd64.s:1371
+2021/11/10 09:56:52 util.go:18: telegram unknown: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running (409)
+gopkg.in/tucnak/telebot%2ev2.(*Bot).debug
+	C:/Users/user/go/pkg/mod/gopkg.in/tucnak/telebot.v2@v2.3.5/util.go:14
+gopkg.in/tucnak/telebot%2ev2.(*LongPoller).Poll
+	C:/Users/user/go/pkg/mod/gopkg.in/tucnak/telebot.v2@v2.3.5/poller.go:102
+runtime.goexit
+	C:/Go/src/runtime/asm_amd64.s:1371
+2021/11/10 09:56:52 util.go:18: telebot: could not fetch new updates
+gopkg.in/tucnak/telebot%2ev2.init
+	C:/Users/user/go/pkg/mod/gopkg.in/tucnak/telebot.v2@v2.3.5/telebot.go:36
+runtime.doInit
+	C:/Go/src/runtime/proc.go:6265
+runtime.doInit
+	C:/Go/src/runtime/proc.go:6242
+runtime.main
+	C:/Go/src/runtime/proc.go:208
+runtime.goexit
+	C:/Go/src/runtime/asm_amd64.s:1371
+gopkg.in/tucnak/telebot%2ev2.(*Bot).debug
+	C:/Users/user/go/pkg/mod/gopkg.in/tucnak/telebot.v2@v2.3.5/util.go:14
+gopkg.in/tucnak/telebot%2ev2.(*LongPoller).Poll
+	C:/Users/user/go/pkg/mod/gopkg.in/tucnak/telebot.v2@v2.3.5/poller.go:103
+runtime.goexit
+	C:/Go/src/runtime/asm_amd64.s:1371
+2021/11/10 09:56:55 util.go:18: telegram unknown: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running (409)
+gopkg.in/tucnak/telebot%2ev2.(*Bot).debug
+	C:/Users/user/go/pkg/mod/gopkg.in/tucnak/telebot.v2@v2.3.5/util.go:14
+gopkg.in/tucnak/telebot%2ev2.(*LongPoller).Poll
+	C:/Users/user/go/pkg/mod/gopkg.in/tucnak/telebot.v2@v2.3.5/poller.go:102
+runtime.goexit
+	C:/Go/src/runtime/asm_amd64.s:1371
+2021/11/10 09:56:55 util.go:18: telebot: could not fetch new updates
+gopkg.in/tucnak/telebot%2ev2.init
+	C:/Users/user/go/pkg/mod/gopkg.in/tucnak/telebot.v2@v2.3.5/telebot.go:36
+runtime.doInit
+	C:/Go/src/runtime/proc.go:6265
+runtime.doInit
+	C:/Go/src/runtime/proc.go:6242
+runtime.main
+	C:/Go/src/runtime/proc.go:208
+runtime.goexit
+	C:/Go/src/runtime/asm_amd64.s:1371
+gopkg.in/tucnak/telebot%2ev2.(*Bot).debug
+	C:/Users/user/go/pkg/mod/gopkg.in/tucnak/telebot.v2@v2.3.5/util.go:14
+gopkg.in/tucnak/telebot%2ev2.(*LongPoller).Poll
+	C:/Users/user/go/pkg/mod/gopkg.in/tucnak/telebot.v2@v2.3.5/poller.go:103
+runtime.goexit
+	C:/Go/src/runtime/asm_amd64.s:1371
+2021/11/10 09:56:58 util.go:18: telegram unknown: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running (409)
+gopkg.in/tucnak/telebot%2ev2.(*Bot).debug
+	C:/Users/user/go/pkg/mod/gopkg.in/tucnak/telebot.v2@v2.3.5/util.go:14
+gopkg.in/tucnak/telebot%2ev2.(*LongPoller).Poll
+	C:/Users/user/go/pkg/mod/gopkg.in/tucnak/telebot.v2@v2.3.5/poller.go:102
+runtime.goexit
+	C:/Go/src/runtime/asm_amd64.s:1371
+2021/11/10 09:56:58 util.go:18: telebot: could not fetch new updates
+gopkg.in/tucnak/telebot%2ev2.init
+	C:/Users/user/go/pkg/mod/gopkg.in/tucnak/telebot.v2@v2.3.5/telebot.go:36
+runtime.doInit
+	C:/Go/src/runtime/proc.go:6265
+runtime.doInit
+	C:/Go/src/runtime/proc.go:6242
+runtime.main
+	C:/Go/src/runtime/proc.go:208
+runtime.goexit
+	C:/Go/src/runtime/asm_amd64.s:1371
+gopkg.in/tucnak/telebot%2ev2.(*Bot).debug
+	C:/Users/user/go/pkg/mod/gopkg.in/tucnak/telebot.v2@v2.3.5/util.go:14
+gopkg.in/tucnak/telebot%2ev2.(*LongPoller).Poll
+	C:/Users/user/go/pkg/mod/gopkg.in/tucnak/telebot.v2@v2.3.5/poller.go:103
+runtime.goexit
+	C:/Go/src/runtime/asm_amd64.s:1371
+2021/11/10 09:57:01 util.go:18: telegram unknown: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running (409)
+gopkg.in/tucnak/telebot%2ev2.(*Bot).debug
+	C:/Users/user/go/pkg/mod/gopkg.in/tucnak/telebot.v2@v2.3.5/util.go:14
+gopkg.in/tucnak/telebot%2ev2.(*LongPoller).Poll
+	C:/Users/user/go/pkg/mod/gopkg.in/tucnak/telebot.v2@v2.3.5/poller.go:102
+runtime.goexit
+	C:/Go/src/runtime/asm_amd64.s:1371
+2021/11/10 09:57:01 util.go:18: telebot: could not fetch new updates
+gopkg.in/tucnak/telebot%2ev2.init
+	C:/Users/user/go/pkg/mod/gopkg.in/tucnak/telebot.v2@v2.3.5/telebot.go:36
+runtime.doInit
+	C:/Go/src/runtime/proc.go:6265
+runtime.doInit
+	C:/Go/src/runtime/proc.go:6242
+runtime.main
+	C:/Go/src/runtime/proc.go:208
+runtime.goexit
+	C:/Go/src/runtime/asm_amd64.s:1371
+gopkg.in/tucnak/telebot%2ev2.(*Bot).debug
+	C:/Users/user/go/pkg/mod/gopkg.in/tucnak/telebot.v2@v2.3.5/util.go:14
+gopkg.in/tucnak/telebot%2ev2.(*LongPoller).Poll
+	C:/Users/user/go/pkg/mod/gopkg.in/tucnak/telebot.v2@v2.3.5/poller.go:103
+runtime.goexit
+	C:/Go/src/runtime/asm_amd64.s:1371
+2021/11/10 09:57:04 util.go:18: telegram unknown: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running (409)
+gopkg.in/tucnak/telebot%2ev2.(*Bot).debug
+	C:/Users/user/go/pkg/mod/gopkg.in/tucnak/telebot.v2@v2.3.5/util.go:14
+gopkg.in/tucnak/telebot%2ev2.(*LongPoller).Poll
+	C:/Users/user/go/pkg/mod/gopkg.in/tucnak/telebot.v2@v2.3.5/poller.go:102
+runtime.goexit
+	C:/Go/src/runtime/asm_amd64.s:1371
+2021/11/10 09:57:04 util.go:18: telebot: could not fetch new updates
+gopkg.in/tucnak/telebot%2ev2.init
+	C:/Users/user/go/pkg/mod/gopkg.in/tucnak/telebot.v2@v2.3.5/telebot.go:36
+runtime.doInit
+	C:/Go/src/runtime/proc.go:6265
+runtime.doInit
+	C:/Go/src/runtime/proc.go:6242
+runtime.main
+	C:/Go/src/runtime/proc.go:208
+runtime.goexit
+	C:/Go/src/runtime/asm_amd64.s:1371
+gopkg.in/tucnak/telebot%2ev2.(*Bot).debug
+	C:/Users/user/go/pkg/mod/gopkg.in/tucnak/telebot.v2@v2.3.5/util.go:14
+gopkg.in/tucnak/telebot%2ev2.(*LongPoller).Poll
+	C:/Users/user/go/pkg/mod/gopkg.in/tucnak/telebot.v2@v2.3.5/poller.go:103
+runtime.goexit
+	C:/Go/src/runtime/asm_amd64.s:1371
+2021/11/10 09:57:07 util.go:18: telegram unknown: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running (409)
+gopkg.in/tucnak/telebot%2ev2.(*Bot).debug
+	C:/Users/user/go/pkg/mod/gopkg.in/tucnak/telebot.v2@v2.3.5/util.go:14
+gopkg.in/tucnak/telebot%2ev2.(*LongPoller).Poll
+	C:/Users/user/go/pkg/mod/gopkg.in/tucnak/telebot.v2@v2.3.5/poller.go:102
+runtime.goexit
+	C:/Go/src/runtime/asm_amd64.s:1371
+2021/11/10 09:57:07 util.go:18: telebot: could not fetch new updates
+gopkg.in/tucnak/telebot%2ev2.init
+	C:/Users/user/go/pkg/mod/gopkg.in/tucnak/telebot.v2@v2.3.5/telebot.go:36
+runtime.doInit
+	C:/Go/src/runtime/proc.go:6265
+runtime.doInit
+	C:/Go/src/runtime/proc.go:6242
+runtime.main
+	C:/Go/src/runtime/proc.go:208
+runtime.goexit
+	C:/Go/src/runtime/asm_amd64.s:1371
+gopkg.in/tucnak/telebot%2ev2.(*Bot).debug
+	C:/Users/user/go/pkg/mod/gopkg.in/tucnak/telebot.v2@v2.3.5/util.go:14
+gopkg.in/tucnak/telebot%2ev2.(*LongPoller).Poll
+	C:/Users/user/go/pkg/mod/gopkg.in/tucnak/telebot.v2@v2.3.5/poller.go:103
+runtime.goexit
+	C:/Go/src/runtime/asm_amd64.s:1371
+2021/11/10 09:57:10 util.go:18: telegram unknown: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running (409)
+gopkg.in/tucnak/telebot%2ev2.(*Bot).debug
+	C:/Users/user/go/pkg/mod/gopkg.in/tucnak/telebot.v2@v2.3.5/util.go:14
+gopkg.in/tucnak/telebot%2ev2.(*LongPoller).Poll
+	C:/Users/user/go/pkg/mod/gopkg.in/tucnak/telebot.v2@v2.3.5/poller.go:102
+runtime.goexit
+	C:/Go/src/runtime/asm_amd64.s:1371
+2021/11/10 09:57:10 util.go:18: telebot: could not fetch new updates
+gopkg.in/tucnak/telebot%2ev2.init
+	C:/Users/user/go/pkg/mod/gopkg.in/tucnak/telebot.v2@v2.3.5/telebot.go:36
+runtime.doInit
+	C:/Go/src/runtime/proc.go:6265
+runtime.doInit
+	C:/Go/src/runtime/proc.go:6242
+runtime.main
+	C:/Go/src/runtime/proc.go:208
+runtime.goexit
+	C:/Go/src/runtime/asm_amd64.s:1371
+gopkg.in/tucnak/telebot%2ev2.(*Bot).debug
+	C:/Users/user/go/pkg/mod/gopkg.in/tucnak/telebot.v2@v2.3.5/util.go:14
+gopkg.in/tucnak/telebot%2ev2.(*LongPoller).Poll
+	C:/Users/user/go/pkg/mod/gopkg.in/tucnak/telebot.v2@v2.3.5/poller.go:103
+runtime.goexit
+	C:/Go/src/runtime/asm_amd64.s:1371
+2021/11/10 09:57:13 util.go:18: telegram unknown: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running (409)
+gopkg.in/tucnak/telebot%2ev2.(*Bot).debug
+	C:/Users/user/go/pkg/mod/gopkg.in/tucnak/telebot.v2@v2.3.5/util.go:14
+gopkg.in/tucnak/telebot%2ev2.(*LongPoller).Poll
+	C:/Users/user/go/pkg/mod/gopkg.in/tucnak/telebot.v2@v2.3.5/poller.go:102
+runtime.goexit
+	C:/Go/src/runtime/asm_amd64.s:1371
+2021/11/10 09:57:13 util.go:18: telebot: could not fetch new updates
+gopkg.in/tucnak/telebot%2ev2.init
+	C:/Users/user/go/pkg/mod/gopkg.in/tucnak/telebot.v2@v2.3.5/telebot.go:36
+runtime.doInit
+	C:/Go/src/runtime/proc.go:6265
+runtime.doInit
+	C:/Go/src/runtime/proc.go:6242
+runtime.main
+	C:/Go/src/runtime/proc.go:208
+runtime.goexit
+	C:/Go/src/runtime/asm_amd64.s:1371
+gopkg.in/tucnak/telebot%2ev2.(*Bot).debug
+	C:/Users/user/go/pkg/mod/gopkg.in/tucnak/telebot.v2@v2.3.5/util.go:14
+gopkg.in/tucnak/telebot%2ev2.(*LongPoller).Poll
+	C:/Users/user/go/pkg/mod/gopkg.in/tucnak/telebot.v2@v2.3.5/poller.go:103
+runtime.goexit
+	C:/Go/src/runtime/asm_amd64.s:1371
+2021/11/10 09:57:17 util.go:18: telegram unknown: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running (409)
+gopkg.in/tucnak/telebot%2ev2.(*Bot).debug
+	C:/Users/user/go/pkg/mod/gopkg.in/tucnak/telebot.v2@v2.3.5/util.go:14
+gopkg.in/tucnak/telebot%2ev2.(*LongPoller).Poll
+	C:/Users/user/go/pkg/mod/gopkg.in/tucnak/telebot.v2@v2.3.5/poller.go:102
+runtime.goexit
+	C:/Go/src/runtime/asm_amd64.s:1371
+2021/11/10 09:57:17 util.go:18: telebot: could not fetch new updates
+gopkg.in/tucnak/telebot%2ev2.init
+	C:/Users/user/go/pkg/mod/gopkg.in/tucnak/telebot.v2@v2.3.5/telebot.go:36
+runtime.doInit
+	C:/Go/src/runtime/proc.go:6265
+runtime.doInit
+	C:/Go/src/runtime/proc.go:6242
+runtime.main
+	C:/Go/src/runtime/proc.go:208
+runtime.goexit
+	C:/Go/src/runtime/asm_amd64.s:1371
+gopkg.in/tucnak/telebot%2ev2.(*Bot).debug
+	C:/Users/user/go/pkg/mod/gopkg.in/tucnak/telebot.v2@v2.3.5/util.go:14
+gopkg.in/tucnak/telebot%2ev2.(*LongPoller).Poll
+	C:/Users/user/go/pkg/mod/gopkg.in/tucnak/telebot.v2@v2.3.5/poller.go:103
+runtime.goexit
+	C:/Go/src/runtime/asm_amd64.s:1371
+2021/11/10 09:57:20 util.go:18: telegram unknown: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running (409)
+gopkg.in/tucnak/telebot%2ev2.(*Bot).debug
+	C:/Users/user/go/pkg/mod/gopkg.in/tucnak/telebot.v2@v2.3.5/util.go:14
+gopkg.in/tucnak/telebot%2ev2.(*LongPoller).Poll
+	C:/Users/user/go/pkg/mod/gopkg.in/tucnak/telebot.v2@v2.3.5/poller.go:102
+runtime.goexit
+	C:/Go/src/runtime/asm_amd64.s:1371
+2021/11/10 09:57:20 util.go:18: telebot: could not fetch new updates
+gopkg.in/tucnak/telebot%2ev2.init
+	C:/Users/user/go/pkg/mod/gopkg.in/tucnak/telebot.v2@v2.3.5/telebot.go:36
+runtime.doInit
+	C:/Go/src/runtime/proc.go:6265
+runtime.doInit
+	C:/Go/src/runtime/proc.go:6242
+runtime.main
+	C:/Go/src/runtime/proc.go:208
+runtime.goexit
+	C:/Go/src/runtime/asm_amd64.s:1371
+gopkg.in/tucnak/telebot%2ev2.(*Bot).debug
+	C:/Users/user/go/pkg/mod/gopkg.in/tucnak/telebot.v2@v2.3.5/util.go:14
+gopkg.in/tucnak/telebot%2ev2.(*LongPoller).Poll
+	C:/Users/user/go/pkg/mod/gopkg.in/tucnak/telebot.v2@v2.3.5/poller.go:103
+runtime.goexit
+	C:/Go/src/runtime/asm_amd64.s:1371
+2021/11/10 09:57:23 util.go:18: telegram unknown: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running (409)
+gopkg.in/tucnak/telebot%2ev2.(*Bot).debug
+	C:/Users/user/go/pkg/mod/gopkg.in/tucnak/telebot.v2@v2.3.5/util.go:14
+gopkg.in/tucnak/telebot%2ev2.(*LongPoller).Poll
+	C:/Users/user/go/pkg/mod/gopkg.in/tucnak/telebot.v2@v2.3.5/poller.go:102
+runtime.goexit
+	C:/Go/src/runtime/asm_amd64.s:1371
+2021/11/10 09:57:23 util.go:18: telebot: could not fetch new updates
+gopkg.in/tucnak/telebot%2ev2.init
+	C:/Users/user/go/pkg/mod/gopkg.in/tucnak/telebot.v2@v2.3.5/telebot.go:36
+runtime.doInit
+	C:/Go/src/runtime/proc.go:6265
+runtime.doInit
+	C:/Go/src/runtime/proc.go:6242
+runtime.main
+	C:/Go/src/runtime/proc.go:208
+runtime.goexit
+	C:/Go/src/runtime/asm_amd64.s:1371
+gopkg.in/tucnak/telebot%2ev2.(*Bot).debug
+	C:/Users/user/go/pkg/mod/gopkg.in/tucnak/telebot.v2@v2.3.5/util.go:14
+gopkg.in/tucnak/telebot%2ev2.(*LongPoller).Poll
+	C:/Users/user/go/pkg/mod/gopkg.in/tucnak/telebot.v2@v2.3.5/poller.go:103
+runtime.goexit
+	C:/Go/src/runtime/asm_amd64.s:1371
+2021/11/10 09:57:26 util.go:18: telegram unknown: Conflict: terminated by other getUpdates request; make sure that only one bot instance is running (409)
+gopkg.in/tucnak/telebot%2ev2.(*Bot).debug
+	C:/Users/user/go/pkg/mod/gopkg.in/tucnak/telebot.v2@v2.3.5/util.go:14
+gopkg.in/tucnak/telebot%2ev2.(*LongPoller).Poll
+	C:/Users/user/go/pkg/mod/gopkg.in/tucnak/telebot.v2@v2.3.5/poller.go:102
+runtime.goexit
+	C:/Go/src/runtime/asm_amd64.s:1371
+2021/11/10 09:57:26 util.go:18: telebot: could not fetch new updates
+gopkg.in/tucnak/telebot%2ev2.init
+	C:/Users/user/go/pkg/mod/gopkg.in/tucnak/telebot.v2@v2.3.5/telebot.go:36
+runtime.doInit
+	C:/Go/src/runtime/proc.go:6265
+runtime.doInit
+	C:/Go/src/runtime/proc.go:6242
+runtime.main
+	C:/Go/src/runtime/proc.go:208
+runtime.goexit
+	C:/Go/src/runtime/asm_amd64.s:1371
+gopkg.in/tucnak/telebot%2ev2.(*Bot).debug
+	C:/Users/user/go/pkg/mod/gopkg.in/tucnak/telebot.v2@v2.3.5/util.go:14
+gopkg.in/tucnak/telebot%2ev2.(*LongPoller).Poll
+	C:/Users/user/go/pkg/mod/gopkg.in/tucnak/telebot.v2@v2.3.5/poller.go:103
+runtime.goexit
+	C:/Go/src/runtime/asm_amd64.s:1371
+2021/11/10 10:07:27 parseHHru.go:184: Run update resume from updateResume
+2021/11/10 10:07:27 parseHHru.go:191: Getting context with timeout
+2021/11/10 10:07:31 parseHHru.go:197: Open hh.ru
+2021/11/10 10:07:31 parseHHru.go:208: Get first nodes
+2021/11/10 10:07:46 parseHHru.go:219: Getting next nodes array
+2021/11/10 10:07:54 parseHHru.go:222: context canceled
+2021/11/10 10:07:54 parseHHru.go:223: Exit from updateResume
+2021/11/10 10:08:04 parseHHru.go:184: Run update resume from updateResume
+2021/11/10 10:08:04 parseHHru.go:191: Getting context with timeout
+2021/11/10 10:08:07 parseHHru.go:197: Open hh.ru
+2021/11/10 10:08:07 parseHHru.go:208: Get first nodes
+2021/11/10 10:08:28 parseHHru.go:219: Getting next nodes array
+2021/11/10 10:12:09 parseHHru.go:184: Run update resume from updateResume
+2021/11/10 10:12:09 parseHHru.go:191: Getting context with timeout
+2021/11/10 10:12:13 parseHHru.go:197: Open hh.ru
+2021/11/10 10:12:13 parseHHru.go:208: Get first nodes
+2021/11/10 10:12:17 parseHHru.go:219: Getting next nodes array
+2021/11/10 10:12:21 parseHHru.go:222: context canceled
+2021/11/10 10:12:21 parseHHru.go:223: Exit from updateResume
+2021/11/10 10:21:15 parseHHru.go:184: Run update resume from updateResume
+2021/11/10 10:21:15 parseHHru.go:191: Getting context with timeout
+2021/11/10 10:21:19 parseHHru.go:197: Open hh.ru
+2021/11/10 10:21:19 parseHHru.go:208: Get first nodes
+2021/11/10 10:22:15 parseHHru.go:219: Getting next nodes array
+2021/11/10 10:22:26 parseHHru.go:222: context deadline exceeded
+2021/11/10 10:22:26 parseHHru.go:223: Exit from updateResume
+2021/11/10 10:26:51 parseHHru.go:184: Run update resume from updateResume
+2021/11/10 10:26:51 parseHHru.go:191: Getting context with timeout
+2021/11/10 10:26:55 parseHHru.go:197: Open hh.ru
+2021/11/10 10:26:55 parseHHru.go:208: Get first nodes
+2021/11/10 10:58:49 parseHHru.go:184: Run update resume from updateResume
+2021/11/10 10:58:49 parseHHru.go:191: Getting context with timeout
+2021/11/10 10:58:49 parseHHru.go:197: Open hh.ru
+2021/11/10 10:59:05 parseHHru.go:200: chrome failed to start:
+Окно или вкладка откроются в текущем сеансе браузера.
+
+2021/11/10 10:59:05 parseHHru.go:201: Exit from updateResume
+2021/11/10 10:59:44 parseHHru.go:184: Run update resume from updateResume
+2021/11/10 10:59:44 parseHHru.go:191: Getting context with timeout
+2021/11/10 10:59:49 parseHHru.go:197: Open hh.ru
+2021/11/10 10:59:49 parseHHru.go:208: Get first nodes
+2021/11/10 10:59:49 parseHHru.go:219: Getting next nodes array
+2021/11/10 10:59:54 parseHHru.go:235: Click by element
+2021/11/10 10:59:54 parseHHru.go:240: Successful resume update
+2021/11/10 10:59:54 parseHHru.go:243: Exit from updateResume

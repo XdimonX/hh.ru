@@ -41,7 +41,7 @@ func prepareChrome(visibleBrowser bool) (context.Context, context.CancelFunc) {
 			chromedp.Flag("no-sandbox", true),
 			chromedp.Flag("disable-gpu", true),
 			chromedp.Flag("enable-automation", true),
-			chromedp.Flag("restore-on-startup", false),
+			chromedp.Flag("restore-on-startup", true),
 			chromedp.UserDataDir(userDir),
 		)
 		ctx, cancel = chromedp.NewExecAllocator(context.Background(), opts...)
@@ -105,7 +105,7 @@ func getResumeList(ctx context.Context, cancel context.CancelFunc) (result []str
 	err = chromedp.Run(
 		ctx,
 		chromedp.Nodes("div.bloko-gap.bloko-gap_top.bloko-gap_bottom",
-			&children, chromedp.ByQueryAll, chromedp.FromNode(nodes[0])),
+			&children, chromedp.ByQueryAll, chromedp.FromNode(nodes[1])),
 	)
 	if err != nil {
 		fmt.Println(err)
@@ -214,7 +214,7 @@ func updateResume(ctx context.Context, resume string) {
 	err = chromedp.Run(
 		ctx,
 		chromedp.Nodes("div.bloko-gap.bloko-gap_top.bloko-gap_bottom",
-			&children, chromedp.ByQueryAll, chromedp.FromNode(nodes[0])),
+			&children, chromedp.ByQueryAll, chromedp.FromNode(nodes[1])),
 	)
 	log.Println("Getting next nodes array")
 	if err != nil {
