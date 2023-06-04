@@ -8,7 +8,6 @@ import (
 	"math"
 	"os/user"
 	"strconv"
-	"strings"
 	"time"
 
 	"github.com/chromedp/cdproto/cdp"
@@ -17,7 +16,7 @@ import (
 	"github.com/chromedp/chromedp"
 )
 
-//Получить домашнюю директорию пользователя
+// Получить домашнюю директорию пользователя
 func getUsrHomeDir() string {
 	usr, err := user.Current()
 	if err != nil {
@@ -26,7 +25,7 @@ func getUsrHomeDir() string {
 	return usr.HomeDir
 }
 
-//Подготовить контекст для запуска браузера
+// Подготовить контекст для запуска браузера
 func prepareChrome(visibleBrowser bool) (context.Context, context.CancelFunc) {
 	var ctx context.Context
 	var cancel context.CancelFunc
@@ -67,7 +66,7 @@ func prepareChrome(visibleBrowser bool) (context.Context, context.CancelFunc) {
 	return ctx, cancel
 }
 
-//При первом запуске необходимо авторизоваться вручную
+// При первом запуске необходимо авторизоваться вручную
 func firstRunChrome(ctx context.Context, cancel context.CancelFunc) {
 	chromedp.Run(ctx,
 		chromedp.Navigate("https://togliatti.hh.ru/account/login?backurl=%2F"),
@@ -76,7 +75,7 @@ func firstRunChrome(ctx context.Context, cancel context.CancelFunc) {
 	cancel()
 }
 
-//Получить список резюме
+// Получить список резюме
 func getResumeList(ctx context.Context, cancel context.CancelFunc) (result []string) {
 	if ctx == nil {
 		return
@@ -86,15 +85,15 @@ func getResumeList(ctx context.Context, cancel context.CancelFunc) (result []str
 		return
 	}
 	defer cancel()
-	ctx, cancel = context.WithTimeout(ctx, 25*time.Second)
+	ctx, cancel = context.WithTimeout(ctx, 5*time.Minute)
 	defer cancel()
 	var nodes, children []*cdp.Node
-	var resume, status string
+	var resume string
 
 	err := chromedp.Run(
 		ctx,
 		chromedp.Navigate("https://togliatti.hh.ru/applicant/resumes?from=header_new"),
-		chromedp.Nodes(`div.bloko-column.bloko-column_xs-4.bloko-column_s-8.bloko-column_m-8.bloko-column_l-11`,
+		chromedp.Nodes(`div.bloko-column.bloko-column_xs-4.bloko-column_s-8.bloko-column_m-8.bloko-column_l-10`,
 			&nodes),
 	)
 
@@ -104,8 +103,8 @@ func getResumeList(ctx context.Context, cancel context.CancelFunc) (result []str
 	}
 	err = chromedp.Run(
 		ctx,
-		chromedp.Nodes("div.bloko-gap.bloko-gap_top.bloko-gap_bottom",
-			&children, chromedp.ByQueryAll, chromedp.FromNode(nodes[1])),
+		chromedp.Nodes("div.applicant-resumes-card-wrapper",
+			&children, chromedp.ByQueryAll, chromedp.FromNode(nodes[4])),
 	)
 	if err != nil {
 		fmt.Println(err)
@@ -114,18 +113,13 @@ func getResumeList(ctx context.Context, cancel context.CancelFunc) (result []str
 	for _, n := range children {
 		chromedp.Run(
 			ctx,
-			chromedp.Text("div>h3>a>span", &resume, chromedp.ByQueryAll, chromedp.FromNode(n)),
-			chromedp.Text("div>div.applicant-resumes-status",
-				&status, chromedp.ByQueryAll, chromedp.FromNode(n)),
-		)
-		if strings.ToLower(status) != "не видно никому" {
-			result = append(result, resume)
-		}
+			chromedp.Text("div>h3>a>span", &resume, chromedp.ByQueryAll, chromedp.FromNode(n)))
+		result = append(result, resume)
 	}
 	return
 }
 
-//Монитор обновления резюме
+// Монитор обновления резюме
 func goUpdateMonitor(visibleBrowser bool) {
 	timeout := 0
 	timeUntilUpdate := 0
@@ -179,7 +173,7 @@ func goUpdateMonitor(visibleBrowser bool) {
 	}
 }
 
-//Функция обновления резюме
+// Функция обновления резюме
 func updateResume(ctx context.Context, resume string) {
 	log.Println("Run update resume from updateResume")
 	defer log.Println("Exit from updateResume")
@@ -246,7 +240,7 @@ func fullScreenshot(filename string, quality int64, res *[]byte) chromedp.Tasks 
 	return chromedp.Tasks{
 		chromedp.ActionFunc(func(ctx context.Context) error {
 			// get layout metrics
-			_, _, contentSize, err := page.GetLayoutMetrics().Do(ctx)
+			_, _, _, _, _, contentSize, err := page.GetLayoutMetrics().Do(ctx)
 			if err != nil {
 				return err
 			}

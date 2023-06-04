@@ -10,7 +10,7 @@ import (
 const (
 	password = "qZ}~zo~f)7rUy<4)\"?/r?OB4№7iKl)Xpo?ypx!M>kls,}xIjF}"
 	cfgFile  = "config.cfg"
-	timeOutContextUpdateResumeInSeconds = 60
+	timeOutContextUpdateResumeInSeconds = 120
 )
 
 var (

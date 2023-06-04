@@ -110,7 +110,7 @@ func startBot() {
 					resumeList := getResumeList(ctx, cancel)
 					msg := ""
 					for i, resume := range resumeList {
-						msg += msg + strconv.Itoa(i+1) + " - " + resume + "\n"
+						msg += strconv.Itoa(i+1) + " - " + resume + "\n"
 					}
 					bot.Send(m.Sender, msg)
 					chromeIsRunning = false
