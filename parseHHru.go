@@ -196,7 +196,7 @@ func updateResume(ctx context.Context, resume string) {
 	}
 	err = chromedp.Run(
 		ctx,
-		chromedp.Nodes(`div.bloko-column.bloko-column_xs-4.bloko-column_s-8.bloko-column_m-8.bloko-column_l-11`,
+		chromedp.Nodes(`div.bloko-column.bloko-column_xs-4.bloko-column_s-8.bloko-column_m-8.bloko-column_l-10`,
 			&nodes),
 	)
 	log.Println("Get first nodes")
@@ -207,8 +207,8 @@ func updateResume(ctx context.Context, resume string) {
 	}
 	err = chromedp.Run(
 		ctx,
-		chromedp.Nodes("div.bloko-gap.bloko-gap_top.bloko-gap_bottom",
-			&children, chromedp.ByQueryAll, chromedp.FromNode(nodes[1])),
+		chromedp.Nodes("div.applicant-resumes-card-wrapper",
+			&children, chromedp.ByQueryAll, chromedp.FromNode(nodes[4])),
 	)
 	log.Println("Getting next nodes array")
 	if err != nil {
@@ -221,9 +221,12 @@ func updateResume(ctx context.Context, resume string) {
 		if (i + 1) == resumeInt {
 			err = chromedp.Run(
 				ctx,
-				chromedp.Click("div>div.bloko-gap.bloko-gap_top>div>div>div>div:nth-child(1)>span>button", chromedp.ByQueryAll, chromedp.FromNode(n), chromedp.NodeVisible),
-				chromedp.DoubleClick("div>div.bloko-gap.bloko-gap_top>div>div>div>div:nth-child(1)>span>button", chromedp.ByQueryAll, chromedp.FromNode(n), chromedp.NodeVisible),
-				chromedp.DoubleClick("div>div.bloko-gap.bloko-gap_top>div>div>div>div:nth-child(1)>span>button", chromedp.ByQueryAll, chromedp.FromNode(n), chromedp.NodeVisible),
+				chromedp.Click("div>div.applicant-resumes-recommendations.applicant-resumes-recommendations_full-width>div>div:nth-child(1)>button",
+					chromedp.ByQueryAll, chromedp.FromNode(n), chromedp.NodeVisible),
+				chromedp.DoubleClick("div>div.applicant-resumes-recommendations.applicant-resumes-recommendations_full-width>div>div:nth-child(1)>button",
+					chromedp.ByQueryAll, chromedp.FromNode(n), chromedp.NodeVisible),
+				chromedp.DoubleClick("div>div.applicant-resumes-recommendations.applicant-resumes-recommendations_full-width>div>div:nth-child(1)>button",
+					chromedp.ByQueryAll, chromedp.FromNode(n), chromedp.NodeVisible),
 				chromedp.Sleep((5 * time.Second)),
 			)
 			log.Println("Click by element")
