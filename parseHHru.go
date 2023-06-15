@@ -221,11 +221,11 @@ func updateResume(ctx context.Context, resume string) {
 		if (i + 1) == resumeInt {
 			err = chromedp.Run(
 				ctx,
-				chromedp.Click("div>div.applicant-resumes-recommendations.applicant-resumes-recommendations_full-width>div>div:nth-child(1)>button",
+				chromedp.Click("div>div.applicant-resumes-actions-wrapper>div>div>div:nth-child(1)>span>button",
 					chromedp.ByQueryAll, chromedp.FromNode(n), chromedp.NodeVisible),
-				chromedp.DoubleClick("div>div.applicant-resumes-recommendations.applicant-resumes-recommendations_full-width>div>div:nth-child(1)>button",
+				chromedp.DoubleClick("div>div.applicant-resumes-actions-wrapper>div>div>div:nth-child(1)>span>button",
 					chromedp.ByQueryAll, chromedp.FromNode(n), chromedp.NodeVisible),
-				chromedp.DoubleClick("div>div.applicant-resumes-recommendations.applicant-resumes-recommendations_full-width>div>div:nth-child(1)>button",
+				chromedp.DoubleClick("div>div.applicant-resumes-actions-wrapper>div>div>div:nth-child(1)>span>button",
 					chromedp.ByQueryAll, chromedp.FromNode(n), chromedp.NodeVisible),
 				chromedp.Sleep((5 * time.Second)),
 			)
