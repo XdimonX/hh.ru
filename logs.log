@@ -1,8 +1,0 @@
-2023/06/05 10:51:29 parseHHru.go:178: Run update resume from updateResume
-2023/06/05 10:51:29 parseHHru.go:185: Getting context with timeout
-2023/06/05 10:52:11 parseHHru.go:191: Open hh.ru
-2023/06/05 10:52:11 parseHHru.go:202: Get first nodes
-2023/06/05 10:52:11 parseHHru.go:213: Getting next nodes array
-2023/06/05 10:52:16 parseHHru.go:232: Click by element
-2023/06/05 10:52:16 parseHHru.go:237: Successful resume update
-2023/06/05 10:52:16 parseHHru.go:240: Exit from updateResume
