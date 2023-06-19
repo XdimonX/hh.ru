@@ -1,14 +1,24 @@
+//Модуль работы с конфигурацией. Получение и парсинг конфигурации и сохранение изменений.
+
 package main
 
 import (
+	"errors"
+	"os"
 	"strconv"
 	"strings"
 )
 
 func parseCfg() {
+	password, isexist := os.LookupEnv("HHSalt")
+	if !isexist && len(strings.TrimSpace(password)) == 0 {
+		checkErr(errors.New("environment variable 'HHSalt' is not exist"))
+	}
+
 	decryptByte := decryptFile(cfgFile, password)
 	decryptText := string(decryptByte)
 	decryptStrArr := strings.Split(decryptText, "\n")
+
 	for _, v := range decryptStrArr {
 		str := strings.Split(v, "&&||")
 		param := strings.ToLower(str[0])
@@ -47,7 +57,6 @@ func saveCfg() {
 	}
 	outCfg := "Token&&||" + token + "\nloginHHru&&||" + loginHHru + "\npasswordHHru&&||" + passwordHHru +
 		"\npasswordTeleBot&&||" + passwordTeleBot + "\nresumeForUpdates&&||" + resumeStr + "\ntimeoutResumeUpdates&&||" + strconv.Itoa(timeoutResumeUpdate)
-	// _ = outCfg
 	encryptFile(cfgFile, []byte(outCfg), password)
 
 }

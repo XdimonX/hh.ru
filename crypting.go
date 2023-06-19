@@ -1,3 +1,5 @@
+//Модуль для шифрования и дешифрования файла конфигурации.
+
 package main
 
 import (
@@ -45,7 +47,7 @@ func decrypt(data []byte, passphrase string) []byte {
 	nonce, ciphertext := data[:nonceSize], data[nonceSize:]
 	plaintext, err := gcm.Open(nil, nonce, ciphertext, nil)
 	if err != nil {
-		panic(err.Error())
+		checkErr(err)
 	}
 	return plaintext
 }

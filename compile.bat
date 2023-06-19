@@ -4,4 +4,4 @@ rem set CGO_LDFLAGS=-lAutoItX3_DLL
 go build -ldflags="-s -w -H=windowsgui"
 rem go build -ldflags="-s -w"
 rem go build -ldflags="-H=windowsgui"
-upx.exe --best *download*.exe 
+upx.exe --best *.exe 

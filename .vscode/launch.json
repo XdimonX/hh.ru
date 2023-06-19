@@ -10,7 +10,7 @@
       "request": "launch",
       "mode": "auto",
       "program": "${fileDirname}",
-      "env": { "GOARCH": "amd64" },
+      "env": { "GOARCH": "amd64", "HHSalt": "123" },
       "args": []
     }
   ]
