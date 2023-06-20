@@ -1,12 +1,12 @@
 //Настройка логов. Назначение вывода, формат вывода
-package main
+package logs
 
 import (
 	"log"
 	"os"
 )
 
-func prepareLogger() {
+func PrepareLogger() {
 	logFile, err := os.OpenFile("logs.log", os.O_RDWR|os.O_CREATE|os.O_APPEND, 0666)
 	if err != nil {
 		os.Exit(2)

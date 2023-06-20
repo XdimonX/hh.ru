@@ -5,6 +5,7 @@ import (
 	"strconv"
 	"strings"
 	"time"
+	"x.hh.ru/checkErr"
 
 	tb "gopkg.in/tucnak/telebot.v2"
 )
@@ -37,7 +38,7 @@ getUpdateStatus Получить состояние службы обновле�
 func startBot() {
 	chromeIsRunning := false
 	bot, err := tb.NewBot(tb.Settings{Token: token, Poller: &tb.LongPoller{Timeout: 10 * time.Second}})
-	checkErr(err)
+	checkerr.СheckErr(err)
 	teleAdminUser := tb.User{ID: teleAdminID}
 	bot.Handle("/help", func(m *tb.Message) {
 		helpAndStart(m, bot)

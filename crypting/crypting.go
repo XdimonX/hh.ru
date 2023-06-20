@@ -1,6 +1,6 @@
 //Модуль для шифрования и дешифрования файла конфигурации.
 
-package main
+package crypting
 
 import (
 	"crypto/aes"
@@ -11,6 +11,7 @@ import (
 	"io"
 	"io/ioutil"
 	"os"
+	"x.hh.ru/checkErr"
 )
 
 func createHash(key string) string {
@@ -47,18 +48,18 @@ func decrypt(data []byte, passphrase string) []byte {
 	nonce, ciphertext := data[:nonceSize], data[nonceSize:]
 	plaintext, err := gcm.Open(nil, nonce, ciphertext, nil)
 	if err != nil {
-		checkErr(err)
+		checkerr.СheckErr(err)
 	}
 	return plaintext
 }
 
-func encryptFile(filename string, data []byte, passphrase string) {
+func EncryptFile(filename string, data []byte, passphrase string) {
 	f, _ := os.Create(filename)
 	defer f.Close()
 	f.Write(encrypt(data, passphrase))
 }
 
-func decryptFile(filename string, passphrase string) []byte {
+func DecryptFile(filename string, passphrase string) []byte {
 	data, _ := ioutil.ReadFile(filename)
 	return decrypt(data, passphrase)
 }

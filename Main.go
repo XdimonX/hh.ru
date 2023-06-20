@@ -1,10 +1,8 @@
 package main
 
 import (
-	"fmt"
-	"log"
-	"os"
 	"sync"
+	"x.hh.ru/logs"
 )
 
 const (
@@ -24,16 +22,8 @@ var (
 	password            = "qZ}~zo~f)7rUy<4)\"?/r?OB4№7iKl)Xpo?ypx!M>kls,}xIjF}"
 )
 
-func checkErr(err error) {
-	if err != nil {
-		fmt.Println(err)
-		log.Fatal(err)
-		os.Exit(2)
-	}
-}
-
 func main() {
-	prepareLogger()
+	logs.PrepareLogger()
 	parseCfg()
 	wg := sync.WaitGroup{}
 	wg.Add(2)

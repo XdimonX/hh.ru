@@ -7,15 +7,17 @@ import (
 	"os"
 	"strconv"
 	"strings"
+	"x.hh.ru/checkErr"
+	"x.hh.ru/crypting"
 )
 
 func parseCfg() {
 	password, isexist := os.LookupEnv("HHSalt")
 	if !isexist && len(strings.TrimSpace(password)) == 0 {
-		checkErr(errors.New("environment variable 'HHSalt' is not exist"))
+		checkerr.СheckErr(errors.New("environment variable 'HHSalt' is not exist"))
 	}
 
-	decryptByte := decryptFile(cfgFile, password)
+	decryptByte := crypting.DecryptFile(cfgFile, password)
 	decryptText := string(decryptByte)
 	decryptStrArr := strings.Split(decryptText, "\n")
 
@@ -40,7 +42,7 @@ func parseCfg() {
 		} else if param == "timeoutresumeupdates" {
 			var err error
 			timeoutResumeUpdate, err = strconv.Atoi(str[1])
-			checkErr(err)
+			checkerr.СheckErr(err)
 			println(timeoutResumeUpdate)
 		}
 	}
@@ -57,6 +59,6 @@ func saveCfg() {
 	}
 	outCfg := "Token&&||" + token + "\nloginHHru&&||" + loginHHru + "\npasswordHHru&&||" + passwordHHru +
 		"\npasswordTeleBot&&||" + passwordTeleBot + "\nresumeForUpdates&&||" + resumeStr + "\ntimeoutResumeUpdates&&||" + strconv.Itoa(timeoutResumeUpdate)
-	encryptFile(cfgFile, []byte(outCfg), password)
+	crypting.EncryptFile(cfgFile, []byte(outCfg), password)
 
 }
