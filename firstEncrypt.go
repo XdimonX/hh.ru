@@ -1,6 +1,8 @@
+// Первоначальное создание файла конфигурации.
 package main
 
 import (
+	"errors"
 	"fmt"
 	"io/ioutil"
 )
@@ -8,7 +10,7 @@ import (
 func firstEncryptCfg() {
 	text, err := ioutil.ReadFile("cfg")
 	if err != nil {
-		panic("aaaaa")
+		checkErr(errors.New("error open and read 'cfg' file"))
 	}
 	fmt.Println(string(text))
 	encryptFile(cfgFile, text, password)
