@@ -17,7 +17,7 @@ func parseCfg() {
 	if !isexist && len(strings.TrimSpace(password)) == 0 {
 		checkerr.СheckErr(errors.New("environment variable 'HHSalt' is not exist"))
 	}
-	
+
 	decryptByte := crypting.DecryptFile(cfgFile, password)
 	decryptText := string(decryptByte)
 	decryptStrArr := strings.Split(decryptText, "\n")
@@ -25,26 +25,26 @@ func parseCfg() {
 	for _, v := range decryptStrArr {
 		str := strings.Split(v, "&&||")
 		param := strings.ToLower(str[0])
-		if param == "token" {
+		switch param {
+		case "token":
 			token = str[1]
-		} else if param == "loginhhru" {
-			loginHHru = str[1]
-		} else if param == "passwordhhru" {
-			passwordHHru = str[1]
-		} else if param == "passwordtelebot" {
-			passwordTeleBot = str[1]
-		} else if param == "resumeforupdates" {
+		case "resumeforupdates":
 			str := strings.Split(str[1], "|")
 			for _, v := range str {
 				if v != "" {
 					resumeForUpdates = append(resumeForUpdates, v)
 				}
 			}
-		} else if param == "timeoutresumeupdates" {
+		case "timeoutresumeupdates":
 			var err error
 			timeoutResumeUpdate, err = strconv.Atoi(str[1])
 			checkerr.СheckErr(err)
-			println(timeoutResumeUpdate)
+		case "teleadminid":
+			var err error
+			teleAdminID, err = strconv.Atoi(str[1])
+			checkerr.СheckErr(err)
+		default:
+
 		}
 	}
 }
@@ -58,8 +58,10 @@ func saveCfg() {
 			resumeStr += v + "|"
 		}
 	}
-	outCfg := "Token&&||" + token + "\nloginHHru&&||" + loginHHru + "\npasswordHHru&&||" + passwordHHru +
-		"\npasswordTeleBot&&||" + passwordTeleBot + "\nresumeForUpdates&&||" + resumeStr + "\ntimeoutResumeUpdates&&||" + strconv.Itoa(timeoutResumeUpdate)
+	outCfg := "token&&||" + token +
+		"\nresumeForUpdates&&||" + resumeStr +
+		"\ntimeoutResumeUpdates&&||" + strconv.Itoa(timeoutResumeUpdate) +
+		"\nteleAdminID&&||" + strconv.Itoa(teleAdminID)
 	crypting.EncryptFile(cfgFile, []byte(outCfg), password)
 
 }

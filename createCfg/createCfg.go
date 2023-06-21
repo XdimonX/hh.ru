@@ -3,8 +3,6 @@ package main
 
 import (
 	"errors"
-	"fmt"
-	"io/ioutil"
 	"log"
 	"os"
 	"strings"
@@ -26,12 +24,16 @@ func firstEncryptCfg() {
 	if !isexist && len(strings.TrimSpace(password)) == 0 {
 		checkErr(errors.New("environment variable 'HHSalt' is not exist"))
 	}
-	text, err := ioutil.ReadFile("cfg")
+	text, err := os.ReadFile("cfg")
 	if err != nil {
 		checkErr(errors.New("error open and read 'cfg' file"))
 	}
-	fmt.Println(string(text))
-	crypting.EncryptFile(cfgFile, text, password)
+	var preparedText string
+	for _, v := range strings.Split(string(text), "\r\n") {
+		preparedText += v + "\n"
+	}
+	preparedText = strings.TrimRight(preparedText, "\n")
+	crypting.EncryptFile(cfgFile, []byte(preparedText), password)
 }
 
 func main() {

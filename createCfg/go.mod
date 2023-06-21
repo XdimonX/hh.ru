@@ -1,4 +1,4 @@
-module x.hh.ru/createCfg
+module createcfg
 
 go 1.19
 

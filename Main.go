@@ -8,7 +8,6 @@ import (
 const (
 	cfgFile                             = "config.cfg"
 	timeOutContextUpdateResumeInSeconds = 300
-	teleAdminID                         = 385060683
 )
 
 var (
@@ -21,6 +20,7 @@ var (
 	lock                = &sync.Mutex{}
 	working             = true
 	password            = ""
+	teleAdminID         = 0
 )
 
 func main() {
