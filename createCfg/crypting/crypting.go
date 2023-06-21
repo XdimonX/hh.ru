@@ -10,7 +10,9 @@ import (
 	"encoding/hex"
 	"io"
 	"io/ioutil"
+	"log"
 	"os"
+
 	"x.hh.ru/checkErr"
 )
 
@@ -48,6 +50,7 @@ func decrypt(data []byte, passphrase string) []byte {
 	nonce, ciphertext := data[:nonceSize], data[nonceSize:]
 	plaintext, err := gcm.Open(nil, nonce, ciphertext, nil)
 	if err != nil {
+		log.Println(passphrase)
 		checkerr.СheckErr(err)
 	}
 	return plaintext

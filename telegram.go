@@ -10,9 +10,6 @@ import (
 	tb "gopkg.in/tucnak/telebot.v2"
 )
 
-const (
-	teleAdminID = 385060683
-)
 
 func helpAndStart(m *tb.Message, bot *tb.Bot) {
 	if m.Sender.ID == teleAdminID {
@@ -228,24 +225,3 @@ func setUpdateService(m *tb.Message, bot *tb.Bot) {
 		bot.Send(m.Sender, "Не верная команда")
 	}
 }
-
-// func tst() {
-// 	b, err := tb.NewBot(tb.Settings{Token: token, Poller: &tb.LongPoller{Timeout: 10 * time.Second}})
-// 	checkErr(err)
-// 	teleAdminUser := tb.User{ID: teleAdminID}
-// 	// var (
-// 	// 	menu    = &tb.ReplyMarkup{ResizeReplyKeyboard: true}
-// 	// 	btnHelp = menu.Text("ℹ Help")
-// 	// )
-// 	// menu.Reply(
-// 	// 	menu.Row(btnHelp),
-// 	// )
-// 	// b.Handle(&btnHelp, func(m *tb.Message) {
-// 	// 	b.Send(m.Chat, "Тута будет помощь.")
-// 	// })
-// 	// b.Handle("/help", func(m *tb.Message) {
-// 	// 	// b.Send(m.Chat, "test", menu)
-// 	// })
-// 	b.Send(&teleAdminUser, "Запуск - "+time.Now().Format(time.ANSIC))
-// 	b.Start()
-// }

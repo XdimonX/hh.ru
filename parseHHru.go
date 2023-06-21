@@ -2,7 +2,6 @@ package main
 
 import (
 	"context"
-	"fmt"
 	"io/ioutil"
 	"log"
 	"math"
@@ -20,7 +19,7 @@ import (
 func getUsrHomeDir() string {
 	usr, err := user.Current()
 	if err != nil {
-		fmt.Println(err)
+		log.Fatalln(err)
 	}
 	return usr.HomeDir
 }
@@ -81,7 +80,7 @@ func getResumeList(ctx context.Context, cancel context.CancelFunc) (result []str
 		return
 	}
 	if ctx.Err() != nil {
-		fmt.Println(ctx.Err())
+		log.Println(ctx.Err())
 		return
 	}
 	defer cancel()
@@ -98,7 +97,7 @@ func getResumeList(ctx context.Context, cancel context.CancelFunc) (result []str
 	)
 
 	if err != nil {
-		fmt.Println(err)
+		log.Println(err)
 		return
 	}
 	err = chromedp.Run(
@@ -107,7 +106,7 @@ func getResumeList(ctx context.Context, cancel context.CancelFunc) (result []str
 			&children, chromedp.ByQueryAll, chromedp.FromNode(nodes[4])),
 	)
 	if err != nil {
-		fmt.Println(err)
+		log.Println(err)
 		return
 	}
 	for _, n := range children {
@@ -190,7 +189,6 @@ func updateResume(ctx context.Context, resume string) {
 	)
 	log.Println("Open hh.ru")
 	if err != nil {
-		fmt.Println(err)
 		log.Println(err)
 		return
 	}
@@ -201,7 +199,6 @@ func updateResume(ctx context.Context, resume string) {
 	)
 	log.Println("Get first nodes")
 	if err != nil {
-		fmt.Println(err)
 		log.Println(err)
 		return
 	}
@@ -212,7 +209,6 @@ func updateResume(ctx context.Context, resume string) {
 	)
 	log.Println("Getting next nodes array")
 	if err != nil {
-		fmt.Println(err)
 		log.Println(err)
 		return
 	}

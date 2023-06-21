@@ -7,6 +7,7 @@ import (
 	"os"
 	"strconv"
 	"strings"
+
 	"x.hh.ru/checkErr"
 	"x.hh.ru/crypting"
 )
@@ -16,7 +17,7 @@ func parseCfg() {
 	if !isexist && len(strings.TrimSpace(password)) == 0 {
 		checkerr.СheckErr(errors.New("environment variable 'HHSalt' is not exist"))
 	}
-
+	
 	decryptByte := crypting.DecryptFile(cfgFile, password)
 	decryptText := string(decryptByte)
 	decryptStrArr := strings.Split(decryptText, "\n")

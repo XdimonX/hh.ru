@@ -8,6 +8,7 @@ import (
 const (
 	cfgFile                             = "config.cfg"
 	timeOutContextUpdateResumeInSeconds = 300
+	teleAdminID                         = 385060683
 )
 
 var (

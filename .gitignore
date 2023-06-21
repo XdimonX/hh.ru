@@ -1,0 +1,12 @@
+.~lock.ТЗ.odt#
+ТЗ.odt
+token
+*.exe
+*.bin
+cover.html
+logs.log
+.vscode
+.idea
+*.bat
+parseHHru(old).goback
+config.cfg
