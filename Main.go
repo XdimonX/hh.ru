@@ -20,7 +20,7 @@ var (
 	timeoutResumeUpdate = 0
 	lock                = &sync.Mutex{}
 	working             = true
-	password            = "qZ}~zo~f)7rUy<4)\"?/r?OB4№7iKl)Xpo?ypx!M>kls,}xIjF}"
+	password            = ""
 )
 
 func main() {
