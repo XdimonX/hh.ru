@@ -120,26 +120,26 @@ func getResumeList(ctx context.Context, cancel context.CancelFunc) (result []str
 
 // Монитор обновления резюме
 func goUpdateMonitor(visibleBrowser bool) {
-	timeout := 0
+	// timeout := 0
 	timeUntilUpdate := 0
 	defer log.Println("Exit from goUpdateMonitor")
 	for {
 		time.Sleep(1 * time.Second)
 		lock.Lock()
 		if !working {
-			timeout = 0
+			// timeout = 0
 			timeUntilUpdate = 0
 			lock.Unlock()
 			continue
 		}
 		tmp := timeoutResumeUpdate
 		lock.Unlock()
-		if timeout != tmp {
-			lock.Lock()
-			timeout = tmp
-			timeUntilUpdate = 0
-			lock.Unlock()
-		}
+		// if timeout != tmp {
+		// 	lock.Lock()
+		// 	timeout = tmp
+		// 	timeUntilUpdate = 0
+		// 	lock.Unlock()
+		// }
 		timeUntilUpdate++
 		if timeUntilUpdate >= (tmp * 60) {
 			var ctx context.Context

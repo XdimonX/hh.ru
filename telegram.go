@@ -1,3 +1,4 @@
+// Модуль реализцющий работу телеграм бота, через которого происходит управление работой программы.
 package main
 
 import (
@@ -9,7 +10,6 @@ import (
 
 	tb "gopkg.in/tucnak/telebot.v2"
 )
-
 
 func helpAndStart(m *tb.Message, bot *tb.Bot) {
 	if m.Sender.ID == teleAdminID {
@@ -32,6 +32,7 @@ getUpdateStatus Получить состояние службы обновле�
 	}
 }
 
+// Запуск бота и обработка команд от пользователя
 func startBot() {
 	chromeIsRunning := false
 	bot, err := tb.NewBot(tb.Settings{Token: token, Poller: &tb.LongPoller{Timeout: 10 * time.Second}})
@@ -71,7 +72,7 @@ func startBot() {
 						cancel()
 						bot.Send(m.Sender, "Готово")
 					} else {
-						bot.Send(m.Sender, "Не верная команда")
+						bot.Send(m.Sender, "Неверная команда")
 					}
 					chromeIsRunning = false
 				} else {
@@ -120,7 +121,7 @@ func startBot() {
 				bot.Send(m.Sender, strconv.Itoa(timeoutResumeUpdate))
 				lock.Unlock()
 			} else {
-				bot.Send(m.Sender, "Не верная команда")
+				bot.Send(m.Sender, "Неверная команда")
 			}
 		}
 	})
@@ -157,7 +158,7 @@ func saveResume(m *tb.Message, bot *tb.Bot) {
 			return
 		}
 	} else {
-		bot.Send(m.Sender, "Не верная команда")
+		bot.Send(m.Sender, "Неверная команда")
 	}
 }
 
@@ -176,33 +177,7 @@ func saveTimeoutResumeUpdate(m *tb.Message, bot *tb.Bot) {
 		lock.Unlock()
 		bot.Send(m.Sender, "Тайм-аут успешно сохранён")
 	} else {
-		bot.Send(m.Sender, "Не верная команда")
-	}
-}
-
-func saveLoginHHru(m *tb.Message, bot *tb.Bot) {
-	text := strings.Split(m.Text, "=")
-	if len(text) == 2 {
-		lock.Lock()
-		loginHHru = strings.TrimSpace(text[1])
-		saveCfg()
-		lock.Unlock()
-		bot.Send(m.Sender, "Логин успешно сохранён")
-	} else {
-		bot.Send(m.Sender, "Не верная команда")
-	}
-}
-
-func savePasswordHHru(m *tb.Message, bot *tb.Bot) {
-	text := strings.Split(m.Text, "=")
-	if len(text) == 2 {
-		lock.Lock()
-		passwordHHru = strings.TrimSpace(text[1])
-		saveCfg()
-		lock.Unlock()
-		bot.Send(m.Sender, "Пароль успешно сохранён")
-	} else {
-		bot.Send(m.Sender, "Не верная команда")
+		bot.Send(m.Sender, "Неверная команда")
 	}
 }
 
@@ -218,10 +193,10 @@ func setUpdateService(m *tb.Message, bot *tb.Bot) {
 			working = false
 			bot.Send(m.Sender, "Служба обновления резюме теперь не работает")
 		default:
-			bot.Send(m.Sender, "Не верная команда")
+			bot.Send(m.Sender, "Неверная команда")
 		}
 		lock.Unlock()
 	} else {
-		bot.Send(m.Sender, "Не верная команда")
+		bot.Send(m.Sender, "Неверная команда")
 	}
 }

@@ -12,9 +12,6 @@ const (
 
 var (
 	token               = ""
-	loginHHru           = ""
-	passwordHHru        = ""
-	passwordTeleBot     = ""
 	resumeForUpdates    []string
 	timeoutResumeUpdate = 0
 	lock                = &sync.Mutex{}

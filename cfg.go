@@ -13,7 +13,8 @@ import (
 )
 
 func parseCfg() {
-	password, isexist := os.LookupEnv("HHSalt")
+	var isexist bool
+	password, isexist = os.LookupEnv("HHSalt")
 	if !isexist && len(strings.TrimSpace(password)) == 0 {
 		checkerr.СheckErr(errors.New("environment variable 'HHSalt' is not exist"))
 	}
