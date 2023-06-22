@@ -8,5 +8,6 @@ logs.log
 .vscode
 .idea
 *.bat
+*.7z
 parseHHru(old).goback
 config.cfg
