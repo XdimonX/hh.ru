@@ -144,13 +144,13 @@ func goUpdateMonitor(visibleBrowser bool) {
 		if timeUntilUpdate >= (tmp * 60) {
 			var ctx context.Context
 			var cancel context.CancelFunc
-			if visibleBrowser {
-				ctx, cancel = prepareChrome(true)
-			} else {
-				ctx, cancel = prepareChrome(false)
-			}
 			lock.Lock()
 			for _, v := range resumeForUpdates {
+				if visibleBrowser {
+					ctx, cancel = prepareChrome(true)
+				} else {
+					ctx, cancel = prepareChrome(false)
+				}
 				log.Println("Run update resume from goUpdateMonitor")
 				done := make(chan bool)
 				go func(done chan bool) {

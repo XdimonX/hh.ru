@@ -3,9 +3,11 @@ package main
 
 import (
 	// "fmt"
+	"context"
 	"strconv"
 	"strings"
 	"time"
+
 	"x.hh.ru/checkErr"
 
 	tb "gopkg.in/tucnak/telebot.v2"
@@ -53,9 +55,11 @@ func startBot() {
 					chromeIsRunning = true
 					if strings.ToLower(strings.TrimSpace(text)) == "false" {
 						bot.Send(m.Sender, "Обновляем...")
-						ctx, cancel := prepareChrome(false)
+						var cancel context.CancelFunc
+						var ctx context.Context
 						lock.Lock()
 						for _, resume := range resumeForUpdates {
+							ctx, cancel = prepareChrome(false)
 							updateResume(ctx, resume)
 						}
 						lock.Unlock()
@@ -63,9 +67,11 @@ func startBot() {
 						bot.Send(m.Sender, "Готово")
 					} else if strings.ToLower(strings.TrimSpace(text)) == "true" {
 						bot.Send(m.Sender, "Обновляем...")
-						ctx, cancel := prepareChrome(true)
+						var cancel context.CancelFunc
+						var ctx context.Context
 						lock.Lock()
 						for _, resume := range resumeForUpdates {
+							ctx, cancel = prepareChrome(true)
 							updateResume(ctx, resume)
 						}
 						lock.Unlock()
